@@ -1,0 +1,121 @@
+{
+  "navLinks": [
+    { "id": 1, "name": "Home", "url": "/", "subLinks": [] },
+    { "id": 2, "name": "AboutUs", "url": "/", "subLinks": [] },
+    { "id": 3, "name": "Our Team", "url": "/", "subLinks": [] },
+    { "id": 4, "name": "Career", "url": "/", "subLinks": [] },
+    { "id": 5, "name": "Privacy Policy", "url": "/", "subLinks": [] },
+    {
+      "id": 6,
+      "name": "Products",
+      "url": "/",
+      "subLinks": [{ "id": 1, "name": "OvaWeb", "url": "/chat" }]
+    },
+    {
+      "id": 7,
+      "name": "Documentation",
+      "url": "/documentation",
+      "subLinks": []
+    }
+  ],
+  "content": [
+    {
+      "id": 1,
+      "title": "What Steve Jobs Thought",
+      "description": "In 1983, Steve Jobs envisioned a future where technology could virtualize human consciousness, making it immortal. Though this dream remains unrealized, it continues to inspire. What does it mean to be immortal? Is it to never die, or to live on through the memories we leave behind? At OvaDrive, we explore this question by pushing the boundaries of technology and imagination. Our mission is to preserve and interact with human consciousness, creating a world where the line between life and legacy blurs, and the dream of immortality comes closer to reality.",
+      "highlightIndex": 3,
+      "img": "/images/img1.jpg",
+      "position": "left",
+      "aos": "fade-up"
+    },
+    {
+      "id": 2,
+      "title": "Vision Behind OvaDrive",
+      "description": "Imagine having a Personal Documentarian—a digital companion that lives your life alongside you, fully under your control. It listens to what you hear, watches what you see, and captures the essence of your experiences. Now, imagine integrating this with a finely tuned Large Language Model, tailored to the unique context of Your World. This isn't just about evolving Artificial General Intelligence; it's about creating an Artificial Soul, a digital entity that understands and resonates with the depth of your existence, far beyond what current digital assistants can offer.",
+      "highlightIndex": 0,
+      "img": "/images/img2.jpeg",
+      "position": "right",
+      "aos": "fade-up"
+    },
+    {
+      "id": 3,
+      "title": "Future Of OvaDrive",
+      "description": "Our journey begins with a mobile app that captures notes from your surroundings, but this is just the beginning. OvaDrive will evolve to include watches, rings, bracelets, necklaces, glasses, holograms, and even the metaverse. This isn't just about achieving immortality; it's about preserving and deeply understanding the essence of human experience. By expanding into these new realms, OvaDrive will open up unprecedented frontiers in psychology, history, and our understanding of consciousness itself.",
+      "highlightIndex": 0,
+      "img": "/images/img3.jpeg",
+      "position": "left",
+      "aos": "fade-left"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "title": "Unlock The Power Of Your 2nd Brain",
+      "description": "Ovadrive is designed to turn your phone into an assistant following you everywhere, learning all about your life and helping to utilize that.",
+      "subtitle": "Own your data, own your life, own your future."
+    },
+    {
+      "id": 2,
+      "title": "Unlock The Power Of Your 3rd Brain",
+      "description": "Our AI Assistant helps you organize and manage your tasks efficiently, giving you more time to focus on what matters.",
+      "subtitle": "Achieve more with less effort."
+    },
+    {
+      "id": 3,
+      "title": "Unlock The Power Of Your 4th Brain",
+      "description": "Keep up with the latest trends and insights with our smart assistant, ensuring you’re always in the know.",
+      "subtitle": "Be informed, be prepared."
+    },
+    {
+      "id": 4,
+      "title": "Unlock The Power Of Your 5th Brain",
+      "description": "Our AI adapts to your lifestyle and preferences, making it a perfect companion for your daily activities.",
+      "subtitle": "A personal touch to technology."
+    }
+  ],
+
+  "slider1": [
+    { "id": 1, "img": "/images/slide1.jpeg" },
+    { "id": 2, "img": "/images/slide2.jpeg" },
+    { "id": 3, "img": "/images/slide3.jpeg" },
+    { "id": 4, "img": "/images/slide4.jpeg" }
+  ],
+  "team": [
+    {
+      "id": 1,
+      "name": "Member1",
+      "data": "Lorem1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "img": "/images/member1.jpeg",
+      "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+      "id": 2,
+      "name": "Member2",
+      "data": "Lorem2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "img": "/images/member2.jpeg",
+      "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+      "id": 3,
+      "name": "Member3",
+      "data": "Lorem3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "img": "/images/member3.jpeg",
+      "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+      "id": 4,
+      "name": "Member4",
+      "data": "Lorem4 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "img": "/images/member4.jpeg",
+      "linkedin": "https://www.linkedin.com/in/"
+    },
+    {
+      "id": 5,
+      "name": "Member5",
+      "data": "The driving force behind OvaDrive revolutionizes talent recruitment and entrepreneurship by passionately fostering innovation and advancing societal progress.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/"
+    }
+  ],
+  "documentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+}
