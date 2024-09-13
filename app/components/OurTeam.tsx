@@ -80,7 +80,9 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   return (
     <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] Xl:h-[55vh] max-w-[1420px] Xl:max-w-[90vw]">
-      <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw]">Our Team</h1>
+      <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw] Xl:mb-[2vh]">
+        Our Team
+      </h1>
       <div className="flex flex-col md:flex-row w-full">
         {/* Left Side: One slider for content, one for images */}
         <div className="w-full lg:w-1/2 flex flex-col sm:flex-row">
@@ -89,9 +91,9 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[30px] sm:h-[40px] Xl:h-[6vh] w-full flex items-center"
+                  className="h-[30px] sm:h-[40px] Xl:h-[6vh] w-full"
                 >
-                  <div className="p-1 sm:p-2">
+                  <div className="p-1 sm:p-2 Xl:h-[6vh]  flex items-center align-middle">
                     <h2 className="text-lg sm:text-2xl Xl:text-[1.5vw] font-semibold">
                       {member.name}
                     </h2>

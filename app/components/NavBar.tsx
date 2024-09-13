@@ -176,7 +176,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             isOpen && screenSize >= 1024 && screenSize < 1280
               ? "lg:w-[82%] mr-[6rem]"
               : "lg:w-[90%]"
-          } xl:w-9/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-2 bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4`}
+          } xl:w-9/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-2 Xl:px-[0.3vw] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4`}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <div className="flex items-center space-x-2">
@@ -236,13 +236,13 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               ))}
             </ul>
           </div>
-          <div className="hidden md:flex gap-2 items-center">
+          <div className="hidden md:flex gap-2 Xl:gap-6 items-center">
             <Button
               text="Get The App"
               bgcolor="bg-customPurple"
               textcolor="text-white Xl:text-[0.9vw]"
               bordercolor="border-customPurple"
-              height="h-7 sm:h-10 Xl:h-[2.4vw]"
+              height="h-7 sm:h-10 Xl:h-[5vh]"
               width="w-24 lg:w-28 Xl:w-[7vw]"
               onClickFn={() => handleNavClick("/")}
             />
@@ -251,9 +251,9 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <Button
                 text="Login"
                 bgcolor="bg-transparent"
-                textcolor="text-white Xl:text-[0.8vw]"
+                textcolor="text-white Xl:text-[0.9vw]"
                 bordercolor="border-white"
-                height="h-7 sm:h-10 Xl:h-[2.4vw]"
+                height="h-7 sm:h-10 Xl:h-[5vh]"
                 width="w-24 lg:w-28 Xl:w-[7vw]"
                 onClickFn={() => router.push("/signin")}
               />

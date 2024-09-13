@@ -171,7 +171,7 @@ const TextImage: FC<TextImageProps> = ({
             )}
           </h1>
           {description && (
-            <p className="mt-4 sm:mt-8 text-white opacity-75 text-md leading-6 sm:leading-7 text-[15px] sm:text-base Xl:text-[1.1vw] Xl:leading-[1.8vw]">
+            <p className="mt-4 sm:mt-8 Xl:mt-[4vh] text-white opacity-75 text-md leading-6 sm:leading-7 text-[15px] sm:text-base Xl:text-[1.1vw] Xl:leading-[1.8vw]">
               {description}
             </p>
           )}
