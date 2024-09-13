@@ -46,7 +46,7 @@ export default function ProfileDropDown({
     <div className="relative flex" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-full font-bold text-xl bg-pink-600 text-white hover:bg-pink-700"
+        className="w-10 Xl:w-[2.4vw] h-10 Xl:h-[2.4vw] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
       >
         {session?.user?.email?.charAt(0).toUpperCase() ??
           email.charAt(0).toUpperCase()}
@@ -56,10 +56,10 @@ export default function ProfileDropDown({
           className={`
           ${
             path.split("/")[1] === ""
-              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-7 rounded-2xl lg:rounded-full"
+              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-7 xl:left-[1.4vw] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
               : "absolute  lg:top-14 md:-left-20 rounded-2xl z-[9999]"
           }
-          mt-[56px] lg:-mt-2 w-28 lg:w-32 -right-2 lg:right-auto h-14  shadow-lg bg-transparent border border-[#ffffff88]  p-2`}
+          mt-[56px] lg:-mt-2 Xl:-mt-[0.5vw] w-28 lg:w-32 Xl:w-[7.5vw] -right-2 lg:right-auto h-14 Xl:h-[3.2vw]  shadow-lg bg-transparent border border-[#ffffff88]  p-2`}
         >
           <div
             className="justify-end items-center"
@@ -71,10 +71,10 @@ export default function ProfileDropDown({
               onClick={handleLogout}
               className={`w-full flex gap-2 items-center h-full
               ${path.split("/")[1] == "" ? "justify-end" : "justify-center"}
-              text-center py-2 text-base text-white hover:text-white-900 font-medium`}
+              text-center py-2 text-base Xl:text-[1vw] text-white hover:text-white-900 font-medium`}
               role="menuitem"
             >
-              <RiLogoutBoxRLine className="text-white text-xl text-bold" />
+              <RiLogoutBoxRLine className="text-white text-xl Xl:text-[1.3vw] text-bold" />
               Log Out
             </button>
           </div>

@@ -46,7 +46,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   useOnClickOutside(ref, () => setOpen(false));
 
@@ -94,7 +94,11 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
   );
 
   return (
-    <nav className={`flex items-center justify-center ${path.split("/")[1] && "py-4 px-4"}`}>
+    <nav
+      className={`flex items-center justify-center ${
+        path.split("/")[1] && "py-4 px-4"
+      }`}
+    >
       {path.split("/")[1] != "" ? (
         <>
           {/* Logo and Page Name for Documentation */}
@@ -178,12 +182,12 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <img
                 src="/images/logo.png"
                 alt="logo"
-                className="w-10 h-10 object-cover rounded-full"
+                className="w-10 Xl:w-[2.5vw] h-10 Xl:h-[2.5vw] object-cover rounded-full"
               />
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 text-white text-xs md:text-sm items-center">
+            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 text-white text-xs md:text-sm Xl:text-[0.8vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
@@ -198,7 +202,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     }}
                     className={`${
                       AnimationManager.activeSection === item.name
-                        ? "bg-customBlack2 p-2 rounded-full"
+                        ? "bg-customBlack2 p-2 Xl:p-3 rounded-full"
                         : ""
                     } hover:text-gray-400 ease-in-out-expo duration-300 transition-all ${
                       ["AboutUs", "Our Team"].includes(item.name)
@@ -234,10 +238,10 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             <Button
               text="Get The App"
               bgcolor="bg-customPurple"
-              textcolor="text-white"
+              textcolor="text-white Xl:text-[0.9vw]"
               bordercolor="border-customPurple"
-              height="h-7 sm:h-10"
-              width="w-24 lg:w-28"
+              height="h-7 sm:h-10 Xl:h-[2.4vw]"
+              width="w-24 lg:w-28 Xl:w-[7vw]"
               onClickFn={() => handleNavClick("/")}
             />
             {/* secondary Navbar button */}
@@ -245,10 +249,10 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <Button
                 text="Login"
                 bgcolor="bg-transparent"
-                textcolor="text-white"
+                textcolor="text-white Xl:text-[0.8vw]"
                 bordercolor="border-white"
-                height="h-7 sm:h-10"
-                width="w-24 lg:w-28"
+                height="h-7 sm:h-10 Xl:h-[2.4vw]"
+                width="w-24 lg:w-28 Xl:w-[7vw]"
                 onClickFn={() => router.push("/signin")}
               />
             ) : (
