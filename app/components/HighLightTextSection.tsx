@@ -51,7 +51,7 @@ const HighLightTextSection = () => {
           }
           breakIndex={7}
           index={13}
-          size="Xl:text-[56px] Xl:leading-[60px]"
+          size="Xl:text-[3vw] Xl:leading-[4vw]"
         />
       </div>
     </div>

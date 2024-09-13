@@ -100,16 +100,16 @@ const Hero: React.FC = () => {
           <div className="text-white opacity-75 text-md lg:text-lg  Xl:text-[1.3vw] Xl:leading-[2vw]">
             The Ultimate AI Assistant
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl Xl:text-[4vw] Xl:leading-[4vw] font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl Xl:text-[4vw] Xl:leading-[4vw]  font-bold text-white">
             Unlock The Power Of Your 2nd Brain
           </h2>
           <div className="w-full sm:w-5/6 mx-auto flex flex-col gap-4">
-            <p className="mt-2 text-white opacity-75 text-base lg:text-lg">
+            <p className="mt-2 text-white opacity-75 text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
               Ovadrive is designed to turn your phone into an assistant
               following you everywhere, learning all about your life and helping
               to utilize that.
             </p>
-            <p className="font-bold text-white text-base lg:text-lg">
+            <p className="font-bold text-white text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
               Own your data, own your life, own your future.
             </p>
           </div>
@@ -119,28 +119,28 @@ const Hero: React.FC = () => {
           <Button
             text="Android App"
             bgcolor="bg-customPurple"
-            textcolor="text-white"
+            textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-customPurple"
-            height="h-9"
-            width="w-28 sm:w-28"
+            height="h-9 Xl:h-[2vw]"
+            width="w-28 sm:w-28 Xl:w-[8vw]"
             onClickFn={() => (window.location.href = "/")}
           />
           <Button
             text="iOS App"
             bgcolor="bg-customPurple"
-            textcolor="text-white"
+            textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-customPurple"
-            height="h-9"
-            width="w-20 sm:w-28"
+            height="h-9 Xl:h-[2vw]"
+            width="w-20 sm:w-28 Xl:w-[6vw]"
             onClickFn={() => (window.location.href = "/")}
           />
           <Button
             text="Learn More"
             bgcolor="bg-transparent"
-            textcolor="text-white"
+            textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-white"
-            height="h-9"
-            width="w-24 sm:w-28"
+            height="h-9 Xl:h-[2vw]"
+            width="w-24 sm:w-28 Xl:w-[7vw]"
             onClickFn={() => (window.location.href = "/")}
           />
         </div>

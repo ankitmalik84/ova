@@ -56,11 +56,11 @@ const SliderComp: FC<SliderCompProps> = ({ heading, data }) => {
 
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-white text-3xl mb-8">{heading}</h2>
+      <h2 className="text-white text-3xl Xl:text-[1.8vw] mb-8">{heading}</h2>
       <Slider {...settings}>
         {data.map((item) => (
           <div key={item.id} className="px-1">
-            <div className="relative h-[300px] w-full">
+            <div className="relative h-[300px] Xl:h-[45vh] w-full">
               <Image
                 src={item.img}
                 alt="Slider Image"

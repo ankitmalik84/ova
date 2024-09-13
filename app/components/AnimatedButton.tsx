@@ -25,7 +25,7 @@ const AnimatedButton: FC<AnimatedButtonProps> = ({
   icon: Icon,
 }) => {
   return (
-    <div className="relative inline-block duration-100 ease-in-out-expo group">
+    <div className="relative inline-block duration-100 ease-in-out-expo group Xl:scale-150">
       <div className="absolute top-[-10px] left-[-10px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
         <PiStarFour className="text-gray-200 text-lg" />
       </div>

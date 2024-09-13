@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import AnimationManager from "../../utils/animationManager";
+import useSmoothScroll from "@/app/hook/useSmoothScroll";
 
 interface TextImageProps {
   id: number;
@@ -14,7 +15,7 @@ interface TextImageProps {
   highlightIndex?: number;
   leading?: string;
   img: string;
-  position: "left" | "right";
+  position: string;
 }
 
 gsap.registerPlugin(ScrollTrigger);
@@ -30,16 +31,17 @@ const TextImage: FC<TextImageProps> = ({
 }) => {
   const textImageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const smoothScroll = useCallback((direction: number) => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: {
-        y: `+=${window.innerHeight * direction}`,
-        autoKill: false,
-      },
-      ease: "power1.inOut",
-    });
-  }, []);
+  const smoothScroll = useSmoothScroll();
+  // const smoothScroll = useCallback((direction: number) => {
+  //   gsap.to(window, {
+  //     duration: 1,
+  //     scrollTo: {
+  //       y: `+=${window.innerHeight * direction}`,
+  //       autoKill: false,
+  //     },
+  //     ease: "power1.inOut",
+  //   });
+  // }, []);
 
   const setupAnimation = useCallback(() => {
     if (!contentRef.current || !textImageRef.current) return;
@@ -141,7 +143,7 @@ const TextImage: FC<TextImageProps> = ({
   return (
     <div
       ref={textImageRef}
-      className="w-full max-w-[1200px] h-[100vh] overflow-hidden"
+      className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden"
     >
       <div
         ref={contentRef}
@@ -153,14 +155,14 @@ const TextImage: FC<TextImageProps> = ({
       >
         <div className="w-full sm:w-3/5 flex flex-col">
           <h1
-            className={`text-3xl sm:text-4xl font-bold ${leading} text-white`}
+            className={`text-3xl sm:text-4xl Xl:text-[3vw] font-bold ${leading} text-white`}
           >
             {words.map((word, index) =>
               index === highlightIndex ? (
                 <HighLightText
                   key={index}
                   text={word + " "}
-                  size="text-4xl italic"
+                  size="text-4xl Xl:text-[3vw] italic"
                   type="bold"
                 />
               ) : (
@@ -169,12 +171,12 @@ const TextImage: FC<TextImageProps> = ({
             )}
           </h1>
           {description && (
-            <p className="mt-4 sm:mt-8 text-white opacity-75 text-md leading-6 sm:leading-7 text-[15px] sm:text-base">
+            <p className="mt-4 sm:mt-8 text-white opacity-75 text-md leading-6 sm:leading-7 text-[15px] sm:text-base Xl:text-[1.2vw] Xl:leading-[2vw]">
               {description}
             </p>
           )}
         </div>
-        <div className="w-full sm:w-2/5 min-h-[350px] max-h-[400px] relative">
+        <div className="w-full sm:w-2/5 min-h-[350px] h-[400px] Xl:h-[48vh] relative">
           <Image
             src={img}
             alt="Text image"

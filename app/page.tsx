@@ -39,7 +39,7 @@ export default function Home() {
   const comp = useRef<HTMLDivElement>(null);
   const intro_last = useRef<HTMLDivElement>(null);
   const welcome = useRef<HTMLDivElement>(null);
-
+  const textImageData = data.content;
   const ActiveSection = useRef<string>("Home");
   const smoothScroll = useSmoothScroll();
   // initially set the decoration to be hidden
@@ -48,7 +48,7 @@ export default function Home() {
     gsap.set(decoration.current, {
       autoAlpha: 0,
     });
-    
+
     const handleScrollDecoration = () => {
       // Check if scroll is less than 0.8 screen heights (approximately 0.8 screens)
       const threshold = window.innerHeight * 0.8;
@@ -135,7 +135,7 @@ export default function Home() {
           .to(intro_last.current, {
             opacity: 0,
           });
-          AnimationManager.addAnimation(tl);
+        AnimationManager.addAnimation(tl);
       }, comp.current);
 
       return () => {
@@ -183,7 +183,7 @@ export default function Home() {
               src={image.src}
               alt={image.alt}
               layout="fit"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
               className={`img p-[2px] `}
             />
             <div
@@ -229,6 +229,15 @@ export default function Home() {
                   position={item.position}
                 />
               ))}
+              {/* <TextImage
+                key={textImageData[0].id}
+                id={textImageData[0].id}
+                title={textImageData[0].title}
+                description={textImageData[0].description}
+                highlightIndex={textImageData[0].highlightIndex}
+                img={textImageData[0].img}
+                position={textImageData[0].position}
+              /> */}
             </div>
             {/* HighLightText2 section */}
             <HighLightTextSection />

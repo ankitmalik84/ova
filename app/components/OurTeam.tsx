@@ -79,8 +79,8 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
   }, [currentMemberImage, ref]);
 
   return (
-    <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] max-w-[1420px]">
-      <h1 className="text-3xl font-bold mb-10">Our Team</h1>
+    <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] Xl:h-[55vh] max-w-[1420px] Xl:max-w-[90vw]">
+      <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw]">Our Team</h1>
       <div className="flex flex-col md:flex-row w-full">
         {/* Left Side: One slider for content, one for images */}
         <div className="w-full lg:w-1/2 flex flex-col sm:flex-row">
@@ -89,10 +89,10 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[30px] sm:h-[40px] w-full flex items-center"
+                  className="h-[30px] sm:h-[40px] Xl:h-[6vh] w-full flex items-center"
                 >
                   <div className="p-1 sm:p-2">
-                    <h2 className="text-lg sm:text-2xl font-semibold">
+                    <h2 className="text-lg sm:text-2xl Xl:text-[1.5vw] font-semibold">
                       {member.name}
                     </h2>
                   </div>
@@ -103,7 +103,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div key={member.id} className="h-[220px] sm:h-[420px] w-full">
                   <div className="p-1 sm:p-2 flex flex-col gap-1 sm:gap-2">
-                    <p className="mt-2 sm:mt-4 text-sm sm:text-base leading-5 sm:leading-6">
+                    <p className="mt-2 sm:mt-4 text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1.15vw] Xl:leading-[1.6vw]">
                       {member.data}
                     </p>
                     {member.linkedin && (
@@ -113,7 +113,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-200 transition-colors duration-300"
                       >
-                        <FaLinkedin size={24} />
+                        <FaLinkedin size={"4vh"} />
                       </a>
                     )}
                   </div>
@@ -126,7 +126,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[340px] w-full border-2 relative border-white"
+                  className="h-[340px] Xl:h-[46vh] w-full border-2 relative border-white"
                 >
                   <Image
                     src={member.img}
@@ -148,9 +148,12 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               const nextIndex1 = (index + 1) % teamMembers.length;
 
               return (
-                <div key={index} className="h-[340px] pt-[36px]">
+                <div
+                  key={index}
+                  className="h-[340px] Xl:h-[46vh] pt-[36px] Xl:pt-[6vh]"
+                >
                   <div className="p-1">
-                    <div className="h-[300px] w-full relative">
+                    <div className="h-[300px] Xl:h-[40vh] w-full relative">
                       <Image
                         src={teamMembers[nextIndex1].img}
                         alt={teamMembers[nextIndex1].name}
