@@ -18,7 +18,7 @@ export default function Model() {
           <HighLightText2
             text="Master your data, seize your life, shape your future with OvaDrive"
             index={10}
-            size="Xl:text-[2vw] Xl:leading-[2.5vw]"
+            size="Xl:text-[42px] Xl:leading-[50px]"
           />
         </div>
         <div className="flex justify-center">

@@ -101,9 +101,12 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
             </Slider>
             <Slider {...leftSliderSettings2}>
               {teamMembers.map((member) => (
-                <div key={member.id} className="h-[220px] sm:h-[420px] w-full">
+                <div
+                  key={member.id}
+                  className="h-[220px] sm:h-[420px] Xl:h-[40vh] w-full"
+                >
                   <div className="p-1 sm:p-2 flex flex-col gap-1 sm:gap-2">
-                    <p className="mt-2 sm:mt-4 text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1.15vw] Xl:leading-[1.6vw]">
+                    <p className="mt-2 sm:mt-4 text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.5vw]">
                       {member.data}
                     </p>
                     {member.linkedin && (
