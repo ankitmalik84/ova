@@ -4,7 +4,7 @@ import HighLightText2 from "@/app/components/common/HighLightText2";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
-import AnimationManager from "../utils/animationManager"; 
+import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +22,7 @@ const HighLightTextSection = () => {
       trigger: element,
       start: "top 95%",
       end: "bottom 5%",
-      // markers: true, 
+      // markers: true,
       onEnter: () => {
         smoothScroll(0.95);
       },
@@ -32,7 +32,7 @@ const HighLightTextSection = () => {
     });
 
     AnimationManager.addScrollTrigger(scrollTrigger);
-    
+
     return () => {
       scrollTrigger.kill(); // Cleanup on unmount
       AnimationManager.removeScrollTrigger(scrollTrigger);
@@ -51,6 +51,7 @@ const HighLightTextSection = () => {
           }
           breakIndex={7}
           index={13}
+          size="Xl:text-[56px] Xl:leading-[60px]"
         />
       </div>
     </div>

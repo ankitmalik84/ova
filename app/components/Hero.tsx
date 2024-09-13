@@ -4,7 +4,7 @@ import Button from "@/app/components/common/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
-// import AnimationManager from "../utils/animationManager"; 
+// import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,17 +53,16 @@ const Hero: React.FC = () => {
       x: 0,
       ease: "expoScale",
       duration: 0.8,
-      
     }).to(
       heroSecond.current,
       {
         yPercent: -100,
         ease: "power1.inOut",
         duration: 0.8,
-        onComplete: () =>{
+        onComplete: () => {
           smoothScroll(1);
           // AnimationManager.removeAnimation(tl);
-        } 
+        },
       },
       "<"
     );
@@ -97,11 +96,11 @@ const Hero: React.FC = () => {
         ref={heroSecond}
         className="mt-[90px] absolute inset-0 flex flex-col items-center px-4 lg:px-12 backdrop-blur-lg"
       >
-        <div className="w-full max-w-6xl text-center space-y-4 flex flex-col justify-center h-full">
-          <div className="text-white opacity-75 text-md lg:text-lg">
+        <div className="w-full text-center space-y-4 flex flex-col justify-center h-full">
+          <div className="text-white opacity-75 text-md lg:text-lg  Xl:text-[1.3vw] Xl:leading-[2vw]">
             The Ultimate AI Assistant
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl Xl:text-[4vw] Xl:leading-[4vw] font-bold text-white">
             Unlock The Power Of Your 2nd Brain
           </h2>
           <div className="w-full sm:w-5/6 mx-auto flex flex-col gap-4">

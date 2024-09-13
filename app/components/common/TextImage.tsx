@@ -67,7 +67,7 @@ const TextImage: FC<TextImageProps> = ({
         from: { autoAlpha: 0 },
         to: {
           autoAlpha: 1,
-          duration: 1,
+          duration: 0.8,
           ease: "power1.inOut",
         },
         scrollTrigger: {
@@ -86,7 +86,7 @@ const TextImage: FC<TextImageProps> = ({
           xPercent: 0,
           yPercent: 0,
           autoAlpha: 1,
-          duration: 1,
+          duration: 0.8,
           ease: "power1.inOut",
         },
         scrollTrigger: {
@@ -120,10 +120,12 @@ const TextImage: FC<TextImageProps> = ({
 
     return () => {
       // console.log('Cleaning up TextImage animation.');
-      
+
       // Only remove the specific ScrollTrigger for this component
-      const triggers = ScrollTrigger.getAll().filter(t => t.trigger === textImageRef.current);
-      triggers.forEach(t => {
+      const triggers = ScrollTrigger.getAll().filter(
+        (t) => t.trigger === textImageRef.current
+      );
+      triggers.forEach((t) => {
         // console.log('Killing ScrollTrigger:', t);
         t.kill();
       });
@@ -177,7 +179,7 @@ const TextImage: FC<TextImageProps> = ({
             src={img}
             alt="Text image"
             fill // Replaces layout="fill"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: "cover" }}
             priority
           />
         </div>
