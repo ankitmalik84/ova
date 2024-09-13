@@ -107,10 +107,12 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <img
                 src="/images/logo.png"
                 alt="logo"
-                className="w-8 sm:w-10 h-8 sm:h-10 object-cover rounded-full"
+                className="w-8 sm:w-10 h-8 sm:h-10 Xl:w-[2.5vw] Xl:h-[2.5vw] object-cover rounded-full"
               />
             </Link>
-            <div className="text-white text-md sm:text-lg w-20">OvaDrive</div>
+            <div className="text-white text-md sm:text-lg Xl:text-[1.4vw] w-20">
+              OvaDrive
+            </div>
           </div>
           <div className="flex justify-between w-full">
             {path.split("/")[1] !== "documentation" ? (
@@ -118,7 +120,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 {pageName}
               </div>
             ) : (
-              <div className="my-auto text-white text-base sm:text-lg lg:ml-[8%] 2xl:ml-[15%] 3xl:ml-[20%]">
+              <div className="my-auto text-white text-base sm:text-lg Xl:text-[1.4vw] lg:ml-[8%] 2xl:ml-[15%] 3xl:ml-[20%]">
                 {pageName}
               </div>
             )}
