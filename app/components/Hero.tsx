@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
             bgcolor="bg-customPurple"
             textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-customPurple"
-            height="h-9 Xl:h-[2vw]"
+            height="h-9 Xl:h-[2.3vw]"
             width="w-28 sm:w-28 Xl:w-[8vw]"
             onClickFn={() => (window.location.href = "/")}
           />
@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
             bgcolor="bg-customPurple"
             textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-customPurple"
-            height="h-9 Xl:h-[2vw]"
+            height="h-9 Xl:h-[2.3vw]"
             width="w-20 sm:w-28 Xl:w-[6vw]"
             onClickFn={() => (window.location.href = "/")}
           />
@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
             bgcolor="bg-transparent"
             textcolor="text-white Xl:text-[1vw]"
             bordercolor="border-white"
-            height="h-9 Xl:h-[2vw]"
+            height="h-9 Xl:h-[2.3vw]"
             width="w-24 sm:w-28 Xl:w-[7vw]"
             onClickFn={() => (window.location.href = "/")}
           />
