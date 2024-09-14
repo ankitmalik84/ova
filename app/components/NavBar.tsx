@@ -75,19 +75,19 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
       <Button
         text="Sign Up"
         bgcolor="bg-transparent"
-        textcolor="text-customPurple"
+        textcolor="text-customPurple Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9"
-        width="w-24"
+        height="h-9 Xl:h-[5vh]"
+        width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signup")}
       />
       <Button
         text="Login"
         bgcolor="bg-customPurple"
-        textcolor="text-white"
+        textcolor="text-white Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9"
-        width="w-24"
+        height="h-9 Xl:h-[5vh]"
+        width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signin")}
       />
     </>
@@ -96,7 +96,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
   return (
     <nav
       className={`flex items-center justify-center ${
-        path.split("/")[1] && "py-4 px-4"
+        path.split("/")[1] && "py-4 Xl:py-[2.5vh] px-4"
       }`}
     >
       {path.split("/")[1] != "" ? (
@@ -120,14 +120,14 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 {pageName}
               </div>
             ) : (
-              <div className="my-auto text-white text-base sm:text-lg Xl:text-[1.4vw] lg:ml-[8%] 2xl:ml-[15%] 3xl:ml-[20%]">
+              <div className="my-auto text-white text-base sm:text-lg Xl:text-[1.4vw] lg:ml-[8%] 2xl:ml-[15%] 3xl:ml-[20%] Xl:ml-[6vw]">
                 {pageName}
               </div>
             )}
             {!session.data?.user ? (
               <>
                 {/* Button Rendering */}
-                <div className="hidden sm:flex space-x-2 sm:space-x-4">
+                <div className="hidden sm:flex space-x-2 sm:space-x-4 Xl:space-x-[1vw]">
                   {renderButtons()}
                 </div>
                 <div className="block sm:hidden">

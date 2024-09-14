@@ -25,34 +25,34 @@ const AnimatedButton: FC<AnimatedButtonProps> = ({
   icon: Icon,
 }) => {
   return (
-    <div className="relative inline-block duration-100 ease-in-out-expo group Xl:scale-150">
-      <div className="absolute top-[-10px] left-[-10px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-lg" />
+    <div className="relative inline-block duration-100 ease-in-out-expo group">
+      <div className="absolute top-[-10px] left-[-10px] Xl:top-[-1vw] Xl:left-[-0.5vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-lg Xl:text-[3vh]" />
       </div>
-      <div className="absolute top-[-35px] right-[5px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-2xl" />
+      <div className="absolute top-[-35px] right-[5px] Xl:top-[-5.5vh] Xl:right-[-0.1vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-2xl Xl:text-[3.5vh]" />
       </div>
-      <div className="absolute bottom-[-40px] left-[-15px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-2xl" />
+      <div className="absolute bottom-[-40px] left-[-15px] Xl:bottom-[-5vh] Xl:left-[-0.5vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-2xl Xl:text-[3.5vh]" />
       </div>
-      <div className="absolute bottom-[45px] right-[-10px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-sm" />
+      <div className="absolute bottom-[45px] right-[-10px] Xl:bottom-[5.5vh] Xl:right-[-1vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-sm Xl:text-[2vh]" />
       </div>
-      <div className="absolute bottom-[10px] left-[-20px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-sm" />
+      <div className="absolute bottom-[10px] left-[-20px] Xl:bottom-[1vh] Xl:left-[-1.3vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-sm Xl:text-[2vh]" />
       </div>
-      <div className="absolute bottom-[-15px] right-[-5px] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
-        <PiStarFour className="text-gray-200 text-lg" />
+      <div className="absolute bottom-[-15px] right-[-5px] Xl:bottom-[-2.5vh] Xl:right-[-0.5vw] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+        <PiStarFour className="text-gray-200 text-lg Xl:text-[3vh]" />
       </div>
       <div className=" transition-rotate group-hover:-rotate-[10deg]">
-        <div className="flex z-10 bg-black rounded-2xl transform transition-transform duration-100 ease-out group-hover:scale-105 group-hover:-translate-x-1 group-hover:translate-y-2">
+        <div className="flex z-10 bg-black rounded-2xl Xl:rounded-[2vh] transform transition-transform duration-100 ease-out group-hover:scale-105 group-hover:-translate-x-1 group-hover:translate-y-2 Xl:group-hover:-translate-x-[0.2vh] Xl:group-hover:translate-y-[0.5vh]">
           <button
             type="button"
             className={`relative ${width || "w-full"} ${
               height || "h-auto"
-            } ${bgcolor} rounded-2xl ${textcolor}
-          ${bordercolor} text-sm flex items-center overflow-hidden
-          gap-2 justify-center group-hover:translate-x-1 group-hover:-translate-y-2 border-[1px] font-bold ease-out duration-300 pl-2`}
+            } ${bgcolor} rounded-2xl Xl:rounded-[2vh] ${textcolor}
+          ${bordercolor} text-sm Xl:text-[1.6vh] flex items-center overflow-hidden
+          gap-2 justify-center group-hover:translate-x-1 group-hover:-translate-y-2 Xl:group-hover:translate-x-[0.5vh] Xl:group-hover:-translate-y-[0.8vh] border-[1px] font-bold ease-out duration-300 pl-2`}
             onClick={onClickFn}
           >
             {/* button text below slide animation */}
