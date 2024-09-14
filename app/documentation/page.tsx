@@ -94,7 +94,7 @@ const Documentation: React.FC = () => {
             <h2 className="mb-4 sm:mb-8 text-2xl sm:text-3xl Xl:text-[1.5vw] Xl:leading-[2vw]">
               Overview
             </h2>
-            <div className="flex flex-col gap-8 text-sm sm:text-md Xl:text-[2.5vh] leading-5 sm:leading-7 Xl:leading-[4.5vh]">
+            <div className="flex flex-col gap-8 Xl:gap-[4vh] text-sm sm:text-md Xl:text-[2.5vh] leading-5 sm:leading-7 Xl:leading-[4.5vh]">
               <p>{data.documentation}</p>
               <p>{data.documentation}</p>
               <p>{data.documentation}</p>
