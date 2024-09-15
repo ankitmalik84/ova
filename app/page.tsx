@@ -20,10 +20,8 @@ import img1 from "@/public/images/start/Frame1.png";
 import img2 from "@/public/images/start/Frame2.png";
 import img3 from "@/public/images/start/Frame3.png";
 import img4 from "@/public/images/start/Frame4.png";
-// import logo1 from "@/public/images/start/ova_logo1.png";
-// import logo2 from "@/public/images/start/ova_logo2.png";
 import logo3 from "@/public/images/start/ova_logo3.png";
-import { ScrollSmoother } from "gsap/all";
+// import { ScrollSmoother } from "gsap/all";
 import Hero from "./components/Hero";
 import HighLightTextSection from "./components/HighLightTextSection";
 import SliderSection from "./components/SliderSection";
@@ -39,10 +37,9 @@ export default function Home() {
   const comp = useRef<HTMLDivElement>(null);
   const intro_last = useRef<HTMLDivElement>(null);
   const welcome = useRef<HTMLDivElement>(null);
-  const textImageData = data.content;
+  // const textImageData = data.content;
   const ActiveSection = useRef<string>("Home");
   const smoothScroll = useSmoothScroll();
-  // initially set the decoration to be hidden
   useEffect(() => {
     // Initial setting of the decoration element
     gsap.set(decoration.current, {
@@ -146,7 +143,9 @@ export default function Home() {
   useEffect(() => {
     const handleNavClick = (event: CustomEvent) => {
       const targetId = event.detail;
-      // smoothScroll(targetId);
+      if (targetId) {
+        smoothScroll(targetId);
+      }
     };
 
     window.addEventListener("navClick", handleNavClick as EventListener);
@@ -204,7 +203,7 @@ export default function Home() {
       </div>
 
       {/* Welcome Section */}
-      <div ref={welcome} className="opacity-0 ">
+      <div ref={welcome} className="opacity-0" id="main-content">
         {/* outer decroative border */}
         <div
           ref={decoration}
@@ -229,20 +228,15 @@ export default function Home() {
                   position={item.position}
                 />
               ))}
-              {/* <TextImage
-                key={textImageData[0].id}
-                id={textImageData[0].id}
-                title={textImageData[0].title}
-                description={textImageData[0].description}
-                highlightIndex={textImageData[0].highlightIndex}
-                img={textImageData[0].img}
-                position={textImageData[0].position}
-              /> */}
             </div>
             {/* HighLightText2 section */}
-            <HighLightTextSection />
+            <div id="pre-about">
+              <HighLightTextSection />
+            </div>
             {/* Slider Section */}
-            <SliderSection activeSection={ActiveSection} />
+            <div id="pre-team">
+              <SliderSection activeSection={ActiveSection} />
+            </div>
             {/* Our Team Section */}
             <OurTeamSection activeSection={ActiveSection} />
             {/* Model Section */}

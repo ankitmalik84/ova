@@ -1,8 +1,8 @@
 {
   "navLinks": [
     { "id": 1, "name": "Home", "url": "/", "subLinks": [] },
-    { "id": 2, "name": "AboutUs", "url": "/", "subLinks": [] },
-    { "id": 3, "name": "Our Team", "url": "/", "subLinks": [] },
+    { "id": 2, "name": "AboutUs", "url": "#pre-about", "subLinks": [] },
+    { "id": 3, "name": "Our Team", "url": "#pre-team", "subLinks": [] },
     { "id": 4, "name": "Career", "url": "/", "subLinks": [] },
     { "id": 5, "name": "Privacy Policy", "url": "/", "subLinks": [] },
     {

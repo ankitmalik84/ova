@@ -38,7 +38,13 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
         activeSection.current = "AboutUs";
       },
       onLeaveBack: () => {
+        // router.push("/");
+        // console.log("leaving back", window.location.pathname);
+        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
         activeSection.current = "Home";
+      },
+      onLeave: () => {
+        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
       },
     });
     AnimationManager.addScrollTrigger(scrollTrigger);
@@ -50,7 +56,6 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
   return (
     <div
       ref={slider}
-      id="about-us"
       className="py-2 sm:py-10 h-[100vh] overflow-hidden flex flex-col justify-center"
     >
       <div className="flex flex-col my-24 h-[380px] Xl:h-[53vh]">

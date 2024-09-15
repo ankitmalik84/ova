@@ -4,7 +4,7 @@ import Button from "@/app/components/common/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
-// import AnimationManager from "../utils/animationManager";
+import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +24,8 @@ const Hero: React.FC = () => {
         trigger: heroSection.current,
         start: "top -2px",
         end: "+=100%",
-        pin: true,
+        pin: window.scrollY > window.innerHeight * 2 ? false : true,
+        // pin: true,
         // pinSpacing: true,
         // markers: true, // Remove markers for production
         // scrub: 1,
@@ -60,13 +61,15 @@ const Hero: React.FC = () => {
         ease: "power1.inOut",
         duration: 0.8,
         onComplete: () => {
-          smoothScroll(1);
+          if (window.scrollY < window.innerHeight * 1.2) {
+            smoothScroll(1);
+          }
           // AnimationManager.removeAnimation(tl);
         },
       },
       "<"
     );
-    // AnimationManager.addAnimation(tl);
+    AnimationManager.addAnimation(tl);
     return tl;
   }, [smoothScroll]);
 
@@ -75,7 +78,7 @@ const Hero: React.FC = () => {
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
-      // AnimationManager.removeAnimation(tl);
+      AnimationManager.removeAnimation(tl);
     };
   }, [setupHeroAnimations]);
 
@@ -89,12 +92,12 @@ const Hero: React.FC = () => {
       <div
         id="hero"
         ref={heroThird}
-        className="mt-[90px] absolute inset-0 bg-cover bg-center bg-texture-gradient"
+        className="mt-[90px] Xl:mt-[8vh] absolute inset-0 bg-cover bg-center bg-texture-gradient"
       ></div>
       {/* Hero section second layer (content) */}
       <div
         ref={heroSecond}
-        className="mt-[90px] absolute inset-0 flex flex-col items-center px-4 lg:px-12 backdrop-blur-lg"
+        className="mt-[90px] Xl:mt-[8vh] absolute inset-0 flex flex-col items-center px-4 lg:px-12 backdrop-blur-lg"
       >
         <div className="w-full text-center space-y-4 flex flex-col justify-center h-full">
           <div className="text-white opacity-75 text-md lg:text-lg  Xl:text-[1.3vw] Xl:leading-[2vw]">

@@ -22,7 +22,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [screenSize, setScreenSize] = useState(0);
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-  const [currentSection, setCurrentSection] = useState(activeSection?.current);
+  // const [currentSection, setCurrentSection] = useState(activeSection?.current);
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);
@@ -54,8 +54,10 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
     if (url.startsWith("#")) {
       const section = document.querySelector(url);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-        window.dispatchEvent(new CustomEvent("navClick", { detail: url }));
+        AnimationManager.autoKill = true;
+        // AnimationManager.stopAllAnimations();
+        // section.scrollIntoView({ behavior: "smooth", block: "start" });
+        // window.dispatchEvent(new CustomEvent("navClick", { detail: url }));
       }
     } else {
       router.push(url);
@@ -199,6 +201,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                   <Link
                     href={item.url}
                     onClick={() => {
+                      AnimationManager.autoKill = true;
                       setSelected(item.name);
                       handleNavClick(item.url);
                     }}
@@ -218,13 +221,13 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                   {item.subLinks.length > 0 && hoveredItem === item.id && (
                     <div
                       onMouseEnter={() => setHoveredItem(item.id)}
-                      className="absolute z-10 mt-5 bg-customBlack text-white rounded-lg ring-1 ring-white ring-opacity-70"
+                      className="absolute z-10 mt-5 Xl:mt-[3vh] bg-customBlack text-white rounded-lg Xl:rounded-3xl ring-1 Xl:ring-4 ring-white ring-opacity-70"
                     >
                       {item.subLinks.map((subLink) => (
                         <Link
                           key={subLink.id}
                           href={subLink.url}
-                          className="block px-4 py-3"
+                          className="block px-4 Xl:px-[1vw] py-3 Xl:py-[2vh]"
                           onClick={() => handleNavClick(subLink.url)}
                         >
                           {subLink.name}

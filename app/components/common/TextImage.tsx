@@ -32,16 +32,6 @@ const TextImage: FC<TextImageProps> = ({
   const textImageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const smoothScroll = useSmoothScroll();
-  // const smoothScroll = useCallback((direction: number) => {
-  //   gsap.to(window, {
-  //     duration: 1,
-  //     scrollTo: {
-  //       y: `+=${window.innerHeight * direction}`,
-  //       autoKill: false,
-  //     },
-  //     ease: "power1.inOut",
-  //   });
-  // }, []);
 
   const setupAnimation = useCallback(() => {
     if (!contentRef.current || !textImageRef.current) return;

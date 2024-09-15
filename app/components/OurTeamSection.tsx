@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
 import AnimationManager from "../utils/animationManager";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 interface TeamSectionProps {
@@ -26,7 +25,7 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
       trigger: element,
       start: "top 95%",
       end: "bottom 5%",
-      // markers: true,
+      markers: true,
       onEnter: () => {
         // setActiveSection("Our Team");
         activeSection.current = "Our Team";
@@ -34,6 +33,9 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
       },
       onEnterBack: () => {
         smoothScroll(-0.95);
+      },
+      onLeave: () => {
+        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
       },
     });
     AnimationManager.addScrollTrigger(scrollTrigger);
