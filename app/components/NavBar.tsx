@@ -191,7 +191,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 text-white text-xs md:text-sm Xl:text-[0.8vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 Xl:space-x-[1.5vw] text-white text-xs md:text-sm Xl:text-[0.8vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
@@ -207,7 +207,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     }}
                     className={`${
                       AnimationManager.activeSection === item.name
-                        ? "bg-customBlack2 p-2 Xl:p-3 rounded-full"
+                        ? "bg-customBlack2 p-2 Xl:p-[1vh] rounded-full"
                         : ""
                     } hover:text-gray-400 ease-in-out-expo duration-300 transition-all ${
                       ["AboutUs", "Our Team"].includes(item.name)
