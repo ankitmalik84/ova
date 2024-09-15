@@ -208,7 +208,7 @@ export default function ChatPage() {
   }, [date]);
 
   return (
-    <div className="h-fit xl:h-full 2xl:h-screen pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 ">
+    <div className="h-fit xl:h-full 2xl:h-screen pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
       <NavBar />
       <div className="flex gap-5 2xl:gap-6 3xl:gap-8 h-full">
         <LeftSidebar
