@@ -177,8 +177,8 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
           className={`fixed z-40 flex justify-between w-[97%] md:w-[94%] ${
             isOpen && screenSize >= 1024 && screenSize < 1280
               ? "lg:w-[82%] mr-[6rem]"
-              : "lg:w-[90%]"
-          } xl:w-9/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-2 Xl:px-[0.3vw] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4`}
+              : "lg:w-[95%]"
+          } xl:w-9/12 2xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-2 Xl:p-[1.5vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4`}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <div className="flex items-center space-x-2">
@@ -186,12 +186,12 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <img
                 src="/images/logo.png"
                 alt="logo"
-                className="w-10 Xl:w-[2.5vw] h-10 Xl:h-[2.5vw] object-cover rounded-full"
+                className="w-10 Xl:w-[6vh] h-10 Xl:h-[6vh] object-cover rounded-full"
               />
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 Xl:space-x-[1.5vw] text-white text-xs md:text-sm Xl:text-[0.8vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 Xl:space-x-[1.5vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
@@ -207,7 +207,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     }}
                     className={`${
                       AnimationManager.activeSection === item.name
-                        ? "bg-customBlack2 p-2 Xl:p-[1vh] rounded-full"
+                        ? "bg-customBlack2 p-2 Xl:p-[1.5vh] rounded-full"
                         : ""
                     } hover:text-gray-400 ease-in-out-expo duration-300 transition-all ${
                       ["AboutUs", "Our Team"].includes(item.name)
@@ -245,7 +245,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               bgcolor="bg-customPurple"
               textcolor="text-white Xl:text-[0.9vw]"
               bordercolor="border-customPurple"
-              height="h-7 sm:h-10 Xl:h-[5vh]"
+              height="h-7 sm:h-10 Xl:h-[6vh]"
               width="w-24 lg:w-28 Xl:w-[7vw]"
               onClickFn={() => handleNavClick("/")}
             />
@@ -256,7 +256,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 bgcolor="bg-transparent"
                 textcolor="text-white Xl:text-[0.9vw]"
                 bordercolor="border-white"
-                height="h-7 sm:h-10 Xl:h-[5vh]"
+                height="h-7 sm:h-10 Xl:h-[6vh]"
                 width="w-24 lg:w-28 Xl:w-[7vw]"
                 onClickFn={() => router.push("/signin")}
               />

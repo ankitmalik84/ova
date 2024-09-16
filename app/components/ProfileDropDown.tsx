@@ -46,7 +46,7 @@ export default function ProfileDropDown({
     <div className="relative flex" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 Xl:w-[2.4vw] h-10 Xl:h-[2.4vw] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
+        className="w-10 Xl:w-[6vh] h-10 Xl:h-[6vh] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
       >
         {session?.user?.email?.charAt(0).toUpperCase() ??
           email.charAt(0).toUpperCase()}
