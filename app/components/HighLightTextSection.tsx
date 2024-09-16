@@ -29,6 +29,9 @@ const HighLightTextSection = () => {
       onEnterBack: () => {
         smoothScroll(-0.95);
       },
+      onLeave: () => {
+        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+      },
     });
 
     AnimationManager.addScrollTrigger(scrollTrigger);

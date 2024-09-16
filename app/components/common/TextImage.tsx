@@ -88,6 +88,9 @@ const TextImage: FC<TextImageProps> = ({
           // markers: true,
           onEnter: () => smoothScroll(0.95),
           onEnterBack: () => smoothScroll(-0.95),
+          onLeave: () => {
+            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+          },
         },
       };
     }
