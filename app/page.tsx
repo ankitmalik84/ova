@@ -41,38 +41,30 @@ export default function Home() {
   const ActiveSection = useRef<string>("Home");
   const smoothScroll = useSmoothScroll();
   useEffect(() => {
-    // Initial setting of the decoration element
-    gsap.set(decoration.current, {
-      autoAlpha: 0,
-    });
+    if (typeof window !== "undefined") {
+      // Only run this code on the client
+      gsap.set(decoration.current, { autoAlpha: 0 });
 
-    const handleScrollDecoration = () => {
-      // Check if scroll is less than 0.8 screen heights (approximately 0.8 screens)
-      const threshold = window.innerHeight * 0.8;
-      const scrollY = window.scrollY;
-      if (scrollY < threshold || ActiveSection.current == "Our Team") {
-        gsap.to(decoration.current, { autoAlpha: 0 });
-        AnimationManager.activeSection = ActiveSection.current;
-        // console.log("pphhhhhppp", ActiveSection);
-      } else {
-        // Show the decoration if the scroll position is greater than or equal to 1.5 screens
-        gsap.to(decoration.current, { autoAlpha: 1 });
-        AnimationManager.activeSection = ActiveSection.current;
-        // console.log("ppppp", AnimationManager.activeSection);
-      }
-    };
+      const handleScrollDecoration = () => {
+        const threshold = window.innerHeight * 0.8;
+        const scrollY = window.scrollY;
+        if (scrollY < threshold || ActiveSection.current === "Our Team") {
+          gsap.to(decoration.current, { autoAlpha: 0 });
+        } else {
+          gsap.to(decoration.current, { autoAlpha: 1 });
+        }
+      };
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleScrollDecoration);
+      window.addEventListener("scroll", handleScrollDecoration);
 
-    // Cleanup function to remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScrollDecoration);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScrollDecoration);
+      };
+    }
   }, [ActiveSection]);
 
   useLayoutEffect(() => {
-    if (comp.current) {
+    if (typeof window !== "undefined" && comp.current) {
       const ctx = gsap.context(() => {
         const slides = document.getElementById("intro-slides");
         const slideup = slides?.querySelectorAll(".slide-up") as
