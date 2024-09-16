@@ -16,35 +16,35 @@ const TopNavigation: React.FC<TopNavigationProps> = ({
   onSummary,
 }) => {
   return (
-    <div className="p-4 flex flex-col gap-2 z-20 rounded-xl relative bg-customBlack2">
-      <h2 className="text-lg font-semibold bg-customBlack2">
+    <div className="p-4 flex flex-col gap-2 Xl:gap-[2vh] z-20 rounded-xl relative bg-customBlack2">
+      <h2 className="text-lg Xl:text-[2.5vh] font-semibold bg-customBlack2">
         Try features like-
       </h2>
-      <div className="flex flex-wrap gap-2 bg-customBlack2">
+      <div className="flex flex-wrap gap-2 Xl:gap-3 bg-customBlack2">
         <Button
           variant="outline"
-          className="text-white border-white border-opacity-75 rounded-xl"
+          className="text-white Xl:h-[4vh] Xl:text-[1.6vh] border-white border-opacity-75 rounded-xl Xl:py-[2vh] Xl:rounded-[1.2vh]"
           onClick={onImageGenerate} // Add onClick handler
         >
           Generate an image for me
         </Button>
         <Button
           variant="outline"
-          className="text-white border-white border-opacity-75 rounded-xl"
+          className="text-white Xl:h-[4vh] Xl:text-[1.6vh] border-white border-opacity-75 rounded-xl Xl:py-[2vh] Xl:rounded-[1.2vh]"
           onClick={onMusicGenerate} // Add onClick handler
         >
           Generate a music for me
         </Button>
         <Button
           variant="outline"
-          className="text-white border-white border-opacity-75 rounded-xl"
+          className="text-white Xl:h-[4vh] Xl:text-[1.6vh] border-white border-opacity-75 rounded-xl Xl:py-[2vh] Xl:rounded-[1.2vh]"
           onClick={onScheduleEvent} // Add onClick handler
         >
           Schedule an event for me on calendar
         </Button>
         <Button
           variant="outline"
-          className="text-white border-white border-opacity-75 rounded-xl"
+          className="text-white Xl:h-[4vh] Xl:text-[1.6vh] border-white border-opacity-75 rounded-xl Xl:py-[2vh] Xl:rounded-[1.2vh]"
           onClick={onSummary} // Add onClick handler
         >
           Write a summary of past 24 hours

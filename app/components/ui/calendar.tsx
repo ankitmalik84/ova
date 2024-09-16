@@ -33,16 +33,16 @@ function Calendar({
         table: "w-full border-collapse space-y-1",
         head_row: "flex",
         head_cell:
-          "text-muted-foreground w-8 lg:w-[2.35em] sxl:w-8 xl:w-[39px] xxl:w-11 2xl:w-[48px] 3xl:w-14 font-normal text-[0.8rem]",
+          "text-muted-foreground w-8 lg:w-[2.35em] sxl:w-8 xl:w-[39px] xxl:w-11 2xl:w-[48px] 3xl:w-14 Xl:w-[5vh] font-normal text-[0.8rem] Xl:text-[1.8vh]",
         row: "flex w-full mt-2",
-        cell: "h-7 xl:h-8 2xl:h-10 w-8 lg:w-[2.1em] sxl:w-8 xl:w-[39px] xxl:w-11 2xl:w-[48px] 3xl:w-14 text-center text-[0.9rem] p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "h-7 xl:h-8 2xl:h-10 Xl:h-[4vh] w-8 lg:w-[2.1em] sxl:w-8 xl:w-[39px] xxl:w-11 2xl:w-[48px] 3xl:w-14 Xl:w-[5vh] text-center text-[0.9rem] Xl:text-[2vh] p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-8 2xl:h-10 w-8 2xl:w-10 p-0 rounded-full font-normal aria-selected:opacity-100"
+          "h-8 2xl:h-10 w-8 2xl:w-10 p-0 rounded-full font-normal Xl:text-[2vh] aria-selected:opacity-100"
         ),
         day_range_end: "day-range-end",
         day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+          "bg-primary Xl:p-[1.5vh] text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
         day_today: "bg-accent text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
@@ -54,11 +54,11 @@ function Calendar({
       }}
       components={{
         Caption: ({ displayMonth }) => (
-          <div className="flex justify-between items-center p-1">
-            <span className="text-xs xl:text-sm font-medium pl-2 xl:pl-3 2xl:pl-4">
+          <div className="flex justify-between items-center p-1 Xl:p-[2vh]">
+            <span className="text-xs xl:text-sm Xl:text-[1.8vh] font-medium pl-2 xl:pl-3 2xl:pl-4 Xl:pl-0">
               Chat History
             </span>
-            <span className="text-xs xl:text-sm font-medium pr-2 xl:pr-3 2xl:pr-4">
+            <span className="text-xs xl:text-sm Xl:text-[1.8vh] font-medium pr-2 xl:pr-3 2xl:pr-4 Xl:pr-0">
               {displayMonth.toLocaleString("default", {
                 month: "long",
                 year: "numeric",

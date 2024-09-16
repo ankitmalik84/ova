@@ -208,9 +208,9 @@ export default function ChatPage() {
   }, [date]);
 
   return (
-    <div className="h-fit xl:h-full 2xl:h-screen pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
+    <div className="h-fit xl:h-full 2xl:h-screen Xl:h-[95vh] pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
       <NavBar />
-      <div className="flex gap-5 2xl:gap-6 3xl:gap-8 h-full">
+      <div className="flex gap-5 2xl:gap-6 3xl:gap-8 Xl:gap-[1.5vw] h-full">
         <LeftSidebar
           handleSummaryPromptClick={handleSummaryPromptClick}
           handleScheduledActionClick={handleScheduledActionClick}
@@ -219,7 +219,7 @@ export default function ChatPage() {
         />
         {/* Main Chat Area */}
         <div className="flex-1 w-[100%] lg:w-[95%] xl:w-[94%] flex flex-col justify-between rounded-xl bg-customBlack2 relative">
-          <h1 className="absolute z-[99999] hidden lg:flex -top-12 text-white text-base sm:text-lg">
+          <h1 className="absolute z-[99999] hidden lg:flex -top-12 Xl:-top-[6vh] text-white text-base sm:text-lg Xl:text-[3vh]">
             Chat
           </h1>
           {/* Top Navigation */}
@@ -231,30 +231,32 @@ export default function ChatPage() {
           />
 
           {/* Chat Messages Area */}
-          <div className="flex-1 pt-28 pb-16 p-4 overflow-y-auto z-10 absolute top-0 bottom-0 w-full">
+          <div className="flex-1 pt-28 Xl:pt-[12vh] pb-16 Xl:pb-[8vh] p-4 overflow-y-auto z-10 absolute top-0 bottom-0 w-full">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`flex ${
                   msg.sender === "user" ? "justify-end" : "justify-start"
-                } mb-4`}
+                } mb-4 Xl:mb-8`}
               >
                 {msg.sender === "model" && (
                   <img
                     src="/images/logo.png"
                     alt="model logo"
-                    className="h-7 w-7 mr-2"
+                    className="h-7 w-7 Xl:h-[4vh] Xl:w-[4vh] mr-2"
                   />
                 )}
                 <div
-                  className={`max-w-[80%] p-3  rounded-xl text-white ${
+                  className={`max-w-[80%] p-3 Xl:p-[1.5vh] rounded-xl Xl:rounded-2xl text-white ${
                     msg.sender === "model"
-                      ? "bg-[#A600FC] rounded-tl-none"
-                      : "bg-customPurple bg-opacity-40 rounded-tr-none"
+                      ? "bg-[#A600FC] rounded-tl-none Xl:rounded-tl-none"
+                      : "bg-customPurple bg-opacity-40 rounded-tr-none Xl:rounded-tr-none"
                   }`}
                 >
-                  <p className="text-sm">{msg.content}</p>
-                  <p className="text-xs mt-2 text-right">{msg.time}</p>
+                  <p className="text-sm Xl:text-[1.8vh]">{msg.content}</p>
+                  <p className="text-xs Xl:text-[1.4vh] mt-2 Xl:mt-[1.8vh] text-right">
+                    {msg.time}
+                  </p>
                 </div>
               </div>
             ))}
@@ -282,7 +284,7 @@ export default function ChatPage() {
                 className="absolute left-0 ml-2"
                 onClick={toggleMediaOptions}
               >
-                <Paperclip className="h-5 w-5" />
+                <Paperclip className="h-5 w-5 Xl:h-[2.5vh] Xl:w-[2.5vh]" />
               </button>
               {/* Input Field */}
               <textarea
@@ -290,18 +292,18 @@ export default function ChatPage() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={handleKeyDown} // Handle key down events
-                className="pt-3 pl-10 w-full bg-customBlack text-white border-none h-12 rounded-xl"
+                className="pt-3 pl-10 Xl:pl-[4.5vh] w-full bg-customBlack Xl:text-[2vh] text-white border-none h-12 Xl:h-[5vh] rounded-xl"
                 style={{ maxHeight: "12rem" }}
               ></textarea>
             </div>
             {/* Send Button */}
             <Button
               type="submit"
-              className="ml-2 w-10 h-10 bg-purple-600 rounded-full flex justify-center items-center"
+              className="ml-2 Xl:ml-[1.5vh] w-10 h-10 Xl:w-[5vh] Xl:h-[5vh] bg-purple-600 rounded-full flex justify-center items-center"
             >
               <img
                 src="/images/icons/send.png"
-                className="h-6 w-6 invert"
+                className="h-6 w-6 Xl:w-[3vh] Xl:h-[3vh] invert"
                 alt="send icon"
               />
             </Button>

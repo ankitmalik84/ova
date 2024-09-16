@@ -15,18 +15,24 @@ const MediaOption: React.FC<{
   onClick: () => void; // Add onClick prop
 }> = ({ iconSrc, IconComponent, label, alt, onClick }) => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-2 Xl:gap-4">
       <button
         onClick={onClick}
-        className="h-10 w-10 bg-customPurple rounded-full text-center flex justify-center items-center text-white"
+        className="h-10 Xl:h-[5vh] w-10 Xl:w-[5vh] bg-customPurple rounded-full text-center flex justify-center items-center text-white"
       >
         {iconSrc ? (
-          <img src={iconSrc} className="h-7 w-7 invert" alt={alt} />
+          <img
+            src={iconSrc}
+            className="h-7 Xl:h-[3.5vh] w-7 Xl:w-[3.5vh] invert"
+            alt={alt}
+          />
         ) : (
-          IconComponent && <IconComponent className="h-7 w-7 text-white-500" />
+          IconComponent && (
+            <IconComponent className="h-7 Xl:h-[3.5vh] w-7 Xl:w-[3.5vh] text-white-500" />
+          )
         )}
       </button>
-      <span className="text-xs">{label}</span>
+      <span className="text-xs Xl:text-[1.5vh]">{label}</span>
     </div>
   );
 };
@@ -38,7 +44,7 @@ const MediaOptions: React.FC<MediaOptionsProps> = ({
   return (
     <div
       ref={mediaPopUpRef}
-      className="absolute bottom-20 left-4 bg-customGray rounded-xl p-4 shadow-lg flex gap-4 z-50"
+      className="absolute bottom-20 Xl:bottom-[7vh] left-4 bg-customGray rounded-xl p-4 Xl:p-[1.5vh] shadow-lg flex gap-4 Xl:gap-[2vh] z-50"
     >
       <MediaOption
         iconSrc="/images/icons/camera.png"

@@ -15,7 +15,7 @@ export function CalendarComp({ date, setDate }: CalendarCompProps) {
       mode="single"
       selected={date}
       onSelect={setDate}
-      className="rounded-md bg-customBlack2 text-foreground"
+      className="rounded-md Xl:rounded-xl bg-customBlack2 text-foreground"
     />
   );
 }
