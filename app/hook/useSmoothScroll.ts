@@ -6,6 +6,15 @@ import AnimationManager from "../utils/animationManager";
 gsap.registerPlugin(ScrollToPlugin);
 
 const useSmoothScroll = () => {
+  let initialScrollTop = window.scrollY; // Store the initial scroll position before animation
+  let userScrolled = false; // Flag to check if the user manually scrolled
+
+  // Event listener to detect manual scrolling during the animation
+  window.addEventListener("scroll", () => {
+    if (Math.abs(window.scrollY - initialScrollTop) > 5) {
+      userScrolled = true;
+    }
+  });
   const smoothScroll = useCallback(
     (target: number | string, duration?: number) => {
       if (typeof target === "string") {
@@ -33,6 +42,17 @@ const useSmoothScroll = () => {
             autoKill: AnimationManager.autoKill || false,
           },
           ease: "power1.inOut",
+          onUpdate: () => {
+            // Detect if the user scrolls during animation and set autoKill to true
+            if (userScrolled) {
+              AnimationManager.autoKill = true; // Update the global autoKill flag
+            }
+          },
+          onComplete: () => {
+            // Reset autoKill after the animation completes
+            userScrolled = false; // Reset the manual scroll detection flag
+            AnimationManager.autoKill = false; // Reset the global autoKill flag
+          },
         });
       }
     },
