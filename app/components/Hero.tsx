@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-3 mb-5 flex flex-row space-x-2 justify-end w-full">
+        {/* <div className="mt-3 mb-5 flex flex-row space-x-2 justify-end w-full">
           <Button
             text="Android App"
             bgcolor="bg-customPurple"
@@ -146,7 +146,7 @@ const Hero: React.FC = () => {
             width="w-24 sm:w-28 Xl:w-[7vw]"
             onClickFn={() => (window.location.href = "/")}
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Hero section first layer (text overlay) */}
