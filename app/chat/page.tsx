@@ -208,7 +208,7 @@ export default function ChatPage() {
   }, [date]);
 
   return (
-    <div className="h-fit xl:h-full 2xl:h-screen Xl:h-[95vh] pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
+    <div className="h-[90vh] Xl:h-[95vh] pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
       <NavBar />
       <div className="flex gap-5 2xl:gap-6 3xl:gap-8 Xl:gap-[1.5vw] h-full">
         <LeftSidebar
@@ -218,7 +218,7 @@ export default function ChatPage() {
           setDate={setDate} // Pass setDate to LeftSidebar
         />
         {/* Main Chat Area */}
-        <div className="flex-1 w-[100%] lg:w-[95%] xl:w-[94%] flex flex-col justify-between rounded-xl bg-customBlack2 relative">
+        <div className="flex-1 w-[100%] lg:w-[95%] xl:w-[94%] flex flex-col justify-between rounded-xl Xl:rounded-[2vh] bg-customBlack2 relative">
           <h1 className="absolute z-[99999] hidden lg:flex -top-12 Xl:-top-[6vh] text-white text-base sm:text-lg Xl:text-[3vh]">
             Chat
           </h1>
@@ -231,11 +231,11 @@ export default function ChatPage() {
           />
 
           {/* Chat Messages Area */}
-          <div className="flex-1 pt-28 Xl:pt-[12vh] pb-16 Xl:pb-[8vh] p-4 overflow-y-auto z-10 absolute top-0 bottom-0 w-full">
+          <div className=" flex-1 pt-28 Xl:pt-[15vh] pb-16 Xl:pb-[9vh] p-4 Xl:px-[2vh] overflow-y-auto z-10 top-0 bottom-0 absolute w-full rounded-xl Xl:rounded-[2vh]">
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`flex ${
+                className={` flex ${
                   msg.sender === "user" ? "justify-end" : "justify-start"
                 } mb-4 Xl:mb-8`}
               >
@@ -243,7 +243,7 @@ export default function ChatPage() {
                   <img
                     src="/images/logo.png"
                     alt="model logo"
-                    className="h-7 w-7 Xl:h-[4vh] Xl:w-[4vh] mr-2"
+                    className="h-7 w-7 Xl:h-[4vh] Xl:w-[4vh] mr-2 Xl:mr-[1vh]"
                   />
                 )}
                 <div
@@ -267,7 +267,7 @@ export default function ChatPage() {
           {/* Message Input */}
           <form
             onSubmit={handleSendMessage}
-            className="p-4 bg-customBlack2 flex items-center relative z-20 rounded-b-xl max-h-32"
+            className="p-4 Xl:p-[4vh] bg-customBlack2 flex items-center relative z-20 rounded-b-xl Xl:rounded-b-[2vh] max-h-32"
           >
             {/* media upload options */}
             {showMediaOptions && (
@@ -281,7 +281,7 @@ export default function ChatPage() {
               {/* Media Toggle Button */}
               <button
                 type="button"
-                className="absolute left-0 ml-2"
+                className="absolute left-0 ml-2 Xl:ml-[1vh]"
                 onClick={toggleMediaOptions}
               >
                 <Paperclip className="h-5 w-5 Xl:h-[2.5vh] Xl:w-[2.5vh]" />

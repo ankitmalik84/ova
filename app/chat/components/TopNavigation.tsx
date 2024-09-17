@@ -16,7 +16,7 @@ const TopNavigation: React.FC<TopNavigationProps> = ({
   onSummary,
 }) => {
   return (
-    <div className="p-4 flex flex-col gap-2 Xl:gap-[2vh] z-20 rounded-xl relative bg-customBlack2">
+    <div className="p-4 Xl:p-[3vh] flex flex-col gap-2 Xl:gap-[2vh] z-20 rounded-xl Xl:rounded-[2vh] relative bg-customBlack2">
       <h2 className="text-lg Xl:text-[2.5vh] font-semibold bg-customBlack2">
         Try features like-
       </h2>

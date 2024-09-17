@@ -44,7 +44,7 @@ const MediaOptions: React.FC<MediaOptionsProps> = ({
   return (
     <div
       ref={mediaPopUpRef}
-      className="absolute bottom-20 Xl:bottom-[7vh] left-4 bg-customGray rounded-xl p-4 Xl:p-[1.5vh] shadow-lg flex gap-4 Xl:gap-[2vh] z-50"
+      className="absolute bottom-20 Xl:bottom-[10vh] left-4 Xl:left-[4vh] bg-customGray rounded-xl p-4 Xl:p-[2vh] shadow-lg flex gap-4 Xl:gap-[2vh] z-50"
     >
       <MediaOption
         iconSrc="/images/icons/camera.png"

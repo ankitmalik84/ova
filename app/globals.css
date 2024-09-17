@@ -8,8 +8,8 @@
 
 *::-webkit-scrollbar-track {
   background: rgba(109, 109, 109, 0.507);
-  margin-bottom: 9px;
-  margin-top: 8.8px;
+  margin-bottom: 2vh;
+  margin-top: 2ch;
 }
 
 *::-webkit-scrollbar-thumb {
