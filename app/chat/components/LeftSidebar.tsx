@@ -33,7 +33,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               <img
                 src="/images/icons/calendar.png"
                 alt="summary"
-                className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] object-cover"
+                className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] object-cover"
               />
               Upcoming events
             </button>
@@ -46,7 +46,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               <img
                 src="/images/icons/notes.png"
                 alt="summary"
-                className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] object-cover"
+                className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] object-cover"
               />
               Summary about you
             </button>
@@ -61,7 +61,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               <img
                 src="/images/icons/star.png"
                 alt="summary"
-                className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] invert"
+                className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh] invert"
               />
               Guess your astrological sign
             </button>
@@ -77,7 +77,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               onClick={() => handleScheduledActionClick("Today's summary")}
             >
               <span className="flex items-center text-sm 2xl:text-base Xl:text-[2vh]">
-                <Clock4 className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
+                <Clock4 className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
                 Today's summary
               </span>
               <span className="text-xs Xl:text-[1.5vh] text-customGray2">
@@ -91,7 +91,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               onClick={() => handleScheduledActionClick("Sentimental score")}
             >
               <span className="flex items-center text-sm 2xl:text-base Xl:text-[2vh]">
-                <Smile className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
+                <Smile className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
                 Sentimental score
               </span>
               <span className="text-xs Xl:text-[1.5vh] text-customGray2">
@@ -105,7 +105,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
               onClick={() => handleScheduledActionClick("Poem about your day")}
             >
               <span className="flex items-center text-sm 2xl:text-base Xl:text-[2vh]">
-                <Album className="mr-2 h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
+                <Album className="mr-2 Xl:mr-[1.5vh] h-4 2xl:h-6 Xl:h-[3vh] w-4 2xl:w-6 Xl:w-[3vh]" />{" "}
                 Poem about your day
               </span>
               <span className="text-xs Xl:text-[1.5vh] text-customGray2">
