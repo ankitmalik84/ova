@@ -18,7 +18,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
   setDate,
 }) => {
   return (
-    <div className="lg:w-[22%] xl:w-[23%] hidden lg:flex flex-col">
+    <div className="lg:w-[22%] xl:w-[23%] hidden lg:flex flex-col Xl:pt-[1vh]">
       {/* Left side Utilities */}
       <div className="flex flex-col">
         <h2 className="text-sm 2xl:text-base Xl:text-[2vh] font-semibold mb-4 Xl:mb-[2.5vh] text-customGray2">
@@ -67,7 +67,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
             </button>
           </li>
         </ul>
-        <h2 className="text-sm 2xl:text-base Xl:text-[2vh] font-semibold mt-4 3xl:mt-8 Xl:mt-[3vh] mb-4 Xl:mb-[3vh] text-customGray2">
+        <h2 className="text-sm 2xl:text-base Xl:text-[2vh] font-semibold mt-4 3xl:mt-8 Xl:mt-[4vh] mb-4 Xl:mb-[3vh] text-customGray2">
           Scheduled actions
         </h2>
         <ul className="space-y-5 3xl:space-y-6 Xl:space-y-[3vh] mb-6">
