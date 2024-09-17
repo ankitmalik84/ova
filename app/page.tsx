@@ -187,7 +187,7 @@ export default function Home() {
               className={`img`}
             />
             <div
-              className={`absolute w-[120%] top-0 -left-5 right-0 bottom-0 bg-customBlack slide-up ${
+              className={`absolute top-0 left-0 right-0 bottom-0 bg-customBlack slide-up ${
                 image.alt === "logo" ? "hidden" : ""
               }`} // Conditional class to hide slide-up for logo
             ></div>
