@@ -138,6 +138,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     alt={member.name}
                     fill
                     style={{ objectFit: "cover" }}
+                    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                   />
                 </div>

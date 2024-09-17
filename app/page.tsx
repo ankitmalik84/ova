@@ -71,9 +71,6 @@ export default function Home() {
           | NodeListOf<HTMLElement>
           | undefined;
         const logo = slides?.querySelector("img[alt='logo']");
-        const slideExpectLogo = slides?.querySelectorAll(
-          ".holder:not(:has(img[alt='logo']))"
-        );
 
         const tl = gsap.timeline({
           defaults: {
@@ -95,10 +92,6 @@ export default function Home() {
             y: "100%", // Slide up the covering divs
             stagger: 0.2,
             ease: "power1.inOut",
-            onComplete: () => {
-              // Hide the slideExpectLogo elements after animation
-              gsap.set(slideExpectLogo || [], { autoAlpha: 0 });
-            },
           })
           // Logo rotation animations
           .to(logo || [], {
@@ -179,13 +172,15 @@ export default function Home() {
               image.alt === "logo" ? "p-5 w-[17%]" : "w-[16%]"
             }`} // Add 'relative' to holder to position slide-up correctly
           >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              // layout="fit"
-              // style={{ objectFit: "cover" }}
-              className={`img`}
-            />
+            <div className="p-1">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="fit"
+                style={{ objectFit: "cover" }}
+                className={`img`}
+              />
+            </div>
             <div
               className={`absolute top-0 left-0 right-0 bottom-0 bg-customBlack slide-up ${
                 image.alt === "logo" ? "hidden" : ""
