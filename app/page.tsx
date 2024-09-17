@@ -172,13 +172,13 @@ export default function Home() {
               image.alt === "logo" ? "p-5 w-[17%]" : "w-[16%]"
             }`} // Add 'relative' to holder to position slide-up correctly
           >
-            <div className="p-1">
+            <div className="p-1 justify-center flex items-center ">
               <Image
                 src={image.src}
                 alt={image.alt}
                 layout="fit"
                 style={{ objectFit: "cover" }}
-                className={`img`}
+                className={`img Xl:min-h-[35vh] Xl:min-w-[35vh] `}
               />
             </div>
             <div

@@ -206,7 +206,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                       handleNavClick(item.url);
                     }}
                     className={`${
-                      AnimationManager.activeSection === item.name
+                      activeSection?.current === item.name
                         ? "bg-customBlack2 p-2 Xl:p-[1.5vh] rounded-full"
                         : ""
                     } hover:text-gray-400 ease-in-out-expo duration-300 transition-all ${
