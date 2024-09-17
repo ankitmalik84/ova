@@ -21,10 +21,10 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
     <div className="lg:w-[22%] xl:w-[23%] hidden lg:flex flex-col">
       {/* Left side Utilities */}
       <div className="flex flex-col">
-        <h2 className="text-sm 2xl:text-base Xl:text-[1.8vh] font-semibold mb-4 Xl:mb-[1.8vh] text-customGray2">
+        <h2 className="text-sm 2xl:text-base Xl:text-[2vh] font-semibold mb-4 Xl:mb-[2.5vh] text-customGray2">
           Summary prompts
         </h2>
-        <ul className="space-y-5 3xl:space-y-6 Xl:space-y-[2vh]">
+        <ul className="space-y-5 3xl:space-y-6 Xl:space-y-[3vh]">
           <li>
             <button
               className="flex items-center w-full text-left text-sm 2xl:text-base Xl:text-[2vh]"
@@ -67,10 +67,10 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
             </button>
           </li>
         </ul>
-        <h2 className="text-sm 2xl:text-base Xl:text-[1.8vh] font-semibold mt-4 3xl:mt-8 Xl:mt-[2vh] mb-4 Xl:mb-[1.8vh] text-customGray2">
+        <h2 className="text-sm 2xl:text-base Xl:text-[2vh] font-semibold mt-4 3xl:mt-8 Xl:mt-[3vh] mb-4 Xl:mb-[3vh] text-customGray2">
           Scheduled actions
         </h2>
-        <ul className="space-y-5 3xl:space-y-6 Xl:space-y-[2vh] mb-6">
+        <ul className="space-y-5 3xl:space-y-6 Xl:space-y-[3vh] mb-6">
           <li>
             <button
               className="flex items-center justify-between w-full text-left"
