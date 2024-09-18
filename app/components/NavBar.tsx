@@ -209,11 +209,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                       activeSection?.current === item.name
                         ? "bg-customBlack2 p-2 Xl:p-[1.5vh] rounded-full"
                         : ""
-                    } hover:text-gray-400 ease-in-out-expo duration-300 transition-all ${
-                      ["AboutUs", "Our Team"].includes(item.name)
-                        ? "cursor-default"
-                        : "cursor-pointer"
-                    }`}
+                    } hover:text-gray-400 ease-in-out-expo duration-300 transition-all cursor-pointer `}
                   >
                     {item.name}
                   </Link>
