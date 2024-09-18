@@ -52,6 +52,9 @@ const TextImage: FC<TextImageProps> = ({
           // markers: true,
           onEnter: () => smoothScroll(0.85),
           onEnterBack: () => smoothScroll(-0.95),
+          onLeave: () => {
+            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+          },
         },
       };
     } else if (id !== 3) {
@@ -69,6 +72,12 @@ const TextImage: FC<TextImageProps> = ({
           // markers: true,
           onEnter: () => smoothScroll(0.95),
           onEnterBack: () => smoothScroll(-0.95),
+          onLeave: () => {
+            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+          },
+          onLeaveBack: () => {
+            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+          },
         },
       };
     } else {
@@ -89,6 +98,9 @@ const TextImage: FC<TextImageProps> = ({
           onEnter: () => smoothScroll(0.95),
           onEnterBack: () => smoothScroll(-0.95),
           onLeave: () => {
+            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+          },
+          onLeaveBack: () => {
             if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
         },
@@ -119,7 +131,7 @@ const TextImage: FC<TextImageProps> = ({
       });
 
       if (animation) {
-        AnimationManager.removeAnimation(animation); 
+        AnimationManager.removeAnimation(animation);
       }
     };
   }, [setupAnimation]);
@@ -166,7 +178,7 @@ const TextImage: FC<TextImageProps> = ({
           <Image
             src={img}
             alt="Text image"
-            fill 
+            fill
             style={{ objectFit: "cover" }}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
