@@ -221,13 +221,13 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                   {item.subLinks.length > 0 && hoveredItem === item.id && (
                     <div
                       onMouseEnter={() => setHoveredItem(item.id)}
-                      className="absolute z-10 mt-5 Xl:mt-[3vh] bg-customBlack text-white rounded-lg Xl:rounded-3xl ring-1 Xl:ring-4 ring-white ring-opacity-70"
+                      className="absolute z-10 mt-5 Xl:mt-[4vh] bg-customBlack text-white rounded-lg Xl:rounded-[1.5vh] ring-1 Xl:ring-4 ring-white ring-opacity-70"
                     >
                       {item.subLinks.map((subLink) => (
                         <Link
                           key={subLink.id}
                           href={subLink.url}
-                          className="block px-4 Xl:px-[1vw] py-3 Xl:py-[2vh]"
+                          className="block px-4 Xl:px-[1vw] py-3 Xl:py-[2.5vh]"
                           onClick={() => handleNavClick(subLink.url)}
                         >
                           {subLink.name}
