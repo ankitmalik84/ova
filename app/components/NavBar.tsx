@@ -104,7 +104,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
       {path.split("/")[1] != "" ? (
         <>
           {/* Logo and Page Name for Documentation */}
-          <div className="flex items-center space-x-2 w-[17rem]">
+          <div className="flex items-center space-x-3 Xl:space-x-[1.5vh] w-[17rem]">
             <Link href="/">
               <img
                 src="/images/logo.png"
@@ -112,7 +112,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 className="w-8 sm:w-10 h-8 sm:h-10 Xl:w-[2.5vw] Xl:h-[2.5vw] object-cover rounded-full"
               />
             </Link>
-            <div className="text-white text-md sm:text-lg Xl:text-[1.4vw] w-20">
+            <div className="text-white text-md sm:text-lg Xl:text-[1.5vw] w-20">
               OvaDrive
             </div>
           </div>
