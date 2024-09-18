@@ -283,7 +283,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     <button
                       key={item.id}
                       className="text-sm p-2 flex hover:text-gray-400"
-                      onClick={() => handleNavClick(item.url || (item.subLinks.length > 0 ? item.subLinks[0].url : " "))}
+                      onClick={() => handleNavClick((item.subLinks.length > 0 ? item.subLinks[0].url :  item.url ))}
                       onMouseEnter={() => setHoveredItem(item.id)}
                     >
                       {/* {item.name} */}
