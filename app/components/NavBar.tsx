@@ -275,7 +275,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             {open && (
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="flex z-[900] absolute top-8 right-8 bg-customBlack rounded-lg border-[1px]"
+                className="flex z-[900] absolute top-2 right-2 bg-customBlack rounded-lg border-[1px]"
                 ref={ref}
               >
                 <div className="flex flex-col space-y-2 w-32 divide-y-[1px]">
@@ -283,9 +283,11 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     <button
                       key={item.id}
                       className="text-sm p-2 flex hover:text-gray-400"
-                      onClick={() => handleNavClick(item.url)}
+                      onClick={() => handleNavClick(item.url || (item.subLinks.length > 0 ? item.subLinks[0].url : " "))}
+                      onMouseEnter={() => setHoveredItem(item.id)}
                     >
-                      {item.name}
+                      {/* {item.name} */}
+                      {(item.subLinks.length > 0 ? item.subLinks[0].name : item.name)}
                     </button>
                   ))}
                   {!session.data?.user && (
