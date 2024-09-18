@@ -24,9 +24,6 @@ class AnimationManager {
         this.removeOldestAnimation();
       }
       this.activeAnimations.push(animation);
-      // console.log(
-      //   `Added animation. Active animations: ${this.activeAnimations.length}`
-      // );
     } catch (error) {
       console.error("Failed to add animation:", error);
     }
@@ -44,9 +41,6 @@ class AnimationManager {
         this.removeOldestScrollTrigger();
       }
       this.activeScrollTriggers.push(trigger);
-      // console.log(
-      //   `Added scroll trigger. Active scroll triggers: ${this.activeScrollTriggers.length}`
-      // );
     } catch (error) {
       console.error("Failed to add scroll trigger:", error);
     }
@@ -58,9 +52,6 @@ class AnimationManager {
       if (index > -1) {
         this.activeAnimations.splice(index, 1);
         (animation as gsap.core.Tween).kill?.(); // Ensure animation is killed if it's a Tween
-        // console.log(
-        //   `Removed animation. Active animations: ${this.activeAnimations.length}`
-        // );
       }
     } catch (error) {
       console.error("Failed to remove animation:", error);
@@ -73,9 +64,6 @@ class AnimationManager {
       if (index > -1) {
         this.activeScrollTriggers.splice(index, 1);
         trigger.kill(); // Ensure trigger is killed
-        // console.log(
-        //   `Removed scroll trigger. Active scroll triggers: ${this.activeScrollTriggers.length}`
-        // );
       }
     } catch (error) {
       console.error("Failed to remove scroll trigger:", error);
@@ -87,9 +75,6 @@ class AnimationManager {
       const oldest = this.activeAnimations.shift();
       if (oldest) {
         (oldest as gsap.core.Tween).kill?.(); // Stop the oldest animation if it's a Tween
-        // console.log(
-        //   `Removed oldest animation. Active animations: ${this.activeAnimations.length}`
-        // );
       }
     } catch (error) {
       console.error("Failed to remove the oldest animation:", error);
@@ -101,9 +86,6 @@ class AnimationManager {
       const oldest = this.activeScrollTriggers.shift();
       if (oldest) {
         oldest.kill(); // Stop the oldest scroll trigger
-        // console.log(
-        //   `Removed oldest scroll trigger. Active scroll triggers: ${this.activeScrollTriggers.length}`
-        // );
       }
     } catch (error) {
       console.error("Failed to remove the oldest scroll trigger:", error);
@@ -120,8 +102,6 @@ class AnimationManager {
       this.activeScrollTriggers.forEach((trigger) => {
         trigger.disable(); // Disable the scroll trigger without killing it
       });
-
-      // console.log("Stopped all animations.");
     } catch (error) {
       console.error("Failed to stop all animations:", error);
     }

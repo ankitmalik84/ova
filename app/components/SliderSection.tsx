@@ -39,7 +39,6 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
       },
       onLeaveBack: () => {
         // router.push("/");
-        // console.log("leaving back", window.location.pathname);
         if (AnimationManager.autoKill) AnimationManager.autoKill = false;
         activeSection.current = "Home";
       },

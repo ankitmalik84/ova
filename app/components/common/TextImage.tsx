@@ -100,8 +100,6 @@ const TextImage: FC<TextImageProps> = ({
       scrollTrigger: animationSettings.scrollTrigger,
     }) as gsap.core.Tween; // Cast Timeline as Tween
 
-    // console.log('Setting up animation:', animation);
-
     if (animation) {
       AnimationManager.addAnimation(animation);
     }
@@ -109,24 +107,19 @@ const TextImage: FC<TextImageProps> = ({
   }, [id, smoothScroll]);
 
   useEffect(() => {
-    // console.log('Setting up TextImage animation.');
-
     const animation = setupAnimation();
 
     return () => {
-      // console.log('Cleaning up TextImage animation.');
-
       // Only remove the specific ScrollTrigger for this component
       const triggers = ScrollTrigger.getAll().filter(
         (t) => t.trigger === textImageRef.current
       );
       triggers.forEach((t) => {
-        // console.log('Killing ScrollTrigger:', t);
         t.kill();
       });
 
       if (animation) {
-        AnimationManager.removeAnimation(animation); // Assuming animation is a Tween, not ScrollTrigger
+        AnimationManager.removeAnimation(animation); 
       }
     };
   }, [setupAnimation]);
@@ -173,7 +166,7 @@ const TextImage: FC<TextImageProps> = ({
           <Image
             src={img}
             alt="Text image"
-            fill // Replaces layout="fill"
+            fill 
             style={{ objectFit: "cover" }}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority

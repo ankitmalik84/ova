@@ -29,7 +29,6 @@ import OurTeamSection from "./components/OurTeamSection";
 import ModelSection from "./components/ModelSection";
 import AnimationManager from "./utils/animationManager";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Home() {
@@ -37,7 +36,6 @@ export default function Home() {
   const comp = useRef<HTMLDivElement>(null);
   const intro_last = useRef<HTMLDivElement>(null);
   const welcome = useRef<HTMLDivElement>(null);
-  // const textImageData = data.content;
   const ActiveSection = useRef<string>("Home");
   const smoothScroll = useSmoothScroll();
   useEffect(() => {
@@ -93,7 +91,6 @@ export default function Home() {
             stagger: 0.2,
             ease: "power1.inOut",
           })
-          // Logo rotation animations
           .to(logo || [], {
             rotate: -180,
             duration: 0.5,
@@ -170,7 +167,7 @@ export default function Home() {
             key={index}
             className={`holder overflow-hidden relative  ${
               image.alt === "logo" ? "p-5 w-[17%]" : "w-[16%]"
-            }`} // Add 'relative' to holder to position slide-up correctly
+            }`} 
           >
             <div className="p-1 justify-center flex items-center ">
               <Image
@@ -184,7 +181,7 @@ export default function Home() {
             <div
               className={`absolute top-0 left-0 right-0 bottom-0 bg-customBlack slide-up ${
                 image.alt === "logo" ? "hidden" : ""
-              }`} // Conditional class to hide slide-up for logo
+              }`}
             ></div>
           </div>
         ))}

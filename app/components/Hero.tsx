@@ -26,9 +26,7 @@ const Hero: React.FC = () => {
         end: "+=100%",
         pin: window.scrollY > window.innerHeight * 2 ? false : true,
         // pin: true,
-        // pinSpacing: true,
         // markers: true, // Remove markers for production
-        // scrub: 1,
         onUpdate: (self) => {
           const progressThreshold = window.innerWidth >= 768 ? 0.05 : 0.02;
           gsap.to(heroFirst.current, {
@@ -40,10 +38,9 @@ const Hero: React.FC = () => {
         },
         onEnterBack: () => {
           smoothScroll(-1);
-          // Restart timeline when entering back
         },
         onLeaveBack: () => {
-          tl.reverse(); // Reverse the animation timeline when scrolling back
+          tl.reverse(); 
         },
       },
     });
@@ -64,7 +61,6 @@ const Hero: React.FC = () => {
           if (window.scrollY < window.innerHeight * 1.2) {
             smoothScroll(1);
           }
-          // AnimationManager.removeAnimation(tl);
         },
       },
       "<"
@@ -117,36 +113,6 @@ const Hero: React.FC = () => {
             </p>
           </div>
         </div>
-
-        {/* <div className="mt-3 mb-5 flex flex-row space-x-2 justify-end w-full">
-          <Button
-            text="Android App"
-            bgcolor="bg-customPurple"
-            textcolor="text-white Xl:text-[1vw]"
-            bordercolor="border-customPurple"
-            height="h-9 Xl:h-[2.3vw]"
-            width="w-28 sm:w-28 Xl:w-[8vw]"
-            onClickFn={() => (window.location.href = "/")}
-          />
-          <Button
-            text="iOS App"
-            bgcolor="bg-customPurple"
-            textcolor="text-white Xl:text-[1vw]"
-            bordercolor="border-customPurple"
-            height="h-9 Xl:h-[2.3vw]"
-            width="w-20 sm:w-28 Xl:w-[6vw]"
-            onClickFn={() => (window.location.href = "/")}
-          />
-          <Button
-            text="Learn More"
-            bgcolor="bg-transparent"
-            textcolor="text-white Xl:text-[1vw]"
-            bordercolor="border-white"
-            height="h-9 Xl:h-[2.3vw]"
-            width="w-24 sm:w-28 Xl:w-[7vw]"
-            onClickFn={() => (window.location.href = "/")}
-          />
-        </div> */}
       </div>
 
       {/* Hero section first layer (text overlay) */}

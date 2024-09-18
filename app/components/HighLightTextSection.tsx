@@ -40,8 +40,7 @@ const HighLightTextSection = () => {
       scrollTrigger.kill(); // Cleanup on unmount
       AnimationManager.removeScrollTrigger(scrollTrigger);
     };
-  }, [smoothScroll]); // Add smoothScroll as a dependency
-
+  }, [smoothScroll]); 
   return (
     <div
       className="flex w-full h-[100vh] mx-auto py-16 sm:py-24 items-center "

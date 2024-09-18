@@ -11,7 +11,7 @@ interface ButtonProps {
   height?: string;
   width?: string;
   icon?:
-    | React.ComponentType<{ className: string }> // Add className prop to the Icon component type
+    | React.ComponentType<{ className: string }> 
     | ((props: any) => ReactElement<any, string | JSXElementConstructor<any>>);
   disabled?: boolean;
 }

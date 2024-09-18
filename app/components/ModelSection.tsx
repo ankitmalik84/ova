@@ -20,7 +20,6 @@ const ModelSection = () => {
       end: "bottom bottom",
       // markers: true, // Set to true for debugging
       onEnter: () => {
-        // gsap.to(element, { autoAlpha: 1, ease: "power2.inOut" });
         smoothScroll(0.95);
       },
       // onEnterBack: () => {
@@ -38,7 +37,7 @@ const ModelSection = () => {
     return () => {
       scrollTrigger.kill(); // Cleanup on unmount
     };
-  }, [smoothScroll]); // Add smoothScroll as a dependency
+  }, [smoothScroll]);
   return (
     <div ref={model} className="pt-[200px] sm:pt-[10%] h-[100vh]">
       <Model />
