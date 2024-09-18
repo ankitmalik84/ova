@@ -56,10 +56,10 @@ export default function ProfileDropDown({
           className={`
           ${
             path.split("/")[1] === ""
-              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-7 xl:left-[1.4vw] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
+              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-7 xl:left-[1.4vw] Xl:left-[3.5vh] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
               : "absolute  lg:top-14 md:-left-20 Xl:top-[3.5vw] Xl:-left-[4.5vw] rounded-2xl z-[9999]"
           }
-          mt-[56px] lg:-mt-2 Xl:-mt-[0.5vw] w-28 lg:w-32 Xl:w-[7.5vw] -right-2 lg:right-auto h-14 Xl:h-[3.2vw]  shadow-lg bg-transparent border border-[#ffffff88]  p-2`}
+          mt-[56px] lg:-mt-2 Xl:-mt-[1.8vh] w-28 lg:w-32 Xl:w-[7.5vw] -right-2 lg:right-auto h-14 Xl:h-[9.5vh] bg-transparent border border-[#ffffff88]  p-2`}
         >
           <div
             className="justify-end items-center"
