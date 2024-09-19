@@ -253,7 +253,9 @@ export default function ChatPage() {
                       : "bg-customPurple bg-opacity-40 rounded-tr-none Xl:rounded-tr-none"
                   }`}
                 >
-                  <div className="text-sm Xl:text-[1.8vh]">{msg.content}</div>
+                  <p className="text-sm Xl:text-[1.8vh] Xl:leading-[2vh]">
+                    {msg.content}
+                  </p>
                   <p className="text-xs Xl:text-[1.4vh] mt-2 Xl:mt-[1.8vh] text-right">
                     {msg.time}
                   </p>
