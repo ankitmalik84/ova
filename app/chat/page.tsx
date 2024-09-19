@@ -208,7 +208,7 @@ export default function ChatPage() {
   }, [date]);
 
   return (
-    <div className="h-[90vh] Xl:h-[90vh] pb-4 2xl:pb-24 pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
+    <div className="h-[90vh] Xl:h-[88vh] pb-4  pt-2 md:px-12 lg:px-16 Xl:px-[10vw]">
       <NavBar />
       <div className="flex gap-5 2xl:gap-6 3xl:gap-8 Xl:gap-[1.5vw] h-full">
         <LeftSidebar
@@ -218,7 +218,7 @@ export default function ChatPage() {
           setDate={setDate} // Pass setDate to LeftSidebar
         />
         {/* Main Chat Area */}
-        <div className="flex-1 w-[100%] lg:w-[95%] xl:w-[94%] flex flex-col justify-between rounded-xl Xl:rounded-[2vh] bg-customBlack2 relative">
+        <div className=" flex-1 w-[100%] lg:w-[95%] xl:w-[94%] flex flex-col justify-between rounded-xl Xl:rounded-[2vh] bg-customBlack2 relative">
           <h1 className="absolute z-[99999] hidden lg:flex -top-12 Xl:-top-[6vh] text-white text-base sm:text-lg Xl:text-[3vh]">
             Chat
           </h1>
@@ -235,7 +235,7 @@ export default function ChatPage() {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={` flex ${
+                className={`flex ${
                   msg.sender === "user" ? "justify-end" : "justify-start"
                 } mb-4 Xl:mb-8`}
               >
@@ -253,7 +253,7 @@ export default function ChatPage() {
                       : "bg-customPurple bg-opacity-40 rounded-tr-none Xl:rounded-tr-none"
                   }`}
                 >
-                  <p className="text-sm Xl:text-[1.8vh]">{msg.content}</p>
+                  <div className="text-sm Xl:text-[1.8vh]">{msg.content}</div>
                   <p className="text-xs Xl:text-[1.4vh] mt-2 Xl:mt-[1.8vh] text-right">
                     {msg.time}
                   </p>
