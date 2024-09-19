@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
               y="50%"
               textAnchor="middle"
               dy=".35em"
-              className="text-[16vw] md:text-[8vw] lg:text-[12vh] font-extrabold flex justify-center"
+              className="text-[16vw] md:text-[7vw] lg:text-[10vh] font-extrabold flex justify-center"
               fill="black"
             >
               OVA DRIVE
