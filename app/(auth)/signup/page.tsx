@@ -64,13 +64,13 @@ export default function Signup(): any {
           <img
             src="/images/logo.png"
             alt="logo"
-            className="w-10 h-10 object-cover rounded-full -ml-[90%]"
+            className="w-10 Xl:w-[2.5vw] h-10 Xl:h-[2.5vw] object-cover rounded-full -ml-[90%]"
           />
-          <div className="flex flex-col gap-8 w-4/5 max-w-md">
+          <div className="flex flex-col gap-8 w-4/5 Xl:max-w-[80%] ">
             <div className="w-full">
               <HeadPara title="Join OvaDrive!" highlightIndex={1} />
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="gap-2 flex flex-col my-2">
+                <div className="gap-2 Xl:gap-[1.3vh] flex flex-col my-2 Xl:my-[2vh] ">
                   <Input
                     id="name"
                     label="Name"

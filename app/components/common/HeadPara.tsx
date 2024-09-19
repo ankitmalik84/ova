@@ -18,14 +18,14 @@ const HeadPara: React.FC<HeadParaProps> = ({
   return (
     <div className={`w-full mx-auto flex flex-col ${description && "my-16"} `}>
       <h1
-        className={`text-3xl sm:text-4xl font-bold ${leading || ""} text-white`}
+        className={`text-3xl sm:text-4xl Xl:text-[4vh] font-bold ${leading || ""} text-white`}
       >
         {words.map((word, index) =>
           index === highlightIndex ? (
             <HighLightText
               key={word + index}
               text={word + " "}
-              size="text-4xl"
+              size="text-4xl Xl:text-[4vh] Xl:leading-[7vh]"
               type="bold"
             />
           ) : (

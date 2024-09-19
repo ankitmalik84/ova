@@ -59,14 +59,14 @@ export default function Signin() {
           <img
             src="/images/logo.png"
             alt="logo"
-            className="w-10 h-10 object-cover rounded-full -ml-[90%]"
+            className="w-10 Xl:w-[2.5vw] h-10 Xl:h-[2.5vw] object-cover rounded-full -ml-[90%] Xl:mb-[3vh]"
           />
-          <div className="flex flex-col gap-8 w-4/5 max-w-md">
+          <div className="flex flex-col gap-8 w-4/5 Xl:max-w-[80%]">
             {/* Form */}
-            <div className="w-full">
+            <div className="w-full ">
               <HeadPara title="Welcome back to OvaDrive!" highlightIndex={3} />
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="gap-2 flex flex-col my-6">
+                <div className="gap-2 Xl:gap-[1.3vh] flex flex-col my-6 Xl:my-[2vh]">
                   <Input
                     id="email"
                     label="Email"
@@ -88,13 +88,13 @@ export default function Signin() {
                   <Button disabled={isLoading} type="submit" fullWidth>
                     Sign in
                   </Button>
+                </div>
+              </form>
                   <BottomWarning
                     text={"Don't have an account?"}
                     linkText={"Register"}
                     path={"/signup"}
                   />
-                </div>
-              </form>
             </div>
           </div>
         </div>

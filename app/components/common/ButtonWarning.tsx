@@ -12,7 +12,7 @@ const BottomWarning: React.FC<BottomWarningProps> = ({
   path,
 }) => {
   return (
-    <div className="text-center text-sm py-4">
+    <div className="text-center text-sm Xl:text-[2vh] py-4">
       <span className="text-muted-foreground">{text}</span>
       <Link
         href={path}

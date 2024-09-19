@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <div className="my-1">
-      <label htmlFor={id} className="text-customGray2 text-md w-full">
+      <label htmlFor={id} className="text-customGray2 text-md Xl:text-[2vh] w-full">
         {label}
       </label>
       <div className="relative">
@@ -41,14 +41,14 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeholder}
           className={clsx(
             `
-            text-sm
+            text-sm Xl:text-[2vh]
             bg-customBlack2
             w-full
             px-2
-            py-2
+            py-2 Xl:py-[1.2vh]
             text-white
             font-normal
-            rounded-lg
+            rounded-lg Xl:rounded-[0.8vh]
             form-input
             sm:text-sm
             sm:leading-6
@@ -58,10 +58,10 @@ const Input: React.FC<InputProps> = ({
         />
         {type === "password" && (
           <span
-            className="absolute right-3 top-2 cursor-pointer text-customGray"
+            className="absolute right-3 Xl:right-[1vh] top-2 Xl:top-[1vh] cursor-pointer text-customGray"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+            {showPassword ? <FaRegEyeSlash className="Xl:text-[2.5vh]" /> : <FaRegEye className="Xl:text-[2.5vh]" />}
           </span>
         )}
       </div>

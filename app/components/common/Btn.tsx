@@ -27,8 +27,8 @@ const Button: React.FC<ButtonProps> = ({
         justify-center
         rounded-full
         px-3
-        py-2
-        text-sm
+        py-2 Xl:py-[1.8vh]
+        text-sm Xl:text-[2vh]
         font-semibold
         bg-customPurple
       `,
