@@ -53,7 +53,7 @@ export default function Signin() {
 
   return (
     <div className="bg-customBlack2 h-screen flex justify-center items-center p-4">
-      <div className="flex flex-col lg:flex-row bg-customBlack w-full max-w-4xl h-auto lg:h-[85%] rounded-lg overflow-hidden shadow-lg">
+      <div className="flex flex-col lg:flex-row bg-customBlack w-full max-w-4xl Xl:max-w-[54vw] h-auto lg:h-[85%] rounded-lg overflow-hidden shadow-lg">
         <div className="lg:w-1/2 flex flex-col justify-center items-center p-8 gap-4">
           {/* Left side sign-in form section and logo */}
           <img
