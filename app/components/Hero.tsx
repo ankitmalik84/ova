@@ -126,11 +126,11 @@ const Hero: React.FC = () => {
           <mask id="mask">
             <rect width="100vw" height="100vh" fill="white" />
             <text
-              x="48%"
+              x="50%"
               y="50%"
               textAnchor="middle"
               dy=".35em"
-              className="text-[16vw] md:text-[8vw] font-extrabold flex justify-center"
+              className="text-[16vw] md:text-[8vw] lg:text-[6vw] font-extrabold flex justify-center"
               fill="black"
             >
               OVA DRIVE
