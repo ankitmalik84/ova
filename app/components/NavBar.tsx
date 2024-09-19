@@ -122,7 +122,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 {pageName}
               </div>
             ) : (
-              <div className="my-auto text-white text-base sm:text-lg Xl:text-[1.4vw] lg:ml-[8%] 2xl:ml-[15%] 3xl:ml-[20%] Xl:ml-[10vw]">
+              <div className="my-auto lg:opacity-0 text-white text-base sm:text-lg Xl:text-[1.4vw] -ml-[5vw] 2xl:-ml-[1.2vw] Xl:ml-[12vh]">
                 {pageName}
               </div>
             )}

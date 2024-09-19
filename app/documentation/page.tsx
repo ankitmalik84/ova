@@ -63,7 +63,7 @@ const Documentation: React.FC = () => {
       </div>
       <div className="flex w-full h-full">
         {/* Left side scrollable search section */}
-        <div className="hidden sm:block relative p-4 Xl:p-[0.8vw] border-r-[0.08px] border-t-[0.08px] border-gray-300 rounded-tr-2xl Xl:rounded-tr-3xl w-2/6 sm:w-3/12 lg:w-2/12  h-screen overflow-hidden">
+        <div className="hidden sm:block relative p-4 Xl:p-[0.8vw] border-r-[0.08px] border-t-[0.08px] border-gray-300 rounded-tr-2xl Xl:rounded-tr-[2vh] w-2/6 sm:w-3/12 lg:w-2/12  h-screen overflow-hidden">
           <div className="relative">
             <input
               className="appearance-none Xl:h-[5vh] Xl:text-[2vh] bg-transparent border-2 border-gray-400 rounded-md Xl:rounded-2xl w-full py-2 pl-4 pr-10 text-white leading-tight focus:outline-none focus:ring-gray-600 focus:border-gray-400 mb-4"
@@ -89,7 +89,10 @@ const Documentation: React.FC = () => {
         </div>
 
         {/* Right side content section */}
-        <div className=" w-full sm:w-9/12 lg:w-10/12 h-fit bg-customBlack2 ml-4 Xl:ml-[2vw] mr-4 sm:mr-12 Xl:mr-[3vw] rounded-xl Xl:rounded-3xl">
+        <div className="relative w-full sm:w-9/12 lg:w-10/12 h-fit bg-customBlack2 ml-4 Xl:ml-[2vw] mr-4 sm:mr-12 Xl:mr-[3vw] rounded-xl Xl:rounded-[2vh]">
+        <h1 className="absolute z-[99999] hidden lg:flex lg:left-7 xl:left-0 -top-12 Xl:-top-[6vh] text-white text-base sm:text-lg Xl:text-[3vh]">
+            Documentation
+          </h1>
           <div className="p-6 py-6 sm:py-12 Xl:py-[4vh]  sm:px-12 md:px-20 Xl:px-[4vw]">
             <h2 className="mb-4 sm:mb-8 text-2xl sm:text-3xl Xl:text-[1.5vw] Xl:leading-[2vw]">
               Overview
