@@ -1,6 +1,5 @@
 "use client";
 import AnimatedButton from "@/app/components/AnimatedButton";
-
 import HighLightText2 from "@/app/components/common/HighLightText2";
 import { GoArrowUpRight } from "react-icons/go";
 

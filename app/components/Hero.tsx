@@ -1,6 +1,5 @@
 "use client";
-import { useRef, useState, useEffect, useCallback } from "react";
-import Button from "@/app/components/common/Button";
+import { useRef, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
@@ -26,7 +25,7 @@ const Hero: React.FC = () => {
         end: "+=100%",
         pin: window.scrollY > window.innerHeight * 2 ? false : true,
         // pin: true,
-        // markers: true, // Remove markers for production
+        // markers: true,
         onUpdate: (self) => {
           const progressThreshold = window.innerWidth >= 768 ? 0.05 : 0.02;
           gsap.to(heroFirst.current, {
