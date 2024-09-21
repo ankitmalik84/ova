@@ -191,7 +191,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-6 Xl:space-x-[1vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-4 Xl:space-x-[1vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
