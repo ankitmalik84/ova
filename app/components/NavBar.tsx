@@ -176,8 +176,8 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
         <div
           className={`fixed z-40 flex justify-between w-[97%] md:w-[94%] ${
             isOpen && screenSize >= 1024 && screenSize < 1280
-              ? "lg:w-[65%] mr-[4rem]"
-              : "lg:w-[69%]"
+              ? "lg:w-[75%] mr-[4rem]"
+              : "lg:w-[79%]"
           } xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[0.8vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
           onMouseLeave={() => setHoveredItem(null)}
         >
@@ -191,7 +191,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-3 xl:space-x-3 Xl:space-x-[0.7vw] text-white text-xs md:text-[12px] 2xl:text-[14px] Xl:text-[0.9vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-4 xl:space-x-7 Xl:space-x-[1.6vw] text-white text-xs md:text-[12px] 2xl:text-[14px] Xl:text-[0.9vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
