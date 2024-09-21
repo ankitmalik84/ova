@@ -46,7 +46,7 @@ export default function ProfileDropDown({
     <div className="relative flex" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 Xl:w-[6vh] h-10 Xl:h-[6vh] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
+        className="w-9 Xl:w-[6vh] h-9 Xl:h-[6vh] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
       >
         {session?.user?.email?.charAt(0).toUpperCase() ??
           email.charAt(0).toUpperCase()}
@@ -56,10 +56,10 @@ export default function ProfileDropDown({
           className={`
           ${
             path.split("/")[1] === ""
-              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-6 xl:left-[1.4vw] Xl:left-[1.5vw] Xl:h-[8.5vh] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
+              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-5 xl:left-[1.3vw] Xl:left-[1.5vw] Xl:h-[8vh] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
               : "absolute  lg:top-14 md:-left-20 Xl:top-[4.5vw] Xl:-left-[6vw] Xl:h-[7vh] justify-center items-center flex  rounded-2xl Xl:rounded-[2vh] z-[9999]"
           }
-          mt-[56px] lg:-mt-2 Xl:-mt-[1.3vh] w-28 lg:w-32 Xl:w-[9vw] -right-2 lg:right-auto h-14 bg-transparent border border-[#ffffff88]  p-2`}
+          mt-[56px] lg:-mt-2 Xl:-mt-[1.1vh] w-28 lg:w-32 Xl:w-[8.5vw] -right-2 lg:right-auto h-[53px] bg-transparent border border-[#ffffff88]  p-2`}
         >
           <div
             className="justify-end items-center"

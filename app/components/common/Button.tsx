@@ -11,7 +11,7 @@ interface ButtonProps {
   height?: string;
   width?: string;
   icon?:
-    | React.ComponentType<{ className: string }> 
+    | React.ComponentType<{ className: string }>
     | ((props: any) => ReactElement<any, string | JSXElementConstructor<any>>);
   disabled?: boolean;
 }
@@ -34,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
       className={` ${width || "w-full"} ${
         height || "h-auto"
       } ${bgcolor} rounded-full ${textcolor} 
-                border-[0.6px] ${bordercolor} text-sm flex items-center 
+                border-[0.6px] ${bordercolor} text-xs 2xl:text-sm flex items-center 
                 gap-2 justify-center`}
       disabled={disabled}
     >

@@ -176,9 +176,9 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
         <div
           className={`fixed z-40 flex justify-between w-[97%] md:w-[94%] ${
             isOpen && screenSize >= 1024 && screenSize < 1280
-              ? "lg:w-[82%] mr-[6rem]"
-              : "lg:w-[95%]"
-          } xl:w-8/12 2xl:w-7/12 Xl:w-7/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[1.1vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
+              ? "lg:w-[65%] mr-[4rem]"
+              : "lg:w-[69%]"
+          } xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[0.8vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <div className="flex items-center space-x-2">
@@ -186,12 +186,12 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <img
                 src="/images/logo.png"
                 alt="logo"
-                className="w-10 Xl:w-[6vh] h-10 Xl:h-[6vh] object-cover rounded-full"
+                className="w-9 2xl:w-10 Xl:w-[6vh] h-9 2xl:h-10 Xl:h-[6vh] object-cover rounded-full"
               />
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-4 Xl:space-x-[1vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-3 xl:space-x-3 Xl:space-x-[0.7vw] text-white text-xs md:text-[12px] 2xl:text-[14px] Xl:text-[0.9vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
@@ -235,14 +235,14 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               ))}
             </ul>
           </div>
-          <div className="hidden md:flex gap-2 Xl:gap-6 items-center">
+          <div className="hidden md:flex gap-2 Xl:gap-4 items-center">
             <Button
               text="Get The App"
               bgcolor="bg-customPurple"
               textcolor="text-white Xl:text-[0.9vw]"
               bordercolor="border-customPurple"
-              height="h-7 sm:h-10 Xl:h-[6vh]"
-              width="w-24 lg:w-28 Xl:w-[7vw]"
+              height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
+              width="w-24 2xl:w-28 Xl:w-[6.5vw]"
               onClickFn={() => handleNavClick("/")}
             />
             {/* secondary Navbar button */}
@@ -252,8 +252,8 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 bgcolor="bg-transparent"
                 textcolor="text-white Xl:text-[0.9vw]"
                 bordercolor="border-white"
-                height="h-7 sm:h-10 Xl:h-[6vh]"
-                width="w-24 lg:w-28 Xl:w-[7vw]"
+                height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
+                width="w-24 2xl:w-28 Xl:w-[6.5vw]"
                 onClickFn={() => router.push("/signin")}
               />
             ) : (
