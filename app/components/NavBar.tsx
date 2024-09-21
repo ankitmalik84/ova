@@ -242,7 +242,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               textcolor="text-white Xl:text-[0.9vw]"
               bordercolor="border-customPurple"
               height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
-              width="w-24 2xl:w-28 Xl:w-[6.5vw]"
+              width="w-24 2xl:w-28 Xl:w-[7vw]"
               onClickFn={() => handleNavClick("/")}
             />
             {/* secondary Navbar button */}
@@ -253,7 +253,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 textcolor="text-white Xl:text-[0.9vw]"
                 bordercolor="border-white"
                 height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
-                width="w-24 2xl:w-28 Xl:w-[6.5vw]"
+                width="w-24 2xl:w-28 Xl:w-[7vw]"
                 onClickFn={() => router.push("/signin")}
               />
             ) : (
