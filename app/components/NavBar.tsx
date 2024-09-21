@@ -178,7 +178,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             isOpen && screenSize >= 1024 && screenSize < 1280
               ? "lg:w-[82%] mr-[6rem]"
               : "lg:w-[95%]"
-          } xl:w-9/12 2xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-2 Xl:p-[1.5vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
+          } xl:w-8/12 2xl:w-7/12 Xl:w-7/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[1.1vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <div className="flex items-center space-x-2">
@@ -191,7 +191,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             </Link>
           </div>
           <div className="hidden md:flex">
-            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-8 Xl:space-x-[1.5vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
+            <ul className="flex space-x-2 lg:space-x-5 xl:space-x-6 Xl:space-x-[1vw] text-white text-xs md:text-sm Xl:text-[0.9vw] items-center">
               {data.navLinks.map((item) => (
                 <li
                   key={item.id}
@@ -217,7 +217,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                   {item.subLinks.length > 0 && hoveredItem === item.id && (
                     <div
                       onMouseEnter={() => setHoveredItem(item.id)}
-                      className="absolute z-10 mt-5 Xl:mt-[4vh] bg-customBlack text-white rounded-lg Xl:rounded-[1.5vh] ring-1 Xl:ring-4 ring-white ring-opacity-70"
+                      className="absolute z-10 mt-4 Xl:mt-[3.5vh] bg-customBlack text-white rounded-lg Xl:rounded-[1.5vh] ring-1 Xl:ring-4 ring-white ring-opacity-70"
                     >
                       {item.subLinks.map((subLink) => (
                         <Link
@@ -283,11 +283,19 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                     <button
                       key={item.id}
                       className="text-sm p-2 flex hover:text-gray-400"
-                      onClick={() => handleNavClick((item.subLinks.length > 0 ? item.subLinks[0].url :  item.url ))}
+                      onClick={() =>
+                        handleNavClick(
+                          item.subLinks.length > 0
+                            ? item.subLinks[0].url
+                            : item.url
+                        )
+                      }
                       onMouseEnter={() => setHoveredItem(item.id)}
                     >
                       {/* {item.name} */}
-                      {(item.subLinks.length > 0 ? item.subLinks[0].name : item.name)}
+                      {item.subLinks.length > 0
+                        ? item.subLinks[0].name
+                        : item.name}
                     </button>
                   ))}
                   {!session.data?.user && (

@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useState, useEffect, useRef, use } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/app/components/ui/button";
 import { Paperclip } from "lucide-react";
 import NavBar from "../components/NavBar";

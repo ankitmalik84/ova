@@ -56,10 +56,10 @@ export default function ProfileDropDown({
           className={`
           ${
             path.split("/")[1] === ""
-              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-7 xl:left-[1.4vw] Xl:left-[1.5vw] Xl:h-[9.4vh] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
+              ? "absolute lg:rounded-l-none lg:border-l-0 lg:left-6 xl:left-[1.4vw] Xl:left-[1.5vw] Xl:h-[8.5vh] rounded-2xl lg:rounded-full Xl:flex Xl:justify-end"
               : "absolute  lg:top-14 md:-left-20 Xl:top-[4.5vw] Xl:-left-[6vw] Xl:h-[7vh] justify-center items-center flex  rounded-2xl Xl:rounded-[2vh] z-[9999]"
           }
-          mt-[56px] lg:-mt-2 Xl:-mt-[1.8vh] w-28 lg:w-32 Xl:w-[9vw] -right-2 lg:right-auto h-14 bg-transparent border border-[#ffffff88]  p-2`}
+          mt-[56px] lg:-mt-2 Xl:-mt-[1.3vh] w-28 lg:w-32 Xl:w-[9vw] -right-2 lg:right-auto h-14 bg-transparent border border-[#ffffff88]  p-2`}
         >
           <div
             className="justify-end items-center"
@@ -70,7 +70,11 @@ export default function ProfileDropDown({
             <button
               onClick={handleLogout}
               className={`w-full flex gap-2 items-center h-full
-              ${path.split("/")[1] == "" ? "justify-end Xl:px-[0.7vw]" : "justify-center"}
+              ${
+                path.split("/")[1] == ""
+                  ? "justify-end Xl:px-[0.7vw]"
+                  : "justify-center"
+              }
               text-center py-2 text-base Xl:text-[1vw] text-white hover:text-white-900 font-medium`}
               role="menuitem"
             >
