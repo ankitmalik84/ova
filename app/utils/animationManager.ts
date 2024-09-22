@@ -16,7 +16,6 @@ class AnimationManager {
   static addAnimation(animation: gsap.core.Tween | gsap.core.Timeline) {
     try {
       if (!animation) {
-        // console.warn("Attempted to add an invalid animation.");
         return;
       }
 
@@ -96,7 +95,7 @@ class AnimationManager {
     try {
       // Stop all active tweens
       this.activeAnimations.forEach((animation) => {
-        (animation as gsap.core.Tween).pause?.(); // Pause the tween if applicable
+        (animation as gsap.core.Tween).pause?.();
       });
       // Stop all active scroll triggers
       this.activeScrollTriggers.forEach((trigger) => {

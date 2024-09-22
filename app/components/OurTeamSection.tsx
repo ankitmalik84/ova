@@ -25,9 +25,7 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
       trigger: element,
       start: "top 95%",
       end: "bottom 5%",
-      // markers: true,
       onEnter: () => {
-        // setActiveSection("Our Team");
         activeSection.current = "Our Team";
         smoothScroll(0.95);
       },

@@ -15,14 +15,11 @@ const HighLightTextSection = () => {
   useEffect(() => {
     const element = highText.current;
 
-    if (!element) return; // Check if element is available
-
-    // Setup individual ScrollTrigger for this component
+    if (!element) return;
     const scrollTrigger = ScrollTrigger.create({
       trigger: element,
       start: "top 95%",
       end: "bottom 5%",
-      // markers: true,
       onEnter: () => {
         smoothScroll(0.95);
       },
@@ -37,10 +34,10 @@ const HighLightTextSection = () => {
     AnimationManager.addScrollTrigger(scrollTrigger);
 
     return () => {
-      scrollTrigger.kill(); // Cleanup on unmount
+      scrollTrigger.kill();
       AnimationManager.removeScrollTrigger(scrollTrigger);
     };
-  }, [smoothScroll]); 
+  }, [smoothScroll]);
   return (
     <div
       className="flex w-full h-[100vh] mx-auto py-16 sm:py-24 items-center "

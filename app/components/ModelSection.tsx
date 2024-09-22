@@ -11,31 +11,20 @@ const ModelSection = () => {
   const smoothScroll = useSmoothScroll();
   useEffect(() => {
     const element = model.current;
-    if (!element) return; // Check if element is available
+    if (!element) return;
 
     // Setup individual ScrollTrigger for this component
     const scrollTrigger = ScrollTrigger.create({
       trigger: element,
       start: "top 95%",
       end: "bottom bottom",
-      // markers: true, // Set to true for debugging
       onEnter: () => {
         smoothScroll(0.95);
       },
-      // onEnterBack: () => {
-      //   // gsap.to(element, { autoAlpha: 1, duration: 0.8, ease: "power2.inOut" });
-      //   smoothScroll(-1);
-      // },
-      // onLeave: () => {
-      //   gsap.to(element, { autoAlpha: 0.5,  ease: "power2.inOut" });
-      // },
-      // onLeaveBack: () => {
-      //   smoothScroll(-1);
-      // },
     });
 
     return () => {
-      scrollTrigger.kill(); // Cleanup on unmount
+      scrollTrigger.kill();
     };
   }, [smoothScroll]);
   return (

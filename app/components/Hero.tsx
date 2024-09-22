@@ -24,8 +24,6 @@ const Hero: React.FC = () => {
         start: "top -2px",
         end: "+=100%",
         pin: window.scrollY > window.innerHeight * 2 ? false : true,
-        // pin: true,
-        // markers: true,
         onUpdate: (self) => {
           const progressThreshold = window.innerWidth >= 768 ? 0.05 : 0.02;
           gsap.to(heroFirst.current, {
@@ -82,8 +80,6 @@ const Hero: React.FC = () => {
       ref={heroSection}
       className="align-bottom relative h-[100vh] overflow-hidden justify-center items-center flex flex-col"
     >
-      {/* <div className="absolute h-[10vh] w-full bg-slate-600">hj</div> */}
-      {/* Hero section third layer (background image) */}
       <div
         id="hero"
         ref={heroThird}

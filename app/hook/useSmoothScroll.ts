@@ -3,15 +3,13 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import AnimationManager from "../utils/animationManager";
 
-// Register the ScrollToPlugin if not already registered
 gsap.registerPlugin(ScrollToPlugin);
 
 const useSmoothScroll = () => {
-  const initialScrollTop = useRef<number>(0); // Store the initial scroll position in a ref
-  const userScrolled = useRef<boolean>(false); // Flag to check if the user manually scrolled
+  const initialScrollTop = useRef<number>(0);
+  const userScrolled = useRef<boolean>(false);
 
   useEffect(() => {
-    // Check if window is defined to ensure this only runs on the client
     if (typeof window !== "undefined") {
       initialScrollTop.current = window.scrollY;
 
@@ -55,13 +53,11 @@ const useSmoothScroll = () => {
             },
             ease: "power1.inOut",
             onUpdate: () => {
-              // Detect if the user scrolls during animation and set autoKill to true
               if (userScrolled.current) {
                 AnimationManager.autoKill = true;
               }
             },
             onComplete: () => {
-              // Reset autoKill after the animation completes
               userScrolled.current = false;
               AnimationManager.autoKill = false;
             },

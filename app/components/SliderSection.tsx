@@ -25,20 +25,15 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
       trigger: element,
       start: "top 95%",
       end: "bottom 5%",
-      // markers: true,
       onEnter: () => {
         smoothScroll(0.95);
-        // setActiveSection("AboutUs");
-        // AnimationManager.activeSection = "AboutUs";
         activeSection.current = "AboutUs";
       },
       onEnterBack: () => {
-        // setActiveSection("AboutUs");
         smoothScroll(-0.95);
         activeSection.current = "AboutUs";
       },
       onLeaveBack: () => {
-        // router.push("/");
         if (AnimationManager.autoKill) AnimationManager.autoKill = false;
         activeSection.current = "Home";
       },
