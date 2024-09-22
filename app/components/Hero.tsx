@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
       {/* Hero section second layer (content) */}
       <div
         ref={heroSecond}
-        className="absolute inset-0 flex flex-col items-center px-4 lg:px-12 backdrop-blur-lg"
+        className="absolute inset-0 flex flex-col items-center px-4 lg:px-12 backdrop-blur-lg Xl:backdrop-blur-xl"
       >
         <div className="w-full text-center space-y-4 flex flex-col justify-center h-full">
           <div className="text-white opacity-75 text-md lg:text-lg  Xl:text-[1.3vw] Xl:leading-[2vw]">
