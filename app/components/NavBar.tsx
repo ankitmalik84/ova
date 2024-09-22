@@ -178,7 +178,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             isOpen && screenSize >= 1024 && screenSize < 1280
               ? "lg:w-[75%] mr-[4rem]"
               : "lg:w-[79%]"
-          } xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[0.8vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[3vh]`}
+          } xl:w-8/12 border border-[#ffffff88] rounded-full items-center px-1 sm:p-1.5 Xl:p-[0.8vh] bg-white bg-opacity-30 backdrop-blur-md top-6 sm:top-4 Xl:top-[2vh]`}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <div className="flex items-center space-x-2">
