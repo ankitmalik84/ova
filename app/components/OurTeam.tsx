@@ -96,7 +96,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                   className="px-1 sm:px-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full"
                 >
                   <div className="flex flex-col">
-                    <h2 className="text-lg sm:text-xl Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
+                    <h2 className="text-lg sm:text-xl xl:text-[23px] xl:leading-[30px] Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
                       {member.name}
                     </h2>
                     <div className="bg-customPurple h-[2px] Xl:h-[0.4vh] w-full"></div>
@@ -125,7 +125,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-200 transition-colors duration-300"
                       >
-                        <FaLinkedin className="h-[4vh] w-[4vh]" />
+                        <FaLinkedin className="h-[3vh] w-[3vh] xl:h-[4vh] xl:w-[4vh]" />
                       </a>
                       <a
                         href={member.github}
@@ -133,7 +133,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-200 transition-colors duration-300"
                       >
-                        <FaGithub className="h-[4vh] w-[4vh]" />
+                        <FaGithub className="h-[3vh] w-[3vh] xl:h-[4vh] xl:w-[4vh]" />
                       </a>
                     </div>
 
