@@ -99,7 +99,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     <h2 className="text-lg sm:text-xl xl:text-[23px] xl:leading-[30px] Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
                       {member.name}
                     </h2>
-                    <div className="bg-customPurple h-[2px] Xl:h-[0.4vh] w-full"></div>
+                    <div className="bg-customPurple h-[2px] Xl:h-[0.4vh] w-[90%]"></div>
                     <p className="text-sm Xl:text-[1vw] Xl:leading-[1.5vw] font-normal">
                       {member.role}
                     </p>
