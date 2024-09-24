@@ -4,7 +4,12 @@
     { "id": 2, "name": "AboutUs", "url": "#pre-about", "subLinks": [] },
     { "id": 3, "name": "Our Team", "url": "#pre-team", "subLinks": [] },
     { "id": 4, "name": "Career", "url": "/", "subLinks": [] },
-    { "id": 5, "name": "Privacy Policy", "url": "/", "subLinks": [] },
+    {
+      "id": 5,
+      "name": "Privacy Policy",
+      "url": "/privacyPolicy",
+      "subLinks": []
+    },
     {
       "id": 6,
       "name": "Products",
