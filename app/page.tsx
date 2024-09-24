@@ -60,14 +60,10 @@ export default function Home() {
       };
     }
   }, [ActiveSection]);
-
   useLayoutEffect(() => {
     if (typeof window !== "undefined" && comp.current) {
       const ctx = gsap.context(() => {
         const slides = document.getElementById("intro-slides");
-        const slideup = slides?.querySelectorAll(".slide-up") as
-          | NodeListOf<HTMLElement>
-          | undefined;
         const logo = slides?.querySelector("img[alt='logo']");
 
         const tl = gsap.timeline({
@@ -78,19 +74,13 @@ export default function Home() {
           },
         });
 
-        // Slide in the whole intro slides section
+        // Slide in the intro slides section
         tl.from(slides, {
           x: "100%",
           y: "100%",
           duration: 1,
           ease: "power1.inOut",
         })
-          // Slide up the .slide-up divs to cover images if slideup is defined
-          .from(slideup || [], {
-            y: "100%", // Slide up the covering divs
-            stagger: 0.2,
-            ease: "power1.inOut",
-          })
           .to(logo || [], {
             rotate: -180,
             duration: 0.5,
@@ -113,9 +103,9 @@ export default function Home() {
             duration: 1,
             ease: "power1.inOut",
             onUpdate: () => {
-              // Hide or remove the intro animations
-              gsap.set(slides, { autoAlpha: 0, display: "none" }); // Hide the intro slides
-              gsap.set(welcome.current, { autoAlpha: 1 }); // Make the welcome screen interactive
+              // Hide intro animations
+              gsap.set(slides, { autoAlpha: 0, display: "none" }); // Hide intro slides
+              gsap.set(welcome.current, { autoAlpha: 1 }); // Show the welcome screen
             },
           })
           .to(intro_last.current, {
@@ -154,37 +144,17 @@ export default function Home() {
       {/* Intro Animation */}
       <div
         id="intro-slides"
-        className="absolute -translate-x-[7%] h-screen w-[115%] flex overflow-hidden z-50 gap-10 items-center justify-between"
+        className="absolute h-screen w-screen flex items-center justify-center z-50"
       >
-        {[
-          { src: img1, alt: "Img1" },
-          { src: img2, alt: "Img2" },
-          { src: logo3, alt: "logo" },
-          { src: img3, alt: "Img3" },
-          { src: img4, alt: "Img4" },
-        ].map((image, index) => (
-          <div
-            key={index}
-            className={`holder overflow-hidden relative  ${
-              image.alt === "logo" ? "p-5 w-[17%]" : "w-[16%]"
-            }`} 
-          >
-            <div className="p-1 justify-center flex items-center ">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                layout="fit"
-                style={{ objectFit: "cover" }}
-                className={`img Xl:min-h-[35vh] Xl:min-w-[35vh] `}
-              />
-            </div>
-            <div
-              className={`absolute top-0 left-0 right-0 bottom-0 bg-customBlack slide-up ${
-                image.alt === "logo" ? "hidden" : ""
-              }`}
-            ></div>
-          </div>
-        ))}
+        <div className="p-2 holder overflow-hidden relative w-[250px] lg:w-[17%] flex items-center justify-center">
+          <Image
+            src={logo3}
+            alt="logo"
+            layout="fit"
+            style={{ objectFit: "cover" }}
+            className="img Xl:min-h-[35vh] Xl:min-w-[35vh]"
+          />
+        </div>
       </div>
 
       {/* Intro Last Slide */}
