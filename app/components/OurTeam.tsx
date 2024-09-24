@@ -82,7 +82,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   return (
     <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] Xl:h-[55vh] max-w-[1420px] Xl:max-w-[90vw]">
-      <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw] Xl:mb-[2vh]">
+      <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw] Xl:mb-[3vh]">
         Our Team
       </h1>
       <div className="flex flex-col md:flex-row w-full">
