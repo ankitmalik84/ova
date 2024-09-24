@@ -23,7 +23,7 @@ const SliderComp: FC<SliderCompProps> = ({ heading, data }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true,
+    pauseOnHover: false,
     speed: 1000,
     arrows: false,
     responsive: [
@@ -55,19 +55,19 @@ const SliderComp: FC<SliderCompProps> = ({ heading, data }) => {
   };
 
   return (
-    <div className="h-full flex flex-col">
-      <h2 className="text-white text-3xl Xl:text-[4vh] mb-8 Xl:mb-[4vh]">
+    <div className="h-full flex flex-col ">
+      <h2 className="text-white text-3xl Xl:text-[4vh] mb-8 Xl:mb-[4vh] pl-6 xl:pl-[5vh]">
         {heading}
       </h2>
       <Slider {...settings}>
         {data.map((item) => (
-          <div key={item.id} className="px-1 Xl:px-[0.4vw]">
-            <div className="relative h-[300px] Xl:h-[45vh] w-full">
+          <div key={item.id} className="px-1 Xl:px-[0.4vw] ">
+            <div className="relative h-[60vh] xl:h-[70vh] Xl:h-[70vh] w-full">
               <Image
                 src={item.img}
                 alt="Slider Image"
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
                 priority
               />
             </div>
