@@ -141,7 +141,7 @@ const TextImage: FC<TextImageProps> = ({
   return (
     <div
       ref={textImageRef}
-      className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden flex justify-center items-center"
+      className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden flex items-center"
     >
       <div
         ref={contentRef}
@@ -174,7 +174,7 @@ const TextImage: FC<TextImageProps> = ({
             </p>
           )}
         </div>
-        <div className="w-full sm:w-2/5 min-h-[350px] h-[400px] Xl:h-[50vh] relative">
+        <div className="w-full sm:w-2/5 min-h-[200px] h-[400px] Xl:h-[50vh] relative">
           <Image
             src={img}
             alt="Text image"
