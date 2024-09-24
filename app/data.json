@@ -83,38 +83,93 @@
   "team": [
     {
       "id": 1,
-      "name": "Member1",
-      "data": "Lorem1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
-      "img": "/images/member1.jpeg",
-      "linkedin": "https://www.linkedin.com/in/"
+      "name": "Jack Jay",
+      "role": "CEO",
+      "data": "The driving force behind OvaDrive revolutionizes talent recruitment and entrepreneurship by passionately fostering innovation and advancing societal progress.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/jack-jay-jackson-jesionowski/",
+      "github": "https://github.com/theguysaccount"
     },
     {
       "id": 2,
-      "name": "Member2",
-      "data": "Lorem2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "name": "Swapnil Sharma",
+      "role": "CTO",
+      "data": "Swapnil Sharma champions technological innovation, nurturing teams to develop solutions that redefine industry standards.",
       "img": "/images/member2.jpeg",
-      "linkedin": "https://www.linkedin.com/in/"
+      "linkedin": "https://www.linkedin.com/in/swapnil-sharma-a99ba3189",
+      "github": "https://github.com/Swapnil-11-04-01"
     },
     {
       "id": 3,
-      "name": "Member3",
-      "data": "Lorem3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "name": "Jatin Kumar Sharma",
+      "role": "AI Engineer",
+      "data": "Jatin Kumar Sharma drives innovation in ML, DL, NLP, and cloud technologies, passionately advancing the AI frontier.",
       "img": "/images/member3.jpeg",
-      "linkedin": "https://www.linkedin.com/in/"
+      "linkedin": "https://www.linkedin.com/in/jatin-kumar-sharma-787328249/",
+      "github": "https://github.com/sharmajatin567"
     },
     {
       "id": 4,
-      "name": "Member4",
-      "data": "Lorem4 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute deserunt mollit anim id est laborum.",
+      "name": "Yash Rastogi",
+      "role": "Flutter Developer",
+      "data": "Yash Rastogi, a skilled flutter developer, excels in algorithm development, ranking under 250 at Codeforces, and shaping coding's future.",
       "img": "/images/member4.jpeg",
-      "linkedin": "https://www.linkedin.com/in/"
+      "linkedin": "https://www.linkedin.com/in/yash-rastogi-coder/",
+      "github": "https://github.com/rastogiyash29"
     },
     {
       "id": 5,
-      "name": "Member5",
-      "data": "The driving force behind OvaDrive revolutionizes talent recruitment and entrepreneurship by passionately fostering innovation and advancing societal progress.",
+      "name": "Mohammad Umar",
+      "role": "Flutter Developer",
+      "data": "Mohammad Umar, with a solid Computer Science background, creates mobile apps enhancing user experiences, focusing on innovation and lifelong learning.",
       "img": "/images/member5.png",
-      "linkedin": "https://www.linkedin.com/in/"
+      "linkedin": "https://www.linkedin.com/in/mohammad-umar-mohammad-akhlaque-01267126b/",
+      "github": "https://github.com/MohammadUmar90"
+    },
+    {
+      "id": 6,
+      "name": "Rohit Ingle",
+      "role": "Flutter Developer",
+      "data": "Rohit Ingle excels in UI design, bringing mobile app innovations to life through technical excellence.",
+      "img": "/images/member5.png",
+      "linkedin": "",
+      "github": "https://github.com/rohitingle34"
+    },
+    {
+      "id": 7,
+      "name": "Rahul Keshavram Prajapati",
+      "role": "Flutter Developer",
+      "data": "Rahul Prajapati dives into UI/UX development, showcasing a keen pursuit of excellence in Flutter development.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/rahul-prajapati-cse/",
+      "github": "https://github.com/rahul-cse-25"
+    },
+    {
+      "id": 8,
+      "name": "Kaustubh Anirudha Vaidya",
+      "role": "Flutter Developer Intern",
+      "data": "Kaustubh Vaidya leverages his software engineering skills to design innovative social chat features, demonstrating a strong commitment to professional growth.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/kaustubh-vaidya-71947221b/",
+      "github": "https://github.com/KaustubhVaidya404"
+    },
+    {
+      "id": 9,
+      "name": "Prasant Gokhale",
+      "role": "3D Designer Intern",
+      "data": "Prasant Gokhale combines architecture and artistry to create stunning 3D designs in Blender, pushing the boundaries of 3D art.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/prasant-gokhale-08808b238/",
+      "github": ""
+    },
+    {
+      "id": 10,
+      "name": "Udit Devadiga",
+      "role": "AWS DevOps Intern",
+      "data": "Udit Devadiga, eager to master Cloud technology and DevOps, is captivated by cloud applications' mechanics, showcasing a strong commitment to his field.",
+      "img": "/images/member5.png",
+      "linkedin": "https://www.linkedin.com/in/udit-devadiga/",
+      "github": "https://github.com/Udit-D"
     }
   ],
   "documentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."

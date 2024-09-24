@@ -6,14 +6,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
 import data from "@/app/data.json";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 interface TeamMember {
   id: number;
   name: string;
+  role: string;
   data: string;
   img: string;
   linkedin?: string;
+  github?: string;
 }
 
 const teamMembers: TeamMember[] = data.team;
@@ -91,12 +93,16 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[30px] sm:h-[40px] Xl:h-[6vh] w-full"
+                  className="px-1 sm:px-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full"
                 >
-                  <div className="p-1 sm:p-2 Xl:h-[6vh]  flex items-center align-middle">
-                    <h2 className="text-lg sm:text-2xl Xl:text-[1.5vw] font-semibold">
+                  <div className="flex flex-col">
+                    <h2 className="text-lg sm:text-xl Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
                       {member.name}
                     </h2>
+                    <div className="bg-customPurple h-[2px] Xl:h-[0.4vh] w-full"></div>
+                    <p className="text-sm Xl:text-[1vw] Xl:leading-[1.5vw] font-normal">
+                      {member.role}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -105,22 +111,33 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[220px] sm:h-[420px] Xl:h-[40vh] w-full"
+                  className="h-[200px] sm:h-[330px] Xl:h-[38vh] w-full"
                 >
-                  <div className="p-1 sm:p-2 flex flex-col gap-1 sm:gap-2">
-                    <p className="mt-2 sm:mt-4 text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.5vw]">
+                  <div className="p-1 sm:px-2 Xl:p-[1vh] flex flex-col gap-1 sm:gap-2">
+                    <p className="text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.4vw]">
                       {member.data}
                     </p>
-                    {member.linkedin && (
+                    {/* {member.linkedin && ( */}
+                    <div className="flex gap-2">
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-200 transition-colors duration-300"
                       >
-                        <FaLinkedin size={"4vh"} />
+                        <FaLinkedin className="h-[4vh] w-[4vh]" />
                       </a>
-                    )}
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-200 transition-colors duration-300"
+                      >
+                        <FaGithub className="h-[4vh] w-[4vh]" />
+                      </a>
+                    </div>
+
+                    {/* )} */}
                   </div>
                 </div>
               ))}
