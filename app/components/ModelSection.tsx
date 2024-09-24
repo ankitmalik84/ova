@@ -28,7 +28,10 @@ const ModelSection = () => {
     };
   }, [smoothScroll]);
   return (
-    <div ref={model} className="pt-[200px] sm:pt-[10%] h-[100vh]">
+    <div
+      ref={model}
+      className="pt-[250px] sm:pt-[10%] flex align-bottom h-[100vh]"
+    >
       <Model />
     </div>
   );

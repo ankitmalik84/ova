@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Model() {
   return (
-    <div className="h-[400px] sm:h-full bg-customBlack2 flex m-auto w-full rounded-lg relative overflow-hidden">
+    <div className="h-full bg-customBlack2 flex m-auto w-full rounded-lg relative overflow-hidden">
       {/* Light Effect */}
       <div className="flex justify-between">
         <div className="absolute top-0 left-0 w-1/2 h-full bg-conic-gradient3 sm:bg-conic-gradient"></div>
