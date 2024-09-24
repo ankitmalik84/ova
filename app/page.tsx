@@ -16,10 +16,6 @@ import TextImage from "@/app/components/common/TextImage";
 import NavBar from "./components/NavBar";
 import data from "./data.json";
 import Image from "next/image";
-import img1 from "@/public/images/start/Frame1.png";
-import img2 from "@/public/images/start/Frame2.png";
-import img3 from "@/public/images/start/Frame3.png";
-import img4 from "@/public/images/start/Frame4.png";
 import logo3 from "@/public/images/start/ova_logo3.png";
 // import { ScrollSmoother } from "gsap/all";
 import Hero from "./components/Hero";
@@ -176,7 +172,6 @@ export default function Home() {
         <NavBar activeSection={ActiveSection} />
         <Hero />
         <div className="z-10 min-h-screen px-2 lg:px-12 overflow-x-clip transition-all ease-in-out duration-500 scroll-smooth">
-          {/* Hero Section */}
           <div className="flex flex-col gap-[6px]">
             {/* text-image section */}
             <div className="flex flex-col items-center gap-2">

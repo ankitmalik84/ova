@@ -141,11 +141,11 @@ const TextImage: FC<TextImageProps> = ({
   return (
     <div
       ref={textImageRef}
-      className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden"
+      className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden flex justify-center items-center"
     >
       <div
         ref={contentRef}
-        className={`mx-auto flex gap-3 sm:gap-4 md:gap-12 Xl:gap-16 h-[100vh] items-center ${
+        className={`mx-auto flex gap-3 sm:gap-4 md:gap-12 Xl:gap-16 items-center ${
           position === "right"
             ? "flex-col sm:flex-row-reverse"
             : "flex-col sm:flex-row"
