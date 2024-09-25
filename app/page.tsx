@@ -1,13 +1,7 @@
 //app/page.tsx
 "use client";
 
-import {
-  useRef,
-  useEffect,
-  // useCallback,
-  useLayoutEffect,
-  // useState,
-} from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
