@@ -142,7 +142,7 @@ export default function Home() {
         id="intro-slides"
         className="absolute h-screen w-screen flex items-center justify-center z-50"
       >
-        <div className="p-2 Xl:p-[2vh] holder overflow-hidden relative w-[250px] lg:w-[17%] flex items-center justify-center">
+        <div className="p-2 holder overflow-hidden relative w-[250px] lg:w-[20%] flex items-center justify-center">
           <Image
             src={logo3}
             alt="logo"
