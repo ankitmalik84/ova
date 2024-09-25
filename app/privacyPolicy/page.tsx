@@ -3,9 +3,7 @@ import NavBar from "@/app/components/NavBar";
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="md:px-12 lg:px-16 Xl:px-[3vw]">
-      <div className="">
-        <NavBar />
-      </div>
+      <NavBar />
       <div className="px-4 pb-4 text-[#CEC7D8]">
         <h1 className="text-4xl text-white Xl:text-[5vh] Xl:leading-[6vh] font-bold mt-8">
           OvaDrive Privacy Policy
