@@ -6,7 +6,7 @@ const PrivacyPolicy: React.FC = () => {
       <div className="">
         <NavBar />
       </div>
-      <div className="px-4 pb-4 text-slate-200">
+      <div className="px-4 pb-4 text-[#CEC7D8]">
         <h1 className="text-4xl text-white Xl:text-[5vh] Xl:leading-[6vh] font-bold mt-8">
           OvaDrive Privacy Policy
         </h1>
