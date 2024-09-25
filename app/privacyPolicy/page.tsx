@@ -6,7 +6,7 @@ const PrivacyPolicy: React.FC = () => {
       <div className="">
         <NavBar />
       </div>
-      <h1 className=" absolute z-[99999] hidden lg:flex lg:left-[20vw] top-6 Xl:top-[2.1vw] text-white text-base sm:text-lg Xl:text-[3vh]">
+      <h1 className=" absolute z-[99999] hidden lg:flex lg:left-[20vw] Xl:left-[18vw] top-6 Xl:top-[2.1vw] text-white text-base sm:text-lg Xl:text-[3vh]">
         Privacy Policy
       </h1>
       <div className="relative px-4 pb-4 text-[#CEC7D8]">
