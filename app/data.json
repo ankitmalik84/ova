@@ -109,7 +109,7 @@
       "name": "Jatin Kumar Sharma",
       "role": "AI Engineer",
       "data": "Jatin Kumar Sharma drives innovation in ML, DL, NLP, and cloud technologies, passionately advancing the AI frontier.",
-      "img": "/images/jatin.png",
+      "img": "/images/jatin_sharma.jpg",
       "linkedin": "https://www.linkedin.com/in/jatin-kumar-sharma-787328249/",
       "github": "https://github.com/sharmajatin567"
     },
@@ -118,7 +118,7 @@
       "name": "Yash Rastogi",
       "role": "Flutter Developer",
       "data": "Yash Rastogi, a skilled flutter developer, excels in algorithm development, ranking under 250 at Codeforces, and shaping coding's future.",
-      "img": "/images/yash_rastogi.png",
+      "img": "/images/yash.jpg",
       "linkedin": "https://www.linkedin.com/in/yash-rastogi-coder/",
       "github": "https://github.com/rastogiyash29"
     },
@@ -172,9 +172,18 @@
       "name": "Udit Devadiga",
       "role": "AWS DevOps Intern",
       "data": "Udit Devadiga, eager to master Cloud technology and DevOps, is captivated by cloud applications' mechanics, showcasing a strong commitment to his field.",
-      "img": "/images/udit.png",
+      "img": "/images/udit.jpg",
       "linkedin": "https://www.linkedin.com/in/udit-devadiga/",
       "github": "https://github.com/Udit-D"
+    },
+    {
+      "id": 11,
+      "name": "Ansh Verma",
+      "role": "UI/UX Designer",
+      "data": "Ansh, excels in UI/UX design with a keen eye for detail. His mastery of various design tools is essential to refining our brand’s visual identity and elevating the user experience.",
+      "img": "/images/ansh.jpg",
+      "linkedin": "https://www.linkedin.com/in/ansh-verma-479939216/",
+      "github": "https://github.com/STATiCaNSH"
     }
   ],
   "documentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
