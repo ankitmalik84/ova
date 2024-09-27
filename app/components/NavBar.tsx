@@ -98,7 +98,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
   return (
     <nav
       className={`flex items-center justify-center ${
-        path.split("/")[1] && "py-4 Xl:py-[2.5vh] px-4"
+        path.split("/")[1] && "py-4 Xl:py-[2.5vh] px-4 md:px-0"
       }`}
     >
       {path.split("/")[1] != "" ? (
