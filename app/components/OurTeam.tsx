@@ -81,22 +81,22 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
   }, [currentMemberImage, ref]);
 
   return (
-    <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] Xl:h-[55vh] max-w-[1420px] Xl:max-w-[90vw]">
+    <div className="mx-auto h-[700px] md:h-[400px] lg:h-[500px] Xl:h-[55vh] max-w-[1440px] Xl:max-w-[90vw]">
       <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw] Xl:mb-[3vh]">
         Our Team
       </h1>
-      <div className="flex flex-col md:flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full  pointer-events-none">
         {/* Left Side: One slider for content, one for images */}
-        <div className="w-full lg:w-1/2 flex flex-col sm:flex-row">
-          <div className="w-full sm:w-1/2">
+        <div className="w-full lg:w-1/2 flex flex-col sm:flex-row ">
+          <div className="w-full sm:w-1/2 ">
             <Slider {...leftSliderSettings2}>
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="px-1 sm:px-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full"
+                  className="pr-1 sm:pr-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full"
                 >
                   <div className="flex flex-col">
-                    <h2 className="text-lg sm:text-xl xl:text-[23px] xl:leading-[30px] Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
+                    <h2 className="text-lg sm:text-xl lg:text-lg xl:text-[23px] xl:leading-[30px] Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
                       {member.name}
                     </h2>
                     <div className="bg-customPurple h-[2px] Xl:h-[0.4vh] w-[90%]"></div>
@@ -113,7 +113,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                   key={member.id}
                   className="h-[200px] sm:h-[330px] Xl:h-[38vh] w-full"
                 >
-                  <div className="p-1 sm:px-2 Xl:p-[1vh] flex flex-col gap-1 sm:gap-2">
+                  <div className="p-1 sm:pr-2 Xl:p-[1vh] flex flex-col gap-1 sm:gap-2">
                     <p className="text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.4vw]">
                       {member.data}
                     </p>
@@ -143,12 +143,12 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               ))}
             </Slider>
           </div>
-          <div className="w-full sm:w-1/2">
+          <div className="w-full sm:w-1/2 ">
             <Slider {...leftSliderSettings1}>
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[340px] Xl:h-[46vh] w-full border-2 relative border-white"
+                  className="h-[400px] lg:h-[380px] Xl:h-[50vh] w-full border-2 relative border-white"
                 >
                   <Image
                     src={member.img}
@@ -165,18 +165,15 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
         </div>
 
         {/* Right Slider: Next Two Images */}
-        <div className="hidden lg:block lg:w-1/2">
+        <div className="hidden lg:block lg:w-1/2 ">
           <Slider {...rightSliderSettings}>
             {teamMembers.map((_, index) => {
               const nextIndex1 = (index + 1) % teamMembers.length;
 
               return (
-                <div
-                  key={index}
-                  className="h-[340px] Xl:h-[46vh] pt-[36px] Xl:pt-[6vh]"
-                >
-                  <div className="p-1">
-                    <div className="h-[300px] Xl:h-[40vh] w-full relative">
+                <div key={index} className="h-full mt-[44px] Xl:mt-[5vh] ">
+                  <div className="m-3 Xl:m-[1.1vh]">
+                    <div className="h-[320px] Xl:h-[44vh] w-full relative">
                       <Image
                         src={teamMembers[nextIndex1].img}
                         alt={teamMembers[nextIndex1].name}
