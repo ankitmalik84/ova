@@ -250,7 +250,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               <Button
                 text="Login"
                 bgcolor="bg-transparent"
-                textcolor="text-white Xl:text-[0.9vw]"
+                textcolor="text-white Xl:text-[0.9vw] hover:text-gray-300 ease-in-out-expo duration-300 transition-all"
                 bordercolor="border-white"
                 height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
                 width="w-24 2xl:w-28 Xl:w-[7vw]"

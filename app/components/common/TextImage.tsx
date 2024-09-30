@@ -73,10 +73,10 @@ const TextImage: FC<TextImageProps> = ({
           onEnter: () => smoothScroll(0.95),
           onEnterBack: () => smoothScroll(-0.95),
           onLeave: () => {
-            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
           onLeaveBack: () => {
-            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
         },
       };
@@ -101,7 +101,7 @@ const TextImage: FC<TextImageProps> = ({
             if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
           onLeaveBack: () => {
-            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
         },
       };
@@ -179,7 +179,7 @@ const TextImage: FC<TextImageProps> = ({
             src={img}
             alt="Text image"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", borderRadius: "2vh" }}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
