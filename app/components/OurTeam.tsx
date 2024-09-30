@@ -85,7 +85,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
       <h1 className="text-3xl font-bold mb-10 Xl:text-[1.8vw] Xl:mb-[3vh]">
         Our Team
       </h1>
-      <div className="flex flex-col md:flex-row w-full  pointer-events-none">
+      <div className="flex flex-col md:flex-row w-full">
         {/* Left Side: One slider for content, one for images */}
         <div className="w-full lg:w-1/2 flex flex-col sm:flex-row ">
           <div className="w-full sm:w-1/2 ">
@@ -143,7 +143,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               ))}
             </Slider>
           </div>
-          <div className="w-full sm:w-1/2 ">
+          <div className="w-full sm:w-1/2 pointer-events-none">
             <Slider {...leftSliderSettings1}>
               {teamMembers.map((member) => (
                 <div
@@ -165,7 +165,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
         </div>
 
         {/* Right Slider: Next Two Images */}
-        <div className="hidden lg:block lg:w-1/2 ">
+        <div className="hidden lg:block lg:w-1/2 pointer-events-none">
           <Slider {...rightSliderSettings}>
             {teamMembers.map((_, index) => {
               const nextIndex1 = (index + 1) % teamMembers.length;
