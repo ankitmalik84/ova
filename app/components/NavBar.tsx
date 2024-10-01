@@ -76,19 +76,19 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
     <>
       <Button
         text="Sign Up"
-        bgcolor="bg-transparent hover:bg-customPurple ease-in-out-expo duration-200"
-        textcolor="text-customPurple hover:text-white hover:text-[0.95vw] hover:font-semibold Xl:text-[0.9vw]"
+        bgcolor="bg-transparent hover:bg-white ease-in-out-expo duration-100 transition-all"
+        textcolor="text-customPurple hover:font-semibold Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9 Xl:h-[5.3vh]"
+        height="h-9 Xl:h-[5vh]"
         width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signup")}
       />
       <Button
         text="Login"
-        bgcolor="bg-customPurple ease-in-out-expo duration-200"
-        textcolor="text-white hover:text-[0.95vw] hover:font-semibold Xl:text-[0.9vw]"
+        bgcolor="bg-customPurple hover:bg-[#b31aff] ease-in-out-expo duration-100 transition-all"
+        textcolor="text-white Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9 Xl:h-[5.3vh]"
+        height="h-9 Xl:h-[5vh]"
         width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signin")}
       />
@@ -209,7 +209,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                       activeSection?.current === item.name
                         ? "bg-customBlack2 p-2 Xl:p-[1.5vh] rounded-full"
                         : ""
-                    } hover:text-gray-400 ease-in-out-expo duration-300 transition-all cursor-pointer `}
+                    } hover:text-gray-300 ease-in-out-expo duration-300 transition-all cursor-pointer `}
                   >
                     {item.name}
                   </Link>
@@ -235,7 +235,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               ))}
             </ul>
           </div>
-          <div className="hidden md:flex gap-2 Xl:gap-4 items-center">
+          <div className="hidden md:flex gap-2 Xl:gap-[0.5vw] items-center">
             <Button
               text="Get The App"
               bgcolor="bg-customPurple"
@@ -249,9 +249,9 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
             {!session.data?.user ? (
               <Button
                 text="Login"
-                bgcolor="bg-transparent"
-                textcolor="text-white Xl:text-[0.9vw] hover:text-gray-300 ease-in-out-expo duration-200 transition-all"
-                bordercolor="border-white hover:border-gray-300 ease-in-out-expo duration-200 transition-all"
+                bgcolor="bg-transparent hover:bg-white ease-in-out-expo duration-100 transition-all"
+                textcolor="text-white Xl:text-[0.9vw] hover:text-black hover:font-semibold ease-in-out-expo duration-100 transition-all"
+                bordercolor="border-white ease-in-out-expo duration-100 transition-all"
                 height="h-7 sm:h-9 2xl:h-10 Xl:h-[6vh]"
                 width="w-24 2xl:w-28 Xl:w-[7vw]"
                 onClickFn={() => router.push("/signin")}

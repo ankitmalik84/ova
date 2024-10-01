@@ -56,7 +56,7 @@ const SliderComp: FC<SliderCompProps> = ({ heading, data }) => {
 
   return (
     <div className="h-full flex flex-col ">
-      <h2 className="text-white text-3xl Xl:text-[4vh] mb-8 Xl:mb-[4vh] pl-6 xl:pl-[5vh]">
+      <h2 className="text-white text-3xl Xl:text-[4vh] mb-8 Xl:mb-[6vh] pl-6 xl:pl-[5vh]">
         {heading}
       </h2>
       <Slider {...settings}>

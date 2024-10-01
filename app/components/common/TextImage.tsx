@@ -38,6 +38,7 @@ const TextImage: FC<TextImageProps> = ({
 
     let animationSettings;
     if (id === 1) {
+      console.log("id 1");
       animationSettings = {
         from: { autoAlpha: 0 },
         to: {
@@ -53,7 +54,7 @@ const TextImage: FC<TextImageProps> = ({
           onEnter: () => smoothScroll(0.85),
           onEnterBack: () => smoothScroll(-0.95),
           onLeave: () => {
-            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
         },
       };
@@ -98,7 +99,7 @@ const TextImage: FC<TextImageProps> = ({
           onEnter: () => smoothScroll(0.95),
           onEnterBack: () => smoothScroll(-0.95),
           onLeave: () => {
-            if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
           },
           onLeaveBack: () => {
             // if (AnimationManager.autoKill) AnimationManager.autoKill = false;

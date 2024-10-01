@@ -34,11 +34,11 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
         activeSection.current = "AboutUs";
       },
       onLeaveBack: () => {
-        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+        // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
         activeSection.current = "Home";
       },
       onLeave: () => {
-        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+        // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
       },
     });
     AnimationManager.addScrollTrigger(scrollTrigger);

@@ -33,7 +33,7 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
         smoothScroll(-0.95);
       },
       onLeave: () => {
-        if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+        // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
       },
     });
     AnimationManager.addScrollTrigger(scrollTrigger);

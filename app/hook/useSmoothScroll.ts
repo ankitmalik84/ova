@@ -10,6 +10,7 @@ const useSmoothScroll = () => {
   const userScrolled = useRef<boolean>(false);
 
   useEffect(() => {
+    console.log("useSmoothScroll mounted");
     if (typeof window !== "undefined") {
       initialScrollTop.current = window.scrollY;
 
@@ -32,6 +33,7 @@ const useSmoothScroll = () => {
   const smoothScroll = useCallback(
     (target: number | string, duration?: number) => {
       if (typeof window !== "undefined") {
+        console.log("useSmoothScroll mounted22222222222");
         if (typeof target === "string") {
           // Scroll to element logic can go here if needed, currently commented out
           // const targetElement = document.querySelector(target); // Get the target element by ID or class
@@ -45,19 +47,29 @@ const useSmoothScroll = () => {
           //   });
           // }
         } else {
+          console.log(
+            "smoothScroll called with target: check autokill",
+            AnimationManager.autoKill
+          );
           gsap.to(window, {
-            duration: duration || 0.7,
+            duration: duration || 0.8,
+
             scrollTo: {
               y: `+=${window.innerHeight * target}`,
               autoKill: AnimationManager.autoKill || false,
             },
             ease: "power1.inOut",
             onUpdate: () => {
+              console.log(
+                "smoothScroll called with target: check autokill22b update",
+                AnimationManager.autoKill
+              );
               if (userScrolled.current) {
                 AnimationManager.autoKill = true;
               }
             },
             onComplete: () => {
+              console.log(AnimationManager.autoKill, "complete");
               userScrolled.current = false;
               AnimationManager.autoKill = false;
             },
