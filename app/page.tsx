@@ -73,24 +73,24 @@ export default function Home() {
         })
           .to(logo || [], {
             rotate: -180,
-            duration: 0.5,
+            duration: 0.6,
             ease: "power1.inOut",
           })
           .to(logo || [], {
             rotate: -360,
-            duration: 0.5,
+            duration: 0.6,
             ease: "power1.inOut",
           })
           // Intro last slide animation
           .from(intro_last.current, {
             y: "100%",
-            duration: 0.5,
+            duration: 0.6,
             ease: "power1.inOut",
           })
           // Purple background slides up and main home screen appears
           .to(intro_last.current, {
             y: "-100%",
-            duration: 0.5,
+            duration: 0.4,
             ease: "power1.inOut",
             onUpdate: () => {
               // Hide intro animations

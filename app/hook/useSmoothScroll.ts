@@ -46,7 +46,7 @@ const useSmoothScroll = () => {
           // }
         } else {
           gsap.to(window, {
-            duration: duration || 0.8,
+            duration: duration || 0.7,
             scrollTo: {
               y: `+=${window.innerHeight * target}`,
               autoKill: AnimationManager.autoKill || false,

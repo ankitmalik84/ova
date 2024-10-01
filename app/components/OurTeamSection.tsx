@@ -47,12 +47,12 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
   return (
     <div
       ref={team}
-      className="flex items-center h-[100vh] relative"
+      className="flex items-center h-[100vh] relative transition-all ease-in-out duration-300"
       id="our-team"
     >
       <div
         ref={memberImageRef}
-        className="-ml-12 absolute inset-0 z-0 w-screen h-screen bg-cover transition-all ease-in-out duration-500"
+        className="-ml-12 absolute inset-0 z-0 w-screen h-screen bg-cover transition-all ease-in-out duration-300"
         style={{
           filter: "blur(14px)",
         }}
