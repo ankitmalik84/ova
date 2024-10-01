@@ -22,7 +22,6 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [screenSize, setScreenSize] = useState(0);
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-  // const [currentSection, setCurrentSection] = useState(activeSection?.current);
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);
@@ -55,9 +54,6 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
       const section = document.querySelector(url);
       if (section) {
         AnimationManager.autoKill = true;
-        // AnimationManager.stopAllAnimations();
-        // section.scrollIntoView({ behavior: "smooth", block: "start" });
-        // window.dispatchEvent(new CustomEvent("navClick", { detail: url }));
       }
     } else {
       router.push(url);
@@ -196,7 +192,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 <li
                   key={item.id}
                   onMouseEnter={() => setHoveredItem(item.id)}
-                  className="relative" // Add relative positioning for the dropdown
+                  className="relative"
                 >
                   <Link
                     href={item.url}
@@ -206,12 +202,15 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                       handleNavClick(item.url);
                     }}
                     className={`${
-                      activeSection?.current === item.name
-                        ? "bg-customBlack2 p-2 Xl:p-[1.5vh] rounded-full"
-                        : ""
+                      activeSection?.current === item.name ? "rounded-full" : ""
                     } hover:text-gray-300 ease-in-out-expo duration-300 transition-all cursor-pointer `}
                   >
                     {item.name}
+                    {/* underline animation */}
+                    <div
+                      className={`absolute mt-[0.3vh] Xl:mt-[0.9vh] h-[0.5vh] bg-customBlack2 bg-opacity-90 rounded-full transition-all duration-500 ease-in-out
+      ${activeSection?.current === item.name ? "w-full" : "w-0"}`}
+                    ></div>
                   </Link>
                   {/* Check for subLinks and render them on hover */}
                   {item.subLinks.length > 0 && hoveredItem === item.id && (
