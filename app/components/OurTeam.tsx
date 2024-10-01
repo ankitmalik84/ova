@@ -93,7 +93,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="pr-1 sm:pr-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full"
+                  className="pr-1 sm:pr-2 Xl:px-[1vh] h-[60px] sm:h-[70px] Xl:h-[8vh] w-full pointer-events-none"
                 >
                   <div className="flex flex-col">
                     <h2 className="text-lg sm:text-xl lg:text-lg xl:text-[23px] xl:leading-[30px] Xl:text-[1.5vw] Xl:leading-[2vw] font-semibold">
@@ -114,7 +114,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                   className="h-[200px] sm:h-[330px] Xl:h-[38vh] w-full"
                 >
                   <div className="p-1 sm:pr-2 Xl:p-[1vh] flex flex-col gap-1 sm:gap-2">
-                    <p className="text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.4vw]">
+                    <p className="text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.4vw] pointer-events-none">
                       {member.data}
                     </p>
                     {/* {member.linkedin && ( */}

@@ -76,19 +76,19 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
     <>
       <Button
         text="Sign Up"
-        bgcolor="bg-transparent"
-        textcolor="text-customPurple Xl:text-[0.9vw]"
+        bgcolor="bg-transparent hover:bg-customPurple ease-in-out-expo duration-200"
+        textcolor="text-customPurple hover:text-white hover:text-[0.95vw] hover:font-semibold Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9 Xl:h-[5vh]"
+        height="h-9 Xl:h-[5.3vh]"
         width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signup")}
       />
       <Button
         text="Login"
-        bgcolor="bg-customPurple"
-        textcolor="text-white Xl:text-[0.9vw]"
+        bgcolor="bg-customPurple ease-in-out-expo duration-200"
+        textcolor="text-white hover:text-[0.95vw] hover:font-semibold Xl:text-[0.9vw]"
         bordercolor="border-customPurple"
-        height="h-9 Xl:h-[5vh]"
+        height="h-9 Xl:h-[5.3vh]"
         width="w-24 Xl:w-[7vw]"
         onClickFn={() => router.push("/signin")}
       />

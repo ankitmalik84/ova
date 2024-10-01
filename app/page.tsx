@@ -59,7 +59,7 @@ export default function Home() {
         const tl = gsap.timeline({
           defaults: {
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: "power1.inOut",
           },
         });
@@ -68,7 +68,7 @@ export default function Home() {
         tl.from(slides, {
           x: "100%",
           y: "100%",
-          duration: 1,
+          duration: 0.7,
           ease: "power1.inOut",
         })
           .to(logo || [], {
@@ -84,13 +84,13 @@ export default function Home() {
           // Intro last slide animation
           .from(intro_last.current, {
             y: "100%",
-            duration: 0.8,
+            duration: 0.5,
             ease: "power1.inOut",
           })
           // Purple background slides up and main home screen appears
           .to(intro_last.current, {
             y: "-100%",
-            duration: 0.8,
+            duration: 0.5,
             ease: "power1.inOut",
             onUpdate: () => {
               // Hide intro animations
