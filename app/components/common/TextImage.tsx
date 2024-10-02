@@ -29,119 +29,119 @@ const TextImage: FC<TextImageProps> = ({
   position,
   id = -1,
 }) => {
-  const textImageRef = useRef<HTMLDivElement>(null);
+  // const textImageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const smoothScroll = useSmoothScroll();
+  // const smoothScroll = useSmoothScroll();
 
-  const setupAnimation = useCallback(() => {
-    if (!contentRef.current || !textImageRef.current) return;
+  // const setupAnimation = useCallback(() => {
+  //   if (!contentRef.current || !textImageRef.current) return;
 
-    let animationSettings;
-    if (id === 1) {
-      console.log("id 1");
-      animationSettings = {
-        from: { autoAlpha: 0 },
-        to: {
-          autoAlpha: 1,
-          duration: 0.5,
-          ease: "power1.inOut",
-        },
-        scrollTrigger: {
-          trigger: textImageRef.current,
-          start: "top 85%",
-          end: "bottom 5%",
-          // markers: true,
-          onEnter: () => smoothScroll(0.85, 1),
-          onEnterBack: () => smoothScroll(-0.95, 1),
-          onLeave: () => {
-            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
-          },
-        },
-      };
-    } else if (id !== 3) {
-      animationSettings = {
-        from: { autoAlpha: 0 },
-        to: {
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1.inOut",
-        },
-        scrollTrigger: {
-          trigger: textImageRef.current,
-          start: "top 95%",
-          end: "bottom 5%",
-          // markers: true,
-          onEnter: () => smoothScroll(0.95),
-          onEnterBack: () => smoothScroll(-0.95),
-          onLeave: () => {
-            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
-          },
-          onLeaveBack: () => {
-            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
-          },
-        },
-      };
-    } else {
-      animationSettings = {
-        from: { xPercent: 100, yPercent: 100, autoAlpha: 0 },
-        to: {
-          xPercent: 0,
-          yPercent: 0,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "power1.inOut",
-        },
-        scrollTrigger: {
-          trigger: textImageRef.current,
-          start: "top 95%",
-          end: "bottom 5%",
-          // markers: true,
-          onEnter: () => smoothScroll(0.95),
-          onEnterBack: () => smoothScroll(-0.95),
-          onLeave: () => {
-            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
-          },
-          onLeaveBack: () => {
-            // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
-          },
-        },
-      };
-    }
+  //   let animationSettings;
+  //   if (id === 1) {
+  //     console.log("id 1");
+  //     animationSettings = {
+  //       from: { autoAlpha: 0 },
+  //       to: {
+  //         autoAlpha: 1,
+  //         duration: 0.5,
+  //         ease: "power1.inOut",
+  //       },
+  //       scrollTrigger: {
+  //         trigger: textImageRef.current,
+  //         start: "top 85%",
+  //         end: "bottom 5%",
+  //         // markers: true,
+  //         onEnter: () => smoothScroll(0.85, 1),
+  //         onEnterBack: () => smoothScroll(-0.95, 1),
+  //         onLeave: () => {
+  //           // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+  //         },
+  //       },
+  //     };
+  //   } else if (id !== 3) {
+  //     animationSettings = {
+  //       from: { autoAlpha: 0 },
+  //       to: {
+  //         autoAlpha: 1,
+  //         duration: 0.8,
+  //         ease: "power1.inOut",
+  //       },
+  //       scrollTrigger: {
+  //         trigger: textImageRef.current,
+  //         start: "top 95%",
+  //         end: "bottom 5%",
+  //         // markers: true,
+  //         onEnter: () => smoothScroll(0.95),
+  //         onEnterBack: () => smoothScroll(-0.95),
+  //         onLeave: () => {
+  //           // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+  //         },
+  //         onLeaveBack: () => {
+  //           // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+  //         },
+  //       },
+  //     };
+  //   } else {
+  //     animationSettings = {
+  //       from: { xPercent: 100, yPercent: 100, autoAlpha: 0 },
+  //       to: {
+  //         xPercent: 0,
+  //         yPercent: 0,
+  //         autoAlpha: 1,
+  //         duration: 0.8,
+  //         ease: "power1.inOut",
+  //       },
+  //       scrollTrigger: {
+  //         trigger: textImageRef.current,
+  //         start: "top 95%",
+  //         end: "bottom 5%",
+  //         // markers: true,
+  //         onEnter: () => smoothScroll(0.95),
+  //         onEnterBack: () => smoothScroll(-0.95),
+  //         onLeave: () => {
+  //           // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+  //         },
+  //         onLeaveBack: () => {
+  //           // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+  //         },
+  //       },
+  //     };
+  //   }
 
-    const animation = gsap.fromTo(contentRef.current, animationSettings.from, {
-      ...animationSettings.to,
-      scrollTrigger: animationSettings.scrollTrigger,
-    }) as gsap.core.Tween; // Cast Timeline as Tween
+  //   const animation = gsap.fromTo(contentRef.current, animationSettings.from, {
+  //     ...animationSettings.to,
+  //     scrollTrigger: animationSettings.scrollTrigger,
+  //   }) as gsap.core.Tween; // Cast Timeline as Tween
 
-    if (animation) {
-      AnimationManager.addAnimation(animation);
-    }
-    return animation;
-  }, [id, smoothScroll]);
+  //   if (animation) {
+  //     AnimationManager.addAnimation(animation);
+  //   }
+  //   return animation;
+  // }, [id, smoothScroll]);
 
-  useEffect(() => {
-    const animation = setupAnimation();
+  // useEffect(() => {
+  //   const animation = setupAnimation();
 
-    return () => {
-      // Only remove the specific ScrollTrigger for this component
-      const triggers = ScrollTrigger.getAll().filter(
-        (t) => t.trigger === textImageRef.current
-      );
-      triggers.forEach((t) => {
-        t.kill();
-      });
+  //   return () => {
+  //     // Only remove the specific ScrollTrigger for this component
+  //     const triggers = ScrollTrigger.getAll().filter(
+  //       (t) => t.trigger === textImageRef.current
+  //     );
+  //     triggers.forEach((t) => {
+  //       t.kill();
+  //     });
 
-      if (animation) {
-        AnimationManager.removeAnimation(animation);
-      }
-    };
-  }, [setupAnimation]);
+  //     if (animation) {
+  //       AnimationManager.removeAnimation(animation);
+  //     }
+  //   };
+  // }, [setupAnimation]);
 
   const words = useMemo(() => title.split(" "), [title]);
 
   return (
     <div
-      ref={textImageRef}
+      // ref={textImageRef}
       className="w-full max-w-[1200px] Xl:max-w-[75vw] h-[100vh] overflow-hidden flex items-center"
     >
       <div

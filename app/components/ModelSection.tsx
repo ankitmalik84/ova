@@ -3,34 +3,34 @@ import React, { useRef, useEffect } from "react";
 import Model from "@/app/components/Model";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useSmoothScroll from "../hook/useSmoothScroll";
-import AnimationManager from "../utils/animationManager";
+// import useSmoothScroll from "../hook/useSmoothScroll";
+// import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 const ModelSection = () => {
   const model = useRef<HTMLDivElement>(null);
-  const smoothScroll = useSmoothScroll();
-  useEffect(() => {
-    const element = model.current;
-    if (!element) return;
+  // const smoothScroll = useSmoothScroll();
+  // useEffect(() => {
+  //   const element = model.current;
+  //   if (!element) return;
 
-    // Setup individual ScrollTrigger for this component
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: element,
-      start: "top 95%",
-      end: "bottom bottom",
-      onEnter: () => {
-        smoothScroll(0.95);
-      },
-      onLeaveBack: () => {
-        AnimationManager.autoKill = false;
-      },
-    });
+  //   // Setup individual ScrollTrigger for this component
+  //   const scrollTrigger = ScrollTrigger.create({
+  //     trigger: element,
+  //     start: "top 95%",
+  //     end: "bottom bottom",
+  //     onEnter: () => {
+  //       smoothScroll(0.95);
+  //     },
+  //     onLeaveBack: () => {
+  //       AnimationManager.autoKill = false;
+  //     },
+  //   });
 
-    return () => {
-      scrollTrigger.kill();
-    };
-  }, [smoothScroll]);
+  //   return () => {
+  //     scrollTrigger.kill();
+  //   };
+  // }, [smoothScroll]);
   return (
     <div
       ref={model}

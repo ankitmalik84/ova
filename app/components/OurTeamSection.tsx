@@ -3,8 +3,6 @@ import React, { useRef, useEffect } from "react";
 import OurTeam from "@/app/components/OurTeam";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useSmoothScroll from "../hook/useSmoothScroll";
-import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +13,6 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
   const team = useRef<HTMLDivElement>(null);
   const memberImageRef = useRef<HTMLDivElement>(null);
 
-  const smoothScroll = useSmoothScroll();
   useEffect(() => {
     const element = team.current;
 
@@ -23,26 +20,20 @@ const OurTeamSection: React.FC<TeamSectionProps> = ({ activeSection }) => {
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: element,
-      start: "top 95%",
-      end: "bottom 5%",
+      start: "top 50%",
+      end: "bottom 50%",
       onEnter: () => {
         activeSection.current = "Our Team";
-        smoothScroll(0.95);
       },
       onEnterBack: () => {
-        smoothScroll(-0.95);
-      },
-      onLeave: () => {
-        // if (AnimationManager.autoKill) AnimationManager.autoKill = false;
+        activeSection.current = "Our Team";
       },
     });
-    AnimationManager.addScrollTrigger(scrollTrigger);
 
     return () => {
       scrollTrigger.kill();
-      AnimationManager.removeScrollTrigger(scrollTrigger);
     };
-  });
+  }, [activeSection]);
 
   return (
     <div

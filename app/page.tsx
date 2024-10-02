@@ -93,15 +93,15 @@ export default function Home() {
               ))}
             </div>
             {/* HighLightText2 section */}
-            <div id="pre-about">
-              <HighLightTextSection />
-            </div>
+            <HighLightTextSection />
             {/* Slider Section */}
-            <div id="pre-team">
+            <div id="about">
               <SliderSection activeSection={ActiveSection} />
             </div>
             {/* Our Team Section */}
-            <OurTeamSection activeSection={ActiveSection} />
+            <div id="team">
+              <OurTeamSection activeSection={ActiveSection} />
+            </div>
             {/* Model Section */}
             <ModelSection />
           </div>
