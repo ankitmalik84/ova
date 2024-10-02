@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
         duration: 0.8,
         onComplete: () => {
           if (window.scrollY < window.innerHeight * 1.2) {
-            smoothScroll(1);
+            smoothScroll(1, 1);
           }
         },
       },
