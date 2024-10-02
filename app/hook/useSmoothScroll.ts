@@ -22,12 +22,12 @@ const useSmoothScroll = () => {
       console.log("currentDelta==>", currentDelta);
       console.log("wheelScrollCount==>", wheelScrollCount.current);
 
-      if (timeDiff < 15 || wheelScrollCount.current > 3) {
+      if (timeDiff < 50 || wheelScrollCount.current > 3) {
         // Adjust this value to change sensitivity
         const speed = currentDelta / timeDiff;
         console.log("speed", speed);
 
-        if (speed > 12 || wheelScrollCount.current > 5) {
+        if (speed > 5 || wheelScrollCount.current > 5) {
           // Adjust these thresholds as needed
           AnimationManager.autoKill = true;
           gsap.killTweensOf(window);

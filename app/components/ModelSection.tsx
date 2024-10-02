@@ -1,9 +1,10 @@
 // components/ModelSection.tsx
-import React, { useRef, useEffect, use } from "react";
+import React, { useRef, useEffect } from "react";
 import Model from "@/app/components/Model";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSmoothScroll from "../hook/useSmoothScroll";
+import AnimationManager from "../utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger);
 const ModelSection = () => {
@@ -20,6 +21,9 @@ const ModelSection = () => {
       end: "bottom bottom",
       onEnter: () => {
         smoothScroll(0.95);
+      },
+      onLeaveBack: () => {
+        AnimationManager.autoKill = false;
       },
     });
 
