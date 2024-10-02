@@ -6,42 +6,50 @@ import AnimationManager from "../utils/animationManager";
 gsap.registerPlugin(ScrollToPlugin);
 
 const useSmoothScroll = () => {
-  const lastWheelTime = useRef<number>(0);
-  const lastWheelDelta = useRef<number>(0);
+  const lastEventTime = useRef<number>(0);
+  const lastEventDelta = useRef<number>(0);
   const animationInProgress = useRef<boolean>(false);
-  const wheelScrollCount = useRef<number>(0);
+  const eventCount = useRef<number>(0);
 
-  const handleWheel = (e: WheelEvent) => {
+  const handleScrollEvent = (delta: number) => {
     if (animationInProgress.current) {
       const currentTime = Date.now();
-      const timeDiff = currentTime - lastWheelTime.current;
-      const currentDelta = Math.abs(e.deltaY);
-      wheelScrollCount.current += 1;
+      const timeDiff = currentTime - lastEventTime.current;
+      const currentDelta = Math.abs(delta);
+      eventCount.current += 1;
 
       console.log("timeDiff==>", timeDiff);
       console.log("currentDelta==>", currentDelta);
-      console.log("wheelScrollCount==>", wheelScrollCount.current);
+      console.log("eventCount==>", eventCount.current);
 
-      if (timeDiff < 50 || wheelScrollCount.current > 3) {
-        // Adjust this value to change sensitivity
+      if (timeDiff < 50 || eventCount.current > 3) {
         const speed = currentDelta / timeDiff;
         console.log("speed", speed);
 
-        if (speed > 5 || wheelScrollCount.current > 5) {
-          // Adjust these thresholds as needed
+        if (speed > 5 || eventCount.current > 5) {
           AnimationManager.autoKill = true;
           gsap.killTweensOf(window);
           console.log(
-            "Animation killed due to rapid wheel speed or high scroll count",
+            "Animation killed due to rapid event speed or high event count",
             speed,
-            wheelScrollCount.current
+            eventCount.current
           );
         }
       }
 
-      lastWheelTime.current = currentTime;
-      lastWheelDelta.current = currentDelta;
+      lastEventTime.current = currentTime;
+      lastEventDelta.current = currentDelta;
     }
+  };
+
+  const handleWheel = (e: WheelEvent) => {
+    handleScrollEvent(e.deltaY);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    const touch = e.touches[0];
+    const delta = touch.clientY - lastEventDelta.current;
+    handleScrollEvent(delta);
   };
 
   const smoothScroll = useCallback((target: number | string, flag?: number) => {
@@ -62,12 +70,15 @@ const useSmoothScroll = () => {
         onStart: () => {
           if (flag !== 1) {
             window.addEventListener("wheel", handleWheel, { passive: true });
+            window.addEventListener("touchmove", handleTouchMove, {
+              passive: true,
+            });
           } else {
             AnimationManager.autoKill = false;
           }
-          lastWheelTime.current = Date.now();
-          lastWheelDelta.current = 0;
-          wheelScrollCount.current = 0; // Reset wheel scroll count
+          lastEventTime.current = Date.now();
+          lastEventDelta.current = 0;
+          eventCount.current = 0; // Reset event count
         },
         onUpdate: () => {
           console.log(
@@ -83,11 +94,13 @@ const useSmoothScroll = () => {
           animationInProgress.current = false;
           AnimationManager.autoKill = false;
           window.removeEventListener("wheel", handleWheel);
+          window.removeEventListener("touchmove", handleTouchMove);
         },
         onInterrupt: () => {
           console.log("Animation interrupted");
           animationInProgress.current = false;
           window.removeEventListener("wheel", handleWheel);
+          window.removeEventListener("touchmove", handleTouchMove);
         },
       });
     } else if (typeof target === "string") {
