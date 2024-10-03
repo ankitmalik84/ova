@@ -111,7 +111,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[200px] sm:h-[330px] Xl:h-[38vh] w-full"
+                  className="h-[180px] sm:h-[330px] Xl:h-[38vh] w-full"
                 >
                   <div className="p-1 sm:pr-2 Xl:p-[1vh] flex flex-col gap-1 sm:gap-2">
                     <p className="text-sm sm:text-base leading-5 sm:leading-6 Xl:text-[1vw] Xl:leading-[1.4vw] pointer-events-none">
@@ -148,7 +148,7 @@ const OurTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="h-[400px] lg:h-[380px] Xl:h-[50vh] w-full border-2 relative border-white"
+                  className="h-[380px] sm:h-[400px] lg:h-[380px] Xl:h-[50vh] w-full border-2 relative border-white"
                 >
                   <Image
                     src={member.img}
