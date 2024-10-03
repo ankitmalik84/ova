@@ -1,10 +1,11 @@
 "use client";
 
-import { FC, useRef, useMemo } from "react";
+import { FC, useRef, useEffect, useMemo } from "react";
 import HighLightText from "./HighLightText";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
 interface TextImageProps {
   id: number;
   title: string;
@@ -26,10 +27,47 @@ const TextImage: FC<TextImageProps> = ({
   position,
   id = -1,
 }) => {
-  // const textImageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const words = useMemo(() => title.split(" "), [title]);
+
+  useEffect(() => {
+    if (contentRef.current && textRef.current && imageRef.current) {
+      gsap.fromTo(
+        textRef.current,
+        { opacity: 0, x: position === "right" ? 50 : -50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, x: position === "right" ? -50 : 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+  }, [position]);
 
   return (
     <div className="w-full max-w-[1200px] Xl:max-w-[75vw] xl:h-[70vh] Xl:h-[60vh] overflow-hidden flex items-center">
@@ -41,7 +79,7 @@ const TextImage: FC<TextImageProps> = ({
             : "flex-col sm:flex-row"
         }`}
       >
-        <div className="w-full sm:w-3/5 flex flex-col">
+        <div ref={textRef} className="w-full sm:w-3/5 flex flex-col">
           <h1
             className={`text-2xl sm:text-3xl lg:text-4xl Xl:text-[3vw] font-bold ${leading} text-white`}
           >
@@ -64,7 +102,10 @@ const TextImage: FC<TextImageProps> = ({
             </p>
           )}
         </div>
-        <div className="w-full sm:w-2/5 h-[300px] sm:h-[400px] Xl:h-[50vh] relative">
+        <div
+          ref={imageRef}
+          className="w-full sm:w-2/5 h-[300px] sm:h-[400px] Xl:h-[50vh] relative"
+        >
           <Image
             src={img}
             alt="Text image"
