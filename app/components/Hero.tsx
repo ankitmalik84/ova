@@ -99,12 +99,12 @@ const Hero: React.FC = () => {
             Unlock The Power Of Your 2nd Brain
           </h2>
           <div className="w-full sm:w-5/6 mx-auto flex flex-col gap-4">
-            <p className="mt-2 text-white opacity-75 text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
+            <p className="mt-2 text-white opacity-75 text-sm sm:text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
               Ovadrive is designed to turn your phone into an assistant
               following you everywhere, learning all about your life and helping
               to utilize that.
             </p>
-            <p className="font-bold text-white text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
+            <p className="font-bold text-white text-sm sm:text-base lg:text-lg Xl:text-[1vw] Xl:leading-[1.5vw]">
               Own your data, own your life, own your future.
             </p>
           </div>
