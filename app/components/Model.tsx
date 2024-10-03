@@ -12,7 +12,7 @@ export default function Model() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-conic-gradient4 sm:bg-conic-gradient2"></div>
       </div>
 
-      <div className="w-[250px] xs:w-[390px] sm:w-[480px] md:w-[580px] Xl:w-full text-center mx-auto space-y-4 sm:space-y-7 py-8 sm:py-24 mt-0 md:mt-4 Xl:mt-[6vh] relative z-10 flex flex-col gap-12 sm:gap-8 Xl:gap-[8vh]">
+      <div className="w-[260px] xs:w-[390px] sm:w-[480px] md:w-[580px] Xl:w-full text-center mx-auto space-y-4 sm:space-y-7 py-8 sm:py-24 mt-0 md:mt-4 Xl:mt-[6vh] relative z-10 flex flex-col gap-12 sm:gap-8 Xl:gap-[8vh]">
         <div>
           <HighLightText2
             text="Master your data, seize your life, shape your future with OvaDrive"
