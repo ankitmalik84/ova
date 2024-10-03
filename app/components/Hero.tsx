@@ -56,8 +56,8 @@ const Hero: React.FC = () => {
         ease: "power1.inOut",
         duration: 0.8,
         onComplete: () => {
-          if (window.scrollY < window.innerHeight * 1.2) {
-            smoothScroll(0.6);
+          if (window.scrollY < window.innerHeight * 1.1) {
+            smoothScroll(1);
           }
         },
       },

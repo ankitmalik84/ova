@@ -34,7 +34,7 @@ const ModelSection = () => {
   return (
     <div
       ref={model}
-      className="pt-[250px] sm:pt-[10%] flex align-bottom h-[100vh]"
+      className="pt-[250px] sm:pt-[20%] md:pt-[10%] flex align-bottom h-[100vh]"
     >
       <Model />
     </div>
