@@ -36,9 +36,9 @@ const SliderSection: React.FC<SliderSectionProps> = ({ activeSection }) => {
   return (
     <div
       ref={sectionRef}
-      className="py-2 sm:py-10 h-[100vh] overflow-hidden flex flex-col justify-center"
+      className="py-2 sm:py-10 h-[80vh]  xl:h-[100vh] overflow-hidden flex flex-col justify-center"
     >
-      <div className="flex flex-col h-[75vh] xl:h-[85vh] Xl:h-[75vh]">
+      <div className="flex flex-col h-[75vh] xl:h-[80vh] Xl:h-[85vh]">
         <SliderComp data={data.slider1} heading="About Us" />
       </div>
     </div>

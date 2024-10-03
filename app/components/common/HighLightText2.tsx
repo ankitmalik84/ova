@@ -4,7 +4,7 @@ import { FC } from "react";
 interface HighLightText2Props {
   text: string;
   index: number;
-  breakIndex?: number; 
+  breakIndex?: number;
   size?: string;
 }
 
@@ -18,7 +18,7 @@ const HighLightText2: FC<HighLightText2Props> = ({
 
   return (
     <span
-      className={`relative font-bold text-2xl sm:text-3xl md:text-4xl ${size} text-center`}
+      className={`relative font-bold text-md sm:text-2xl md:text-3xl ${size} text-center`}
     >
       {words.map((word, idx) => (
         <span key={word + idx}>

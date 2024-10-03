@@ -23,6 +23,7 @@ const Hero: React.FC = () => {
         trigger: heroSection.current,
         start: "top -2px",
         end: "+=100%",
+        // scrub: true,
         pin: window.scrollY > window.innerHeight * 2 ? false : true,
         onUpdate: (self) => {
           const progressThreshold = window.innerWidth >= 768 ? 0.05 : 0.02;
@@ -56,7 +57,7 @@ const Hero: React.FC = () => {
         duration: 0.8,
         onComplete: () => {
           if (window.scrollY < window.innerHeight * 1.2) {
-            smoothScroll(1, 1);
+            smoothScroll(0.6);
           }
         },
       },

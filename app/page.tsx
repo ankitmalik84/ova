@@ -71,7 +71,7 @@ export default function Home() {
         {/* outer decroative border */}
         <div
           ref={decoration}
-          className="fixed h-[101vh] inset-0 z-30 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_75%,#A600FC_150%)]"
+          className="hidden sm:block fixed h-[101vh] inset-0 z-30 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_75%,#A600FC_150%)]"
         ></div>
         {/* main Page Content */}
         <NavBar activeSection={ActiveSection} />
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="z-10 min-h-screen px-2 lg:px-12 overflow-x-clip transition-all ease-in-out duration-500 scroll-smooth">
           <div className="flex flex-col gap-[6px]">
             {/* text-image section */}
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-[8vh] xl:gap-[20vh] 2xl:gap-[10vh] Xl:gap-[20vh]">
               {data.content.map((item: any) => (
                 <TextImage
                   key={item.id}
