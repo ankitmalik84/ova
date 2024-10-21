@@ -20,7 +20,9 @@ export default function Signin() {
       router.push("/");
     }
   }, [session?.status, router]);
-
+  const handleGoogleSignIn = () => {
+    signIn("google");
+  };
   const {
     register,
     handleSubmit,
@@ -88,13 +90,19 @@ export default function Signin() {
                   <Button disabled={isLoading} type="submit" fullWidth>
                     Sign in
                   </Button>
+                  <Button
+                    onClick={handleGoogleSignIn}
+                    // className="bg-blue-500 text-white px-4 py-2 rounded"
+                  >
+                    Sign in with Google
+                  </Button>
                 </div>
               </form>
-                  <BottomWarning
-                    text={"Don't have an account?"}
-                    linkText={"Register"}
-                    path={"/signup"}
-                  />
+              <BottomWarning
+                text={"Don't have an account?"}
+                linkText={"Register"}
+                path={"/signup"}
+              />
             </div>
           </div>
         </div>
