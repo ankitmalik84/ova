@@ -69,6 +69,7 @@ export const authOptions: AuthOptions = {
             data: {
               email: user.email!,
               name: user.name ?? "",
+              // @ts-ignore
               profilePic: user.image ?? "",
             },
           });
