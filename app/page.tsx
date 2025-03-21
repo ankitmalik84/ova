@@ -9,13 +9,11 @@ import useSmoothScroll from "@/app/hook/useSmoothScroll";
 import TextImage from "@/app/components/common/TextImage";
 import NavBar from "./components/NavBar";
 import data from "./data.json";
-// import { ScrollSmoother } from "gsap/all";
 import Hero from "./components/Hero";
 import HighLightTextSection from "./components/HighLightTextSection";
 import SliderSection from "./components/SliderSection";
 import OurTeamSection from "./components/OurTeamSection";
 import ModelSection from "./components/ModelSection";
-// import AnimationManager from "./utils/animationManager";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 

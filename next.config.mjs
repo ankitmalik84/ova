@@ -23,6 +23,11 @@ const nextConfig = {
         hostname: "pbs.twimg.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "ova-ten.vercel.app",
+        pathname: "/**",
+      },
     ],
   },
 };
