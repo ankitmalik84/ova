@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { getAuth, signOut } from "firebase/auth";
 import { useRouter, usePathname } from "next/navigation";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 
@@ -16,13 +16,13 @@ export default function ProfileDropDown({
   isOpen,
   setIsOpen,
 }: ProfileDropDownProps) {
-  const { data: session } = useSession();
   const router = useRouter();
   const dropdownRef = useRef<HTMLDivElement>(null);
   const path = usePathname();
 
-  const handleLogout = () => {
-    signOut();
+  const handleLogout = async () => {
+    const auth = getAuth();
+    await signOut(auth);
     router.push("/signin");
   };
 
@@ -48,8 +48,7 @@ export default function ProfileDropDown({
         onClick={() => setIsOpen(!isOpen)}
         className="w-9 Xl:w-[6vh] h-9 Xl:h-[6vh] rounded-full font-bold text-xl Xl:text-[1.4vw] bg-pink-600 text-white hover:bg-pink-700"
       >
-        {session?.user?.email?.charAt(0).toUpperCase() ??
-          email.charAt(0).toUpperCase()}
+        {email.charAt(0).toUpperCase()}
       </button>
       {isOpen && (
         <div

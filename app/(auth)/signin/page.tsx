@@ -6,23 +6,38 @@ import Input from "@/app/components/common/Input";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-import { signIn, useSession } from "next-auth/react";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
+import { useFirebase } from "../../context/FirebaseContext";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 
 export default function Signin() {
-  const session = useSession();
+  const { user } = useFirebase();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const auth = getAuth();
 
   useEffect(() => {
-    if (session?.status === "authenticated") {
+    if (user) {
       router.push("/");
     }
-  }, [session?.status, router]);
-  const handleGoogleSignIn = () => {
-    signIn("google");
+  }, [user, router]);
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      router.push("/");
+    } catch (error: any) {
+      toast.error(error.message || "Failed to sign in with Google");
+    }
   };
+
   const {
     register,
     handleSubmit,
@@ -31,26 +46,29 @@ export default function Signin() {
     defaultValues: { email: "", password: "" },
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
-    const res: any = signIn("credentials", {
-      ...data,
-      redirect: false,
-    });
 
-    toast.promise(res, {
-      loading: "Signing in...",
-      success: (res: any) => {
-        if (res?.ok) {
-          router.push("/");
-          return "Welcome back!";
-        } else {
-          throw new Error(res?.error);
-        }
-      },
-      error: (err) => err.message,
-    });
-    setIsLoading(false);
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      toast.success("Welcome back!");
+      router.push("/");
+    } catch (error: any) {
+      let errorMessage = "Failed to sign in";
+
+      if (
+        error.code === "auth/user-not-found" ||
+        error.code === "auth/wrong-password"
+      ) {
+        errorMessage = "Invalid email or password";
+      } else if (error.code === "auth/too-many-requests") {
+        errorMessage = "Too many attempts. Try again later";
+      }
+
+      toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -90,10 +108,7 @@ export default function Signin() {
                   <Button disabled={isLoading} type="submit" fullWidth>
                     Sign in
                   </Button>
-                  <Button
-                    onClick={handleGoogleSignIn}
-                    // className="bg-blue-500 text-white px-4 py-2 rounded"
-                  >
+                  <Button onClick={handleGoogleSignIn} type="button">
                     Sign in with Google
                   </Button>
                 </div>
@@ -115,8 +130,7 @@ export default function Signin() {
             objectFit="cover"
           />
         </div>
-      </div>{" "}
-      {/* This is the missing closing tag for the wrapping div */}
+      </div>
     </div>
   );
 }

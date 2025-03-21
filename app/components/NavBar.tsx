@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
 import Hamburger from "hamburger-react";
 import Link from "next/link";
 import Button from "@/app/components/common/Button";
@@ -8,13 +7,14 @@ import data from "@/app/data.json";
 import ProfileDropDown from "@/app/components/ProfileDropDown";
 import useOnClickOutside from "@/app/hook/useOnClickOutside";
 import AnimationManager from "../utils/animationManager";
+import { useFirebase } from "../context/FirebaseContext";
 
 interface NavBarProps {
   activeSection?: React.MutableRefObject<string>;
 }
 
 const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
-  const session = useSession();
+  const { user } = useFirebase();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -122,7 +122,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                 {pageName}
               </div>
             )}
-            {!session.data?.user ? (
+            {!user ? (
               <>
                 {/* Button Rendering */}
                 <div className="hidden sm:flex space-x-2 sm:space-x-4 Xl:space-x-[1vw]">
@@ -161,7 +161,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               </>
             ) : (
               <ProfileDropDown
-                email={session.data?.user?.email}
+                email={user.email}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
               />
@@ -245,7 +245,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               onClickFn={() => handleNavClick("/")}
             />
             {/* secondary Navbar button */}
-            {!session.data?.user ? (
+            {!user ? (
               <Button
                 text="Login"
                 bgcolor="bg-transparent hover:bg-white ease-in-out-expo duration-100 transition-all"
@@ -257,7 +257,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
               />
             ) : (
               <ProfileDropDown
-                email={session.data?.user?.email}
+                email={user.email}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
               />
@@ -297,7 +297,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeSection }) => {
                         : item.name}
                     </button>
                   ))}
-                  {!session.data?.user && (
+                  {!user && (
                     <>
                       <button
                         className="text-sm p-2 flex hover:text-gray-400"

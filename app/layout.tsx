@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ToasterContext from "@/app/context/ToasterContext";
-import AuthContextProvider from "@/app/context/AuthContext";
 import { Providers } from "./providers";
 import Head from "next/head";
+import FirebaseContextProvider from "./context/FirebaseContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -21,10 +21,10 @@ export default function RootLayout({
       </Head>
       <body className={`${inter.className} bg-customBlack text-foreground`}>
         <Providers>
-          <AuthContextProvider>
+          <FirebaseContextProvider>
             <ToasterContext />
             {children}
-          </AuthContextProvider>
+          </FirebaseContextProvider>
         </Providers>
       </body>
     </html>

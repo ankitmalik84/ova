@@ -1,26 +1,33 @@
 "use client";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Input from "@/app/components/common/Input";
 import Button from "@/app/components/common/Btn";
 import HeadPara from "@/app/components/common/HeadPara";
 import BottomWarning from "@/app/components/common/ButtonWarning";
-import { signIn, useSession } from "next-auth/react";
+import { useFirebase } from "../../context/FirebaseContext";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 
-export default function Signup(): any {
-  const session = useSession();
+export default function Signup() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const { user } = useFirebase();
+  const auth = getAuth();
 
   useEffect(() => {
-    if (session?.status === "authenticated") {
+    if (user) {
       router.push("/");
     }
-  }, [session?.status, router]);
+  }, [user, router]);
 
   const {
     register,
@@ -30,31 +37,49 @@ export default function Signup(): any {
     defaultValues: { name: "", email: "", password: "" },
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
 
-    const res: any = axios.post("/api/register", data);
-    toast
-      .promise(res, {
-        loading: "Registering...",
-        success: "Registration successful!",
-        error: (err) => {
-          const errorCode = err.response?.status;
-          if (errorCode === 400) {
-            return "Please enter your email and password!";
-          } else if (errorCode === 409) {
-            return "Email already exists!";
-          } else {
-            return "Something went wrong!";
-          }
-        },
-      })
-      .then(() => {
-        signIn("credentials", { ...data, redirect: false }).then(() => {
-          router.push("/");
-        });
-      })
-      .finally(() => setIsLoading(false));
+    try {
+      // Create user with Firebase
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        data.email,
+        data.password
+      );
+
+      // Update profile with display name
+      await updateProfile(userCredential.user, {
+        displayName: data.name,
+      });
+
+      toast.success("Registration successful!");
+      router.push("/");
+    } catch (error: any) {
+      let errorMessage = "Registration failed";
+
+      if (error.code === "auth/email-already-in-use") {
+        errorMessage = "Email already in use";
+      } else if (error.code === "auth/weak-password") {
+        errorMessage = "Password is too weak";
+      } else if (error.code === "auth/invalid-email") {
+        errorMessage = "Invalid email address";
+      }
+
+      toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleSignUp = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      router.push("/");
+    } catch (error: any) {
+      toast.error(error.message || "Failed to sign up with Google");
+    }
   };
 
   return (
@@ -101,9 +126,11 @@ export default function Signup(): any {
                   <Button type="submit" disabled={isLoading} fullWidth>
                     Sign up
                   </Button>
-                  {/* Closing form tag added here */}
+                  <Button onClick={handleGoogleSignUp} type="button">
+                    Sign up with Google
+                  </Button>
                 </div>
-              </form>{" "}
+              </form>
               <BottomWarning
                 text={"Already have an account?"}
                 linkText={"Sign in"}
