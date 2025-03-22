@@ -9,8 +9,8 @@ interface InputProps {
   id: string;
   type?: string;
   required?: boolean;
-  register: UseFormRegister<FieldValues>;
-  errors: FieldErrors;
+  register: any;
+  errors?: any;
   disabled?: boolean;
   placeholder?: string;
 }
@@ -28,7 +28,10 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <div className="my-1">
-      <label htmlFor={id} className="text-customGray2 text-md Xl:text-[2vh] w-full">
+      <label
+        htmlFor={id}
+        className="text-customGray2 text-md Xl:text-[2vh] w-full"
+      >
         {label}
       </label>
       <div className="relative">
@@ -37,7 +40,7 @@ const Input: React.FC<InputProps> = ({
           id={id}
           autoComplete={id}
           disabled={disabled}
-          {...register(id, { required })}
+          {...register}
           placeholder={placeholder}
           className={clsx(
             `
@@ -61,7 +64,11 @@ const Input: React.FC<InputProps> = ({
             className="absolute right-3 Xl:right-[1vh] top-2 Xl:top-[1vh] cursor-pointer text-customGray"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? <FaRegEyeSlash className="Xl:text-[2.5vh]" /> : <FaRegEye className="Xl:text-[2.5vh]" />}
+            {showPassword ? (
+              <FaRegEyeSlash className="Xl:text-[2.5vh]" />
+            ) : (
+              <FaRegEye className="Xl:text-[2.5vh]" />
+            )}
           </span>
         )}
       </div>
