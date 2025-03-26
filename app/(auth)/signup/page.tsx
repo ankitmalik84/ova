@@ -124,6 +124,9 @@ export default function Signup() {
   const handleGoogleSignUp = async () => {
     try {
       const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({
+        prompt: "select_account",
+      });
       await signInWithPopup(auth, provider);
 
       // Google signup automatically verifies email

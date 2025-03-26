@@ -42,6 +42,9 @@ export default function Signin() {
     try {
       setIsSigningIn(true);
       const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({
+        prompt: "select_account",
+      });
       await signInWithPopup(auth, provider);
       router.push("/");
     } catch (error: any) {
