@@ -118,66 +118,39 @@
       "name": "Yash Rastogi",
       "role": "Flutter Developer",
       "data": "Yash Rastogi, a skilled flutter developer, excels in algorithm development, ranking under 250 at Codeforces, and shaping coding's future.",
-      "img": "/images/yash.jpg",
+      "img": "/images/yash_rastogi.jpg",
       "linkedin": "https://www.linkedin.com/in/yash-rastogi-coder/",
       "github": "https://github.com/rastogiyash29"
     },
     {
       "id": 5,
-      "name": "Mohammad Umar",
-      "role": "Flutter Developer",
-      "data": "Mohammad Umar, with a solid Computer Science background, creates mobile apps enhancing user experiences, focusing on innovation and lifelong learning.",
-      "img": "/images/umar.png",
-      "linkedin": "https://www.linkedin.com/in/mohammad-umar-mohammad-akhlaque-01267126b/",
-      "github": "https://github.com/MohammadUmar90"
+      "name": "Ankit Malik",
+      "role": "Full Stack Developer",
+      "data": "Ankit Malik, with a solid Computer Science background, creates full stack apps enhancing user experiences, focusing on innovation and lifelong learning.",
+      "img": "/images/ankit.jpg",
+      "linkedin": "https://www.linkedin.com/in/ankitmalik00/",
+      "github": "https://github.com/ankitmalik84"
     },
     {
       "id": 6,
-      "name": "Rohit Ingle",
+      "name": "Adarsh Nagrikar",
       "role": "Flutter Developer",
-      "data": "Rohit Ingle excels in UI design, bringing mobile app innovations to life through technical excellence.",
-      "img": "/images/rohit.png",
+      "data": "Adarsh Nagrikar excels in UI design, bringing mobile app innovations to life through technical excellence.",
+      "img": "/images/adarsh.jpg",
       "linkedin": "",
-      "github": "https://github.com/rohitingle34"
-    },
-    {
-      "id": 7,
-      "name": "Rahul Keshavram Prajapati",
-      "role": "Flutter Developer",
-      "data": "Rahul Prajapati dives into UI/UX development, showcasing a keen pursuit of excellence in Flutter development.",
-      "img": "/images/rahul.png",
-      "linkedin": "https://www.linkedin.com/in/rahul-prajapati-cse/",
-      "github": "https://github.com/rahul-cse-25"
-    },
-    {
-      "id": 8,
-      "name": "Kaustubh Anirudha Vaidya",
-      "role": "Flutter Developer Intern",
-      "data": "Kaustubh Vaidya leverages his software engineering skills to design innovative social chat features, demonstrating a strong commitment to professional growth.",
-      "img": "/images/kaustubh.png",
-      "linkedin": "https://www.linkedin.com/in/kaustubh-vaidya-71947221b/",
-      "github": "https://github.com/KaustubhVaidya404"
-    },
-    {
-      "id": 9,
-      "name": "Prasant Gokhale",
-      "role": "3D Designer Intern",
-      "data": "Prasant Gokhale combines architecture and artistry to create stunning 3D designs in Blender, pushing the boundaries of 3D art.",
-      "img": "/images/prasant.png",
-      "linkedin": "https://www.linkedin.com/in/prasant-gokhale-08808b238/",
       "github": ""
     },
     {
-      "id": 10,
-      "name": "Udit Devadiga",
-      "role": "AWS DevOps Intern",
-      "data": "Udit Devadiga, eager to master Cloud technology and DevOps, is captivated by cloud applications' mechanics, showcasing a strong commitment to his field.",
-      "img": "/images/udit.jpg",
-      "linkedin": "https://www.linkedin.com/in/udit-devadiga/",
-      "github": "https://github.com/Udit-D"
+      "id": 7,
+      "name": "Navlesh Todkar",
+      "role": "Flutter Developer",
+      "data": "Navlesh Todkar dives into UI/UX development, showcasing a keen pursuit of excellence in Flutter development.",
+      "img": "/images/navlesh.jpg",
+      "linkedin": "",
+      "github": ""
     },
     {
-      "id": 11,
+      "id": 8,
       "name": "Ansh Verma",
       "role": "UI/UX Designer",
       "data": "Ansh, excels in UI/UX design with a keen eye for detail. His mastery of various design tools is essential to refining our brand’s visual identity and elevating the user experience.",

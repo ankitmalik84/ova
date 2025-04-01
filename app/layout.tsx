@@ -28,7 +28,20 @@ export const metadata: Metadata = {
   viewport:
     "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
-    icon: "/images/logo.png",
+    icon: [
+      {
+        url: "/images/logo.png",
+        sizes: "any",
+      },
+      {
+        url: "/images/logo.png",
+        sizes: "16x16",
+      },
+      {
+        url: "/images/logo.png",
+        sizes: "32x32",
+      },
+    ],
     apple: "/images/logo.png",
   },
   openGraph: {
@@ -68,6 +81,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <link rel="icon" type="image/png" href="/images/logo.png" />
       <body className={`${inter.className} bg-customBlack text-foreground`}>
         <Providers>
           <FirebaseContextProvider>
