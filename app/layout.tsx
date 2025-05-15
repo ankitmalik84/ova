@@ -81,11 +81,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} text-foreground`}>
+      <head />
+      <body className={inter.className} suppressHydrationWarning>
         <Providers>
           <FirebaseContextProvider>
             <ToasterContext />
-            {children}
+            <main className="text-foreground">{children}</main>
           </FirebaseContextProvider>
         </Providers>
       </body>
