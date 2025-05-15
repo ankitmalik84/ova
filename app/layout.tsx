@@ -3,11 +3,25 @@ import "./globals.css";
 import ToasterContext from "@/app/context/ToasterContext";
 import { Providers } from "./providers";
 import FirebaseContextProvider from "./context/FirebaseContext";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Base URL configuration
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://ovadrive.com";
+
+// Viewport configuration
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+// Metadata configuration
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: {
     default: "OvaDrive - Your AI Voice Assistant",
     template: "%s | OvaDrive",
@@ -25,8 +39,6 @@ export const metadata: Metadata = {
     "data ownership",
   ],
   authors: [{ name: "OvaDrive Team" }, { name: "Jack Jay" }],
-  viewport:
-    "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
     icon: [
       {
