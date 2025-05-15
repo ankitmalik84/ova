@@ -63,7 +63,7 @@ export default function Home() {
     smoothScroll,
   ]);
   return (
-    <div className="relative overflow-x-hidden bg-customBlack">
+    <div className="relative overflow-x-hidden">
       {/* Welcome Section */}
       <div id="main-content">
         {/* outer decroative border */}

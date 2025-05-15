@@ -80,9 +80,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <link rel="icon" type="image/png" href="/images/logo.png" />
-      <body className={`${inter.className} bg-customBlack text-foreground`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} text-foreground`}>
         <Providers>
           <FirebaseContextProvider>
             <ToasterContext />

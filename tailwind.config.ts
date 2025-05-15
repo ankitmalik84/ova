@@ -26,7 +26,7 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#212121", // Changed this to use the exact hex color
+        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -84,9 +84,7 @@ const config: Config = {
     function ({ addBase }: { addBase: Function }) {
       addBase({
         body: {
-          color: "#ffffff",
           fontFamily: "Poppins, sans-serif",
-          backgroundColor: "#212121", // Changed this to use the exact hex color
         },
       });
     },
