@@ -1,12 +1,5 @@
 # 🎯 Ova - Next.js Web Application
 
-<div align="center">
-  [![TypeScript](https://img.shields.io/badge/TypeScript-97.7%25-blue)](https://www.typescriptlang.org/)
-  [![CSS](https://img.shields.io/badge/CSS-1.6%25-purple)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  [![JavaScript](https://img.shields.io/badge/JavaScript-0.7%25-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://ova-ten.vercel.app)
-</div>
-
 ## 📖 About
 
 Ova is a modern web application built with Next.js, featuring real-time WebSocket communication and a robust TypeScript foundation. The project implements best practices in web development and provides a scalable architecture for building interactive web applications.
