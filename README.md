@@ -1,8 +1,6 @@
 # 🎯 Ova - Next.js Web Application
 
 <div align="center">
-  <img src="public/logo.png" alt="Ova Logo" width="200"/>
-  
   [![TypeScript](https://img.shields.io/badge/TypeScript-97.7%25-blue)](https://www.typescriptlang.org/)
   [![CSS](https://img.shields.io/badge/CSS-1.6%25-purple)](https://developer.mozilla.org/en-US/docs/Web/CSS)
   [![JavaScript](https://img.shields.io/badge/JavaScript-0.7%25-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -13,13 +11,13 @@
 
 Ova is a modern web application built with Next.js, featuring real-time WebSocket communication and a robust TypeScript foundation. The project implements best practices in web development and provides a scalable architecture for building interactive web applications.
 
-## ✨ Features
+## ⚡ Features
 
 - 🚀 Built with Next.js 14
-- 💎 TypeScript for type safety
+- 📊 TypeScript for type safety
 - 🔄 Real-time WebSocket communication
 - 🎨 Modern UI with custom Google Font (Inter)
-- 🛠 Prisma for database management
+- 🗃 Prisma for database management
 - 📱 Responsive design
 - 🔒 Security best practices
 
@@ -62,7 +60,7 @@ bun dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## 🏗 Project Structure
+## 🗂 Project Structure
 
 ```
 ova/
