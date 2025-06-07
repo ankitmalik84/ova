@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Ova Logo](public/ova-logo.png)
-
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Prisma](https://img.shields.io/badge/Prisma-4.0-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
